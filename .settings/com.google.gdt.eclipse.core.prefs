@@ -1,0 +1,6 @@
+#Wed Oct 06 11:15:49 CEST 2010
+eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=/home/albatros/w2b/lib/gin/aopalliance.jar|/home/albatros/w2b/lib/gin/gin.jar
+lastWarOutDir=/home/albatros/.eclipse/tests/KKPortal/war
+warSrcDir=war
+warSrcDirIsOutput=false

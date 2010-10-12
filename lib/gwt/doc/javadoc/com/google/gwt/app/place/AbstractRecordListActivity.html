@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AbstractRecordListActivity (Google Web Toolkit Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AbstractRecordListActivity (Google Web Toolkit Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+GWT 2.1.0.M3</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordEditActivity.html" title="class in com.google.gwt.app.place"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListView.html" title="class in com.google.gwt.app.place"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/google/gwt/app/place/AbstractRecordListActivity.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractRecordListActivity.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.google.gwt.app.place</FONT>
+<BR>
+Class AbstractRecordListActivity&lt;R extends com.google.gwt.valuestore.shared.Record&gt;</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.app.place.AbstractRecordListActivity&lt;R&gt;</B>
+</PRE>
+<DL>
+<DT><DT><B>Type Parameters:</B><DD><CODE>R</CODE> - the type of <CODE>Record</CODE> listed</DL>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A>, <A HREF="../../../../../com/google/gwt/app/place/RecordListView.Delegate.html" title="interface in com.google.gwt.app.place">RecordListView.Delegate</A>&lt;R&gt;</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>AbstractRecordListActivity&lt;R extends com.google.gwt.valuestore.shared.Record&gt;</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A>, <A HREF="../../../../../com/google/gwt/app/place/RecordListView.Delegate.html" title="interface in com.google.gwt.app.place">RecordListView.Delegate</A>&lt;R&gt;</DL>
+</PRE>
+
+<P>
+<p>
+ <span style="color:red">Experimental API: This class is still under rapid
+ development, and is very likely to be deleted. Use it at your own risk.
+ </span>
+ </p>
+ Abstract activity for requesting and displaying a list of <CODE>Record</CODE>.
+ <p>
+ Subclasses must:
+ 
+ <ul>
+ <li>implement methods to provide a full count, and request a specific
+ <li>provide a <A HREF="../../../../../com/google/gwt/app/place/RecordListView.html" title="interface in com.google.gwt.app.place"><CODE>RecordListView</CODE></A>
+ <li>respond to "show details" commands
+ </ul>
+ 
+ Only the properties required by the view will be requested.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="nested_classes_inherited_from_class_com.google.gwt.app.place.Activity"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface com.google.gwt.app.place.<A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.Display.html" title="interface in com.google.gwt.app.place">Activity.Display</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#AbstractRecordListActivity(com.google.gwt.requestfactory.shared.RequestFactory, com.google.gwt.app.place.PlaceController, com.google.gwt.app.place.RecordListView, java.lang.Class)">AbstractRecordListActivity</A></B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html" title="interface in com.google.gwt.requestfactory.shared">RequestFactory</A>&nbsp;requests,
+                           <A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place">PlaceController</A>&nbsp;placeController,
+                           <A HREF="../../../../../com/google/gwt/app/place/RecordListView.html" title="interface in com.google.gwt.app.place">RecordListView</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;&nbsp;view,
+                           java.lang.Class&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;&nbsp;proxyType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#createClicked()">createClicked</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RecordListRequest.html" title="interface in com.google.gwt.requestfactory.shared">RecordListRequest</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#createRangeRequest(com.google.gwt.view.client.Range)">createRangeRequest</A></B>(<A HREF="../../../../../com/google/gwt/view/client/Range.html" title="class in com.google.gwt.view.client">Range</A>&nbsp;range)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#fireCountRequest(com.google.gwt.requestfactory.shared.Receiver)">fireCountRequest</A></B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/Receiver.html" title="interface in com.google.gwt.requestfactory.shared">Receiver</A>&lt;java.lang.Long&gt;&nbsp;callback)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/google/gwt/app/place/RecordListView.html" title="interface in com.google.gwt.app.place">RecordListView</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#getView()">getView</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#mayStop()">mayStop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the user is trying to navigate away from this activity.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#onCancel()">onCancel</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when <A HREF="../../../../../com/google/gwt/app/place/Activity.html#start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)"><CODE>Activity.start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)</CODE></A> has not yet replied to its callback, but the
+ user has lost interest.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#onRangeChanged(com.google.gwt.view.client.HasData)">onRangeChanged</A></B>(<A HREF="../../../../../com/google/gwt/view/client/HasData.html" title="interface in com.google.gwt.view.client">HasData</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;&nbsp;listView)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called by the table as it needs data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#onStop()">onStop</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the Activity's widget has been removed from view.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#select(R)">select</A></B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&nbsp;record)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the given record, or clear the selection if called with null.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#showDetails(R)">showDetails</A></B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&nbsp;record)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the user chooses a record to view.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)">start</A></B>(<A HREF="../../../../../com/google/gwt/app/place/Activity.Display.html" title="interface in com.google.gwt.app.place">Activity.Display</A>&nbsp;display,
+      <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the Activity should prepare its <A HREF="../../../../../com/google/gwt/app/place/IsWidget.html" title="interface in com.google.gwt.app.place"><CODE>IsWidget</CODE></A> for the user.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html#update(com.google.gwt.valuestore.shared.WriteOperation, R)">update</A></B>(com.google.gwt.valuestore.shared.WriteOperation&nbsp;writeOperation,
+       <A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&nbsp;record)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AbstractRecordListActivity(com.google.gwt.requestfactory.shared.RequestFactory, com.google.gwt.app.place.PlaceController, com.google.gwt.app.place.RecordListView, java.lang.Class)"><!-- --></A><H3>
+AbstractRecordListActivity</H3>
+<PRE>
+public <B>AbstractRecordListActivity</B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html" title="interface in com.google.gwt.requestfactory.shared">RequestFactory</A>&nbsp;requests,
+                                  <A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place">PlaceController</A>&nbsp;placeController,
+                                  <A HREF="../../../../../com/google/gwt/app/place/RecordListView.html" title="interface in com.google.gwt.app.place">RecordListView</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;&nbsp;view,
+                                  java.lang.Class&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;&nbsp;proxyType)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="createClicked()"><!-- --></A><H3>
+createClicked</H3>
+<PRE>
+public void <B>createClicked</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/RecordListView.Delegate.html#createClicked()">createClicked</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/RecordListView.Delegate.html" title="interface in com.google.gwt.app.place">RecordListView.Delegate</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A> extends com.google.gwt.valuestore.shared.Record&gt;</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getView()"><!-- --></A><H3>
+getView</H3>
+<PRE>
+public <A HREF="../../../../../com/google/gwt/app/place/RecordListView.html" title="interface in com.google.gwt.app.place">RecordListView</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt; <B>getView</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="mayStop()"><!-- --></A><H3>
+mayStop</H3>
+<PRE>
+public java.lang.String <B>mayStop</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#mayStop()">Activity</A></CODE></B></DD>
+<DD>Called when the user is trying to navigate away from this activity.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#mayStop()">mayStop</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>A message to display to the user, e.g. to warn of unsaved work, or
+         null to say nothing</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="onCancel()"><!-- --></A><H3>
+onCancel</H3>
+<PRE>
+public void <B>onCancel</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#onCancel()">Activity</A></CODE></B></DD>
+<DD>Called when <A HREF="../../../../../com/google/gwt/app/place/Activity.html#start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)"><CODE>Activity.start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)</CODE></A> has not yet replied to its callback, but the
+ user has lost interest.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#onCancel()">onCancel</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="onRangeChanged(com.google.gwt.view.client.HasData)"><!-- --></A><H3>
+onRangeChanged</H3>
+<PRE>
+public void <B>onRangeChanged</B>(<A HREF="../../../../../com/google/gwt/view/client/HasData.html" title="interface in com.google.gwt.view.client">HasData</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt;&nbsp;listView)</PRE>
+<DL>
+<DD>Called by the table as it needs data.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="onStop()"><!-- --></A><H3>
+onStop</H3>
+<PRE>
+public void <B>onStop</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#onStop()">Activity</A></CODE></B></DD>
+<DD>Called when the Activity's widget has been removed from view. All event
+ handlers it registered will have been removed before this method is called.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#onStop()">onStop</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="select(com.google.gwt.valuestore.shared.Record)"><!-- --></A><A NAME="select(R)"><!-- --></A><H3>
+select</H3>
+<PRE>
+public void <B>select</B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&nbsp;record)</PRE>
+<DL>
+<DD>Select the given record, or clear the selection if called with null.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)"><!-- --></A><H3>
+start</H3>
+<PRE>
+public void <B>start</B>(<A HREF="../../../../../com/google/gwt/app/place/Activity.Display.html" title="interface in com.google.gwt.app.place">Activity.Display</A>&nbsp;display,
+                  <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)">Activity</A></CODE></B></DD>
+<DD>Called when the Activity should prepare its <A HREF="../../../../../com/google/gwt/app/place/IsWidget.html" title="interface in com.google.gwt.app.place"><CODE>IsWidget</CODE></A> for the user.
+ Once the widget is ready (typically after an RPC response has been
+ received), receiver should present it via
+ <A HREF="../../../../../com/google/gwt/app/place/Activity.Display.html#showActivityWidget(com.google.gwt.app.place.IsWidget)"><CODE>Activity.Display.showActivityWidget(IsWidget)</CODE></A>.
+ <p>
+ Any handlers attached to the provided event bus will be de-registered when
+ the activity is stopped, so activities will rarely need to hold on to the
+ <CODE>HandlerRegistration</CODE> instances returned by
+ <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html#addHandler(com.google.gwt.event.shared.GwtEvent.Type, H)"><CODE>EventBus.addHandler(com.google.gwt.event.shared.GwtEvent.Type<H>, H)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html#start(com.google.gwt.app.place.Activity.Display, com.google.gwt.event.shared.EventBus)">start</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/Activity.html" title="interface in com.google.gwt.app.place">Activity</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>display</CODE> - the panel to display this activity's widget when it is ready<DD><CODE>eventBus</CODE> - the event bus</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="update(com.google.gwt.valuestore.shared.WriteOperation,com.google.gwt.valuestore.shared.Record)"><!-- --></A><A NAME="update(com.google.gwt.valuestore.shared.WriteOperation, R)"><!-- --></A><H3>
+update</H3>
+<PRE>
+public void <B>update</B>(com.google.gwt.valuestore.shared.WriteOperation&nbsp;writeOperation,
+                   <A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&nbsp;record)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="createRangeRequest(com.google.gwt.view.client.Range)"><!-- --></A><H3>
+createRangeRequest</H3>
+<PRE>
+protected abstract <A HREF="../../../../../com/google/gwt/requestfactory/shared/RecordListRequest.html" title="interface in com.google.gwt.requestfactory.shared">RecordListRequest</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&gt; <B>createRangeRequest</B>(<A HREF="../../../../../com/google/gwt/view/client/Range.html" title="class in com.google.gwt.view.client">Range</A>&nbsp;range)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="fireCountRequest(com.google.gwt.requestfactory.shared.Receiver)"><!-- --></A><H3>
+fireCountRequest</H3>
+<PRE>
+protected abstract void <B>fireCountRequest</B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/Receiver.html" title="interface in com.google.gwt.requestfactory.shared">Receiver</A>&lt;java.lang.Long&gt;&nbsp;callback)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="showDetails(com.google.gwt.valuestore.shared.Record)"><!-- --></A><A NAME="showDetails(R)"><!-- --></A><H3>
+showDetails</H3>
+<PRE>
+protected void <B>showDetails</B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListActivity.html" title="type parameter in AbstractRecordListActivity">R</A>&nbsp;record)</PRE>
+<DL>
+<DD>Called when the user chooses a record to view. This default implementation
+ sends the <A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place"><CODE>PlaceController</CODE></A> to an appropriate <A HREF="../../../../../com/google/gwt/app/place/ProxyPlace.html" title="class in com.google.gwt.app.place"><CODE>ProxyPlace</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>record</CODE> - the chosen record</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+GWT 2.1.0.M3</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordEditActivity.html" title="class in com.google.gwt.app.place"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractRecordListView.html" title="class in com.google.gwt.app.place"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/google/gwt/app/place/AbstractRecordListActivity.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractRecordListActivity.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

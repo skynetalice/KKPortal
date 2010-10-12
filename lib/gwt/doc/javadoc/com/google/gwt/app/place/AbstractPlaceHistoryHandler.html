@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+AbstractPlaceHistoryHandler (Google Web Toolkit Javadoc)
+</TITLE>
+
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    if (location.href.indexOf('is-external=true') == -1) {
+        parent.document.title="AbstractPlaceHistoryHandler (Google Web Toolkit Javadoc)";
+    }
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+<HR>
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+GWT 2.1.0.M3</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractActivity.html" title="class in com.google.gwt.app.place"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.Historian.html" title="interface in com.google.gwt.app.place"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractPlaceHistoryHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.google.gwt.app.place</FONT>
+<BR>
+Class AbstractPlaceHistoryHandler&lt;F&gt;</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.app.place.AbstractPlaceHistoryHandler&lt;F&gt;</B>
+</PRE>
+<DL>
+<DT><DT><B>Type Parameters:</B><DD><CODE>F</CODE> - the factory type</DL>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html" title="interface in com.google.gwt.app.place">PlaceHistoryHandler</A>, <A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandlerWithFactory.html" title="interface in com.google.gwt.app.place">PlaceHistoryHandlerWithFactory</A>&lt;F&gt;</DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>AbstractPlaceHistoryHandler&lt;F&gt;</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandlerWithFactory.html" title="interface in com.google.gwt.app.place">PlaceHistoryHandlerWithFactory</A>&lt;F&gt;</DL>
+</PRE>
+
+<P>
+Abstract implementation of <A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html" title="interface in com.google.gwt.app.place"><CODE>PlaceHistoryHandler</CODE></A>.
+<P>
+
+<P>
+<HR>
+
+<P>
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;interface</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.Historian.html" title="interface in com.google.gwt.app.place">AbstractPlaceHistoryHandler.Historian</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Isolates us from History, for testing.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.PrefixAndToken.html" title="class in com.google.gwt.app.place">AbstractPlaceHistoryHandler.PrefixAndToken</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return value for
+ <A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#getPrefixAndToken(com.google.gwt.app.place.Place)"><CODE>getPrefixAndToken(Place)</CODE></A>.</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" title="type parameter in AbstractPlaceHistoryHandler">F</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#factory">factory</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place">PlaceController</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#placeController">placeController</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#AbstractPlaceHistoryHandler()">AbstractPlaceHistoryHandler</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#AbstractPlaceHistoryHandler(com.google.gwt.app.place.AbstractPlaceHistoryHandler.Historian)">AbstractPlaceHistoryHandler</A></B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.Historian.html" title="interface in com.google.gwt.app.place">AbstractPlaceHistoryHandler.Historian</A>&nbsp;historian)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.PrefixAndToken.html" title="class in com.google.gwt.app.place">AbstractPlaceHistoryHandler.PrefixAndToken</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#getPrefixAndToken(com.google.gwt.app.place.Place)">getPrefixAndToken</A></B>(<A HREF="../../../../../com/google/gwt/app/place/Place.html" title="class in com.google.gwt.app.place">Place</A>&nbsp;newPlace)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;<A HREF="../../../../../com/google/gwt/app/place/PlaceTokenizer.html" title="interface in com.google.gwt.app.place">PlaceTokenizer</A>&lt;?&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#getTokenizer(java.lang.String)">getTokenizer</A></B>(java.lang.String&nbsp;prefix)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#handleCurrentHistory()">handleCurrentHistory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the current place from current history token, e.g.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#register(com.google.gwt.app.place.PlaceController, com.google.gwt.event.shared.EventBus, com.google.gwt.app.place.Place)">register</A></B>(<A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place">PlaceController</A>&nbsp;placeController,
+         <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus,
+         <A HREF="../../../../../com/google/gwt/app/place/Place.html" title="class in com.google.gwt.app.place">Place</A>&nbsp;defaultPlace)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Registers this <A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html" title="interface in com.google.gwt.app.place"><CODE>PlaceHistoryHandler</CODE></A> with the event bus, and sets its
+ default place (where to go when there is no history token).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html#setFactory(F)">setFactory</A></B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" title="type parameter in AbstractPlaceHistoryHandler">F</A>&nbsp;factory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="factory"><!-- --></A><H3>
+factory</H3>
+<PRE>
+protected <A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" title="type parameter in AbstractPlaceHistoryHandler">F</A> <B>factory</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="placeController"><!-- --></A><H3>
+placeController</H3>
+<PRE>
+protected <A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place">PlaceController</A> <B>placeController</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="AbstractPlaceHistoryHandler()"><!-- --></A><H3>
+AbstractPlaceHistoryHandler</H3>
+<PRE>
+protected <B>AbstractPlaceHistoryHandler</B>()</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="AbstractPlaceHistoryHandler(com.google.gwt.app.place.AbstractPlaceHistoryHandler.Historian)"><!-- --></A><H3>
+AbstractPlaceHistoryHandler</H3>
+<PRE>
+protected <B>AbstractPlaceHistoryHandler</B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.Historian.html" title="interface in com.google.gwt.app.place">AbstractPlaceHistoryHandler.Historian</A>&nbsp;historian)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="handleCurrentHistory()"><!-- --></A><H3>
+handleCurrentHistory</H3>
+<PRE>
+public void <B>handleCurrentHistory</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html#handleCurrentHistory()">PlaceHistoryHandler</A></CODE></B></DD>
+<DD>Sets the current place from current history token, e.g. in case of being
+ launched from a bookmark.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html#handleCurrentHistory()">handleCurrentHistory</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html" title="interface in com.google.gwt.app.place">PlaceHistoryHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="register(com.google.gwt.app.place.PlaceController, com.google.gwt.event.shared.EventBus, com.google.gwt.app.place.Place)"><!-- --></A><H3>
+register</H3>
+<PRE>
+public <A HREF="../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A> <B>register</B>(<A HREF="../../../../../com/google/gwt/app/place/PlaceController.html" title="class in com.google.gwt.app.place">PlaceController</A>&nbsp;placeController,
+                                    <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus,
+                                    <A HREF="../../../../../com/google/gwt/app/place/Place.html" title="class in com.google.gwt.app.place">Place</A>&nbsp;defaultPlace)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html#register(com.google.gwt.app.place.PlaceController, com.google.gwt.event.shared.EventBus, com.google.gwt.app.place.Place)">PlaceHistoryHandler</A></CODE></B></DD>
+<DD>Registers this <A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html" title="interface in com.google.gwt.app.place"><CODE>PlaceHistoryHandler</CODE></A> with the event bus, and sets its
+ default place (where to go when there is no history token).
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html#register(com.google.gwt.app.place.PlaceController, com.google.gwt.event.shared.EventBus, com.google.gwt.app.place.Place)">register</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandler.html" title="interface in com.google.gwt.app.place">PlaceHistoryHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>registration object to deregister and reset the default place to
+         <A HREF="../../../../../com/google/gwt/app/place/Place.html#NOWHERE"><CODE>Place.NOWHERE</CODE></A>.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFactory(java.lang.Object)"><!-- --></A><A NAME="setFactory(F)"><!-- --></A><H3>
+setFactory</H3>
+<PRE>
+public void <B>setFactory</B>(<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" title="type parameter in AbstractPlaceHistoryHandler">F</A>&nbsp;factory)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandlerWithFactory.html#setFactory(F)">setFactory</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/app/place/PlaceHistoryHandlerWithFactory.html" title="interface in com.google.gwt.app.place">PlaceHistoryHandlerWithFactory</A>&lt;<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" title="type parameter in AbstractPlaceHistoryHandler">F</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getPrefixAndToken(com.google.gwt.app.place.Place)"><!-- --></A><H3>
+getPrefixAndToken</H3>
+<PRE>
+protected abstract <A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.PrefixAndToken.html" title="class in com.google.gwt.app.place">AbstractPlaceHistoryHandler.PrefixAndToken</A> <B>getPrefixAndToken</B>(<A HREF="../../../../../com/google/gwt/app/place/Place.html" title="class in com.google.gwt.app.place">Place</A>&nbsp;newPlace)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>newPlace</CODE> - what needs tokenizing
+<DT><B>Returns:</B><DD>the token, or null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTokenizer(java.lang.String)"><!-- --></A><H3>
+getTokenizer</H3>
+<PRE>
+protected abstract <A HREF="../../../../../com/google/gwt/app/place/PlaceTokenizer.html" title="interface in com.google.gwt.app.place">PlaceTokenizer</A>&lt;?&gt; <B>getTokenizer</B>(java.lang.String&nbsp;prefix)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>prefix</CODE> - the prefix found on the history token
+<DT><B>Returns:</B><DD>the PlaceTokenizer registered with that token, or null</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+GWT 2.1.0.M3</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractActivity.html" title="class in com.google.gwt.app.place"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/app/place/AbstractPlaceHistoryHandler.Historian.html" title="interface in com.google.gwt.app.place"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/google/gwt/app/place/AbstractPlaceHistoryHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="AbstractPlaceHistoryHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+
+</BODY>
+</HTML>

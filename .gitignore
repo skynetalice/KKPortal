@@ -1,0 +1,8 @@
+war/WEB-INF/
+war/.generated/
+war/kkportal/
+test-classes/
+test-classes/
+.generated/
+test.db
+*.pyc

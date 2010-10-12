@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<!-- 
+
+ Copyright 2010 kk-electronic a/s. 
+
+ This file is part of KKPortal.
+
+ KKPortal is free software: you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published
+ by the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ KKPortal is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with KKPortal.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:kk="urn:import:com.kk_electronic.kkportal.core.ui">
+	<ui:style src="../../res/palette.css">
+		html,body {height:100%};
+		.body { background-color: colour1; color: White; }
+		.canvas { background-color: colour2; color: Black; }
+		.thumb {
+			margin-top: 2em;
+			background-color: colour1;
+			background-image: url('kkportal/gwt/standard/images/splitPanelThumb.png');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		.thumb:HOVER { 
+			background-color: colour3;
+		}
+		.sidebar {
+			margin-top: 2em;
+			background-color: colour2;
+		}
+	</ui:style>
+		
+	<g:DockLayoutPanel unit='EM' styleName='{style.body}'>
+		<g:north size='4'>
+			<g:HTML>North</g:HTML>
+		</g:north>
+		<g:center>
+			<g:DockLayoutPanel unit="PX" ui:field="main">
+				<g:west size='0'><g:StackLayoutPanel ui:field="sidebar" styleName="{style.sidebar}"></g:StackLayoutPanel></g:west>
+				<g:west size='10'><g:FocusPanel styleName="{style.thumb}" ui:field="thumb"></g:FocusPanel></g:west>
+				<g:center><g:LayoutPanel ui:field="activityContainer"></g:LayoutPanel></g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder>
