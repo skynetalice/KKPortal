@@ -7,8 +7,7 @@
   /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCellTreeDescription();
 
     String cwCellTreeName();
@@ -27,17 +26,12 @@
   Label selectedLabel;
 
   /**
-   * An instance of the constants.
-   */
-  private CwConstants constants;
-
-  /**
    * Initialize this example.
    */
   @Override
   public Widget onInitialize() {
-    final MultiSelectionModel&lt;ContactInfo&gt; selectionModel = new MultiSelectionModel&lt;ContactInfo&gt;();
-    selectionModel.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
+    final MultiSelectionModel&lt;ContactInfo&gt; selectionModel =
+      new MultiSelectionModel&lt;ContactInfo&gt;(ContactDatabase.ContactInfo.KEY_PROVIDER);
     selectionModel.addSelectionChangeHandler(
         new SelectionChangeEvent.Handler() {
           public void onSelectionChange(SelectionChangeEvent event) {
@@ -58,7 +52,9 @@
           }
         });
 
-    cellTree = new CellTree(new ContactTreeViewModel(selectionModel), null);
+    CellTree.Resources res = GWT.create(CellTree.BasicResources.class);
+    cellTree = new CellTree(
+        new ContactTreeViewModel(selectionModel), null, res);
     cellTree.setAnimationEnabled(true);
 
     // Create the UiBinder.

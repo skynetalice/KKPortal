@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/cell/client/ImageResourceCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/SelectionCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/SafeHtmlCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/cell/client/NumberCell.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="NumberCell.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -122,13 +122,30 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html#NumberCell()">NumberCell</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using decimal format.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using decimal format and a
+ <A HREF="../../../../../com/google/gwt/text/shared/SimpleSafeHtmlRenderer.html" title="class in com.google.gwt.text.shared"><CODE>SimpleSafeHtmlRenderer</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html#NumberCell(com.google.gwt.i18n.client.NumberFormat)">NumberCell</A></B>(<A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client">NumberFormat</A>&nbsp;format)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using the given <A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client"><CODE>NumberFormat</CODE></A> and
+ a <A HREF="../../../../../com/google/gwt/text/shared/SimpleSafeHtmlRenderer.html" title="class in com.google.gwt.text.shared"><CODE>SimpleSafeHtmlRenderer</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html#NumberCell(com.google.gwt.i18n.client.NumberFormat, com.google.gwt.text.shared.SafeHtmlRenderer)">NumberCell</A></B>(<A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client">NumberFormat</A>&nbsp;format,
+           <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using the given <A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client"><CODE>NumberFormat</CODE></A> and
+ a <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html#NumberCell(com.google.gwt.text.shared.SafeHtmlRenderer)">NumberCell</A></B>(<A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using decimal format and the given
+ <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -143,13 +160,13 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html#render(java.lang.Number, java.lang.Object, java.lang.StringBuilder)">render</A></B>(java.lang.Number&nbsp;value,
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html#render(java.lang.Number, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(java.lang.Number&nbsp;value,
        java.lang.Object&nbsp;key,
-       java.lang.StringBuilder&nbsp;sb)</CODE>
+       <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.cell.client.AbstractCell"><!-- --></A>
@@ -158,7 +175,7 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.cell.client.<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -188,7 +205,8 @@ NumberCell</H3>
 <PRE>
 public <B>NumberCell</B>()</PRE>
 <DL>
-<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using decimal format.
+<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using decimal format and a
+ <A HREF="../../../../../com/google/gwt/text/shared/SimpleSafeHtmlRenderer.html" title="class in com.google.gwt.text.shared"><CODE>SimpleSafeHtmlRenderer</CODE></A>.
 <P>
 </DL>
 <HR>
@@ -198,10 +216,40 @@ NumberCell</H3>
 <PRE>
 public <B>NumberCell</B>(<A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client">NumberFormat</A>&nbsp;format)</PRE>
 <DL>
-<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A>.
+<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using the given <A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client"><CODE>NumberFormat</CODE></A> and
+ a <A HREF="../../../../../com/google/gwt/text/shared/SimpleSafeHtmlRenderer.html" title="class in com.google.gwt.text.shared"><CODE>SimpleSafeHtmlRenderer</CODE></A>.
 <P>
 <DL>
 <DT><B>Parameters:</B><DD><CODE>format</CODE> - the <A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client"><CODE>NumberFormat</CODE></A> used to render the number</DL>
+</DL>
+<HR>
+
+<A NAME="NumberCell(com.google.gwt.text.shared.SafeHtmlRenderer)"><!-- --></A><H3>
+NumberCell</H3>
+<PRE>
+public <B>NumberCell</B>(<A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</PRE>
+<DL>
+<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using decimal format and the given
+ <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>renderer</CODE> - the <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A> used to render the formatted
+          number as HTML</DL>
+</DL>
+<HR>
+
+<A NAME="NumberCell(com.google.gwt.i18n.client.NumberFormat, com.google.gwt.text.shared.SafeHtmlRenderer)"><!-- --></A><H3>
+NumberCell</H3>
+<PRE>
+public <B>NumberCell</B>(<A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client">NumberFormat</A>&nbsp;format,
+                  <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</PRE>
+<DL>
+<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client"><CODE>NumberCell</CODE></A> using the given <A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client"><CODE>NumberFormat</CODE></A> and
+ a <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>format</CODE> - the <A HREF="../../../../../com/google/gwt/i18n/client/NumberFormat.html" title="class in com.google.gwt.i18n.client"><CODE>NumberFormat</CODE></A> used to render the number<DD><CODE>renderer</CODE> - the <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A> used to render the formatted
+          number as HTML</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -214,22 +262,28 @@ public <B>NumberCell</B>(<A HREF="../../../../../com/google/gwt/i18n/client/Numb
 </TR>
 </TABLE>
 
-<A NAME="render(java.lang.Number, java.lang.Object, java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(java.lang.Number, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
 public void <B>render</B>(java.lang.Number&nbsp;value,
                    java.lang.Object&nbsp;key,
-                   java.lang.StringBuilder&nbsp;sb)</PRE>
+                   <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">Cell</A></CODE></B></DD>
-<DD>Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">Cell</A></CODE></B></DD>
+<DD>Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+ 
+ <p>
+ Note: If your cell contains natively focusable elements, such as buttons or
+ input elements, be sure to set the tabIndex to -1 so that they do not steal
+ focus away from the containing widget.
+ </p>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.lang.Number&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;java.lang.Number&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.lang.Number&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;java.lang.Number&gt;</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the StringBuilder to be written to</DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to be written to</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -256,14 +310,14 @@ public void <B>render</B>(java.lang.Number&nbsp;value,
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/cell/client/ImageResourceCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/SelectionCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/SafeHtmlCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/cell/client/NumberCell.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="NumberCell.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

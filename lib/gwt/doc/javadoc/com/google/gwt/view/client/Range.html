@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -102,10 +102,6 @@ java.lang.Object
 
 <P>
 The range of interest for a single handler.
-
- <p>
- Note: This class is new and its interface subject to change.
- </p>
 <P>
 
 <P>
@@ -146,7 +142,8 @@ The range of interest for a single handler.
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/Range.html#equals(java.lang.Object)">equals</A></B>(java.lang.Object&nbsp;o)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return true if this ranges's start end length are equal to those of
+ the given object.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -170,7 +167,7 @@ The range of interest for a single handler.
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/Range.html#hashCode()">hashCode</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return a hash code based on this range's start and length.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -178,7 +175,7 @@ The range of interest for a single handler.
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/Range.html#toString()">toString</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a String representation for debugging.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -230,6 +227,9 @@ equals</H3>
 <PRE>
 public boolean <B>equals</B>(java.lang.Object&nbsp;o)</PRE>
 <DL>
+<DD>Return true if this ranges's start end length are equal to those of
+ the given object.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE>equals</CODE> in class <CODE>java.lang.Object</CODE></DL>
 </DD>
@@ -278,6 +278,8 @@ hashCode</H3>
 <PRE>
 public int <B>hashCode</B>()</PRE>
 <DL>
+<DD>Return a hash code based on this range's start and length.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE>hashCode</CODE> in class <CODE>java.lang.Object</CODE></DL>
 </DD>
@@ -292,6 +294,8 @@ toString</H3>
 <PRE>
 public java.lang.String <B>toString</B>()</PRE>
 <DL>
+<DD>Returns a String representation for debugging.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE>toString</CODE> in class <CODE>java.lang.Object</CODE></DL>
 </DD>
@@ -323,7 +327,7 @@ public java.lang.String <B>toString</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

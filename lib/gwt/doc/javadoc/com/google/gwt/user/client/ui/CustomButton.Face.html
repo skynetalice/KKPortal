@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -93,14 +93,14 @@ java.lang.Object
   <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.CustomButton.Face</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A></DD>
 </DL>
 <DL>
 <DT><B>Enclosing class:</B><DD><A HREF="../../../../../../com/google/gwt/user/client/ui/CustomButton.html" title="class in com.google.gwt.user.client.ui">CustomButton</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public abstract class <B>CustomButton.Face</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A></DL>
+<DT><PRE>public abstract class <B>CustomButton.Face</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></DL>
 </PRE>
 
 <P>
@@ -136,6 +136,14 @@ Represents a button's face. Each face is associated with its own style
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the face's contents as text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/CustomButton.Face.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the face's contents as html.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -226,6 +234,22 @@ public java.lang.String <B>getText</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="setHTML(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+setHTML</H3>
+<PRE>
+public void <B>setHTML</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD>Set the face's contents as html.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - html to set as face's contents html</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="setHTML(java.lang.String)"><!-- --></A><H3>
 setHTML</H3>
 <PRE>
@@ -310,7 +334,7 @@ public final java.lang.String <B>toString</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

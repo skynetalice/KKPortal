@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -96,7 +96,7 @@ java.lang.Object
               <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.cellview.client.AbstractPager</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A></DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/cellview/client/PageSizePager.html" title="class in com.google.gwt.user.cellview.client">PageSizePager</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/SimplePager.html" title="class in com.google.gwt.user.cellview.client">SimplePager</A></DD>
@@ -377,7 +377,7 @@ An abstract pager that exposes many methods useful for paging.
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.UIObject"><!-- --></A>
@@ -760,7 +760,7 @@ protected void <B>setPageStart</B>(int&nbsp;index)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

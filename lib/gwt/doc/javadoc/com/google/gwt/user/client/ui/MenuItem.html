@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -94,11 +94,11 @@ java.lang.Object
       <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.MenuItem</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>MenuItem</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.html" title="class in com.google.gwt.user.client.ui">UIObject</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A></DL>
+<DT><PRE>public class <B>MenuItem</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.html" title="class in com.google.gwt.user.client.ui">UIObject</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></DL>
 </PRE>
 
 <P>
@@ -160,6 +160,26 @@ An entry in a
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/MenuItem.html#MenuItem(com.google.gwt.safehtml.shared.SafeHtml)">MenuItem</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new menu item that fires a command when it is selected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/MenuItem.html#MenuItem(com.google.gwt.safehtml.shared.SafeHtml, com.google.gwt.user.client.Command)">MenuItem</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+         <A HREF="../../../../../../com/google/gwt/user/client/Command.html" title="interface in com.google.gwt.user.client">Command</A>&nbsp;cmd)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new menu item that fires a command when it is selected.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/MenuItem.html#MenuItem(com.google.gwt.safehtml.shared.SafeHtml, com.google.gwt.user.client.ui.MenuBar)">MenuItem</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+         <A HREF="../../../../../../com/google/gwt/user/client/ui/MenuBar.html" title="class in com.google.gwt.user.client.ui">MenuBar</A>&nbsp;subMenu)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new menu item that cascades to a sub-menu when it is selected.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/MenuItem.html#MenuItem(java.lang.String, boolean, com.google.gwt.user.client.Command)">MenuItem</A></B>(java.lang.String&nbsp;text,
@@ -261,6 +281,14 @@ An entry in a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/MenuItem.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets this object's contents via known-safe HTML.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/MenuItem.html#setHTML(java.lang.String)">setHTML</A></B>(java.lang.String&nbsp;html)</CODE>
 
 <BR>
@@ -322,6 +350,31 @@ An entry in a
 </TR>
 </TABLE>
 
+<A NAME="MenuItem(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+MenuItem</H3>
+<PRE>
+public <B>MenuItem</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD>Constructs a new menu item that fires a command when it is selected.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the item's html text</DL>
+</DL>
+<HR>
+
+<A NAME="MenuItem(com.google.gwt.safehtml.shared.SafeHtml, com.google.gwt.user.client.Command)"><!-- --></A><H3>
+MenuItem</H3>
+<PRE>
+public <B>MenuItem</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+                <A HREF="../../../../../../com/google/gwt/user/client/Command.html" title="interface in com.google.gwt.user.client">Command</A>&nbsp;cmd)</PRE>
+<DL>
+<DD>Constructs a new menu item that fires a command when it is selected.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the item's text<DD><CODE>cmd</CODE> - the command to be fired when it is selected</DL>
+</DL>
+<HR>
+
 <A NAME="MenuItem(java.lang.String, com.google.gwt.user.client.Command)"><!-- --></A><H3>
 MenuItem</H3>
 <PRE>
@@ -346,6 +399,19 @@ public <B>MenuItem</B>(java.lang.String&nbsp;text,
 <P>
 <DL>
 <DT><B>Parameters:</B><DD><CODE>text</CODE> - the item's text<DD><CODE>asHTML</CODE> - <code>true</code> to treat the specified text as html<DD><CODE>cmd</CODE> - the command to be fired when it is selected</DL>
+</DL>
+<HR>
+
+<A NAME="MenuItem(com.google.gwt.safehtml.shared.SafeHtml, com.google.gwt.user.client.ui.MenuBar)"><!-- --></A><H3>
+MenuItem</H3>
+<PRE>
+public <B>MenuItem</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+                <A HREF="../../../../../../com/google/gwt/user/client/ui/MenuBar.html" title="class in com.google.gwt.user.client.ui">MenuBar</A>&nbsp;subMenu)</PRE>
+<DL>
+<DD>Constructs a new menu item that cascades to a sub-menu when it is selected.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the item's text<DD><CODE>subMenu</CODE> - the sub-menu to be displayed when it is selected</DL>
 </DL>
 <HR>
 
@@ -507,6 +573,32 @@ public void <B>setHTML</B>(java.lang.String&nbsp;html)</PRE>
 </DL>
 <HR>
 
+<A NAME="setHTML(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+setHTML</H3>
+<PRE>
+public void <B>setHTML</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">HasSafeHtml</A></CODE></B></DD>
+<DD>Sets this object's contents via known-safe HTML.
+
+ <p>
+ The object will behave exactly the same as when a widget's
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html#setHTML(java.lang.String)"><CODE>HasHTML.setHTML(String)</CODE></A> method is
+ invoked; however the <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared"><CODE>SafeHtml</CODE></A> passed to this method observes the
+ contract that it can be used in an HTML context without causing unsafe
+ script execution. Thus, unlike
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html#setHTML(java.lang.String)"><CODE>HasHTML.setHTML(String)</CODE></A>, using this
+ method cannot result in Cross-Site Scripting security vulnerabilities.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the object's new HTML, represented as a <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared"><CODE>SafeHtml</CODE></A> object</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="setSubMenu(com.google.gwt.user.client.ui.MenuBar)"><!-- --></A><H3>
 setSubMenu</H3>
 <PRE>
@@ -593,7 +685,7 @@ protected void <B>setSelectionStyle</B>(boolean&nbsp;selected)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

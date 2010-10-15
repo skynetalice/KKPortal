@@ -46,13 +46,13 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractSafeHtmlCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.Delegate.html" title="interface in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/cell/client/ActionCell.html" target="_top"><B>FRAMES</B></A>  &nbsp;
@@ -106,10 +106,6 @@ java.lang.Object
 <P>
 A cell that renders a button and takes a delegate to perform actions on
  mouseUp.
-
- <p>
- Note: This class is new and its interface subject to change.
- </p>
 <P>
 
 <P>
@@ -143,11 +139,19 @@ A cell that renders a button and takes a delegate to perform actions on
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html#ActionCell(java.lang.String, com.google.gwt.cell.client.ActionCell.Delegate)">ActionCell</A></B>(java.lang.String&nbsp;message,
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html#ActionCell(com.google.gwt.safehtml.shared.SafeHtml, com.google.gwt.cell.client.ActionCell.Delegate)">ActionCell</A></B>(<A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;message,
            <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.Delegate.html" title="interface in com.google.gwt.cell.client">ActionCell.Delegate</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;&nbsp;delegate)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client"><CODE>ActionCell</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html#ActionCell(java.lang.String, com.google.gwt.cell.client.ActionCell.Delegate)">ActionCell</A></B>(java.lang.String&nbsp;text,
+           <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.Delegate.html" title="interface in com.google.gwt.cell.client">ActionCell.Delegate</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;&nbsp;delegate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client"><CODE>ActionCell</CODE></A> with a text String that does not contain
+ HTML markup.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -173,14 +177,27 @@ A cell that renders a button and takes a delegate to perform actions on
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&nbsp;value,
-       java.lang.Object&nbsp;key,
-       java.lang.StringBuilder&nbsp;sb)</CODE>
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+               <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&nbsp;value,
+               java.lang.Object&nbsp;key,
+               <A HREF="../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
+               <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;&nbsp;valueUpdater)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the user triggers a <code>keydown</code> event with the ENTER
+ key while focused on the cell.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&nbsp;value,
+       java.lang.Object&nbsp;key,
+       <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.cell.client.AbstractCell"><!-- --></A>
@@ -189,7 +206,7 @@ A cell that renders a button and takes a delegate to perform actions on
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.cell.client.<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -214,16 +231,30 @@ A cell that renders a button and takes a delegate to perform actions on
 </TR>
 </TABLE>
 
-<A NAME="ActionCell(java.lang.String, com.google.gwt.cell.client.ActionCell.Delegate)"><!-- --></A><H3>
+<A NAME="ActionCell(com.google.gwt.safehtml.shared.SafeHtml, com.google.gwt.cell.client.ActionCell.Delegate)"><!-- --></A><H3>
 ActionCell</H3>
 <PRE>
-public <B>ActionCell</B>(java.lang.String&nbsp;message,
+public <B>ActionCell</B>(<A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;message,
                   <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.Delegate.html" title="interface in com.google.gwt.cell.client">ActionCell.Delegate</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;&nbsp;delegate)</PRE>
 <DL>
 <DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client"><CODE>ActionCell</CODE></A>.
 <P>
 <DL>
 <DT><B>Parameters:</B><DD><CODE>message</CODE> - the message to display on the button<DD><CODE>delegate</CODE> - the delegate that will handle events</DL>
+</DL>
+<HR>
+
+<A NAME="ActionCell(java.lang.String, com.google.gwt.cell.client.ActionCell.Delegate)"><!-- --></A><H3>
+ActionCell</H3>
+<PRE>
+public <B>ActionCell</B>(java.lang.String&nbsp;text,
+                  <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.Delegate.html" title="interface in com.google.gwt.cell.client">ActionCell.Delegate</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;&nbsp;delegate)</PRE>
+<DL>
+<DD>Construct a new <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client"><CODE>ActionCell</CODE></A> with a text String that does not contain
+ HTML markup.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>text</CODE> - the text to display on the button<DD><CODE>delegate</CODE> - the delegate that will handle events</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -249,9 +280,10 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 <DD>Handle a browser event that took place within the cell. The default
  implementation returns null.
 
- This method is a no-op in <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A>. If you override this method
- to add support for events, remember to pass the event types that the cell
- expects into the constructor.
+ <p>
+ If you override this method to add support for events, remember to pass the
+ event types that the cell expects into the constructor.
+ </p>
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE></DL>
@@ -262,22 +294,53 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 </DL>
 <HR>
 
-<A NAME="render(java.lang.Object,java.lang.Object,java.lang.StringBuilder)"><!-- --></A><A NAME="render(C, java.lang.Object, java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(java.lang.Object,java.lang.Object,com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><A NAME="render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
 public void <B>render</B>(<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&nbsp;value,
                    java.lang.Object&nbsp;key,
-                   java.lang.StringBuilder&nbsp;sb)</PRE>
+                   <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">Cell</A></CODE></B></DD>
-<DD>Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">Cell</A></CODE></B></DD>
+<DD>Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+ 
+ <p>
+ Note: If your cell contains natively focusable elements, such as buttons or
+ input elements, be sure to set the tabIndex to -1 so that they do not steal
+ focus away from the containing widget.
+ </p>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the StringBuilder to be written to</DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to be written to</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="onEnterKeyDown(com.google.gwt.dom.client.Element,java.lang.Object,java.lang.Object,com.google.gwt.dom.client.NativeEvent,com.google.gwt.cell.client.ValueUpdater)"><!-- --></A><A NAME="onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><!-- --></A><H3>
+onEnterKeyDown</H3>
+<PRE>
+protected void <B>onEnterKeyDown</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+                              <A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&nbsp;value,
+                              java.lang.Object&nbsp;key,
+                              <A HREF="../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
+                              <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;&nbsp;valueUpdater)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">AbstractCell</A></CODE></B></DD>
+<DD>Called when the user triggers a <code>keydown</code> event with the ENTER
+ key while focused on the cell. If your cell interacts with the user, you
+ should override this method to provide a consistent user experience. Your
+ widget must consume <code>keydown</code> events for this method to be
+ called.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="type parameter in ActionCell">C</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - the parent Element<DD><CODE>value</CODE> - the value associated with the cell<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>event</CODE> - the native browser event<DD><CODE>valueUpdater</CODE> - a <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A>, or null if not specified</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -304,13 +367,13 @@ public void <B>render</B>(<A HREF="../../../../../com/google/gwt/cell/client/Act
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractSafeHtmlCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.Delegate.html" title="interface in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/cell/client/ActionCell.html" target="_top"><B>FRAMES</B></A>  &nbsp;

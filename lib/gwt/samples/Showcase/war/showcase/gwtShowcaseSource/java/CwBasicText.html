@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwBasicTextAreaLabel();
 
     String cwBasicTextDescription();
@@ -21,7 +20,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -72,13 +71,13 @@
   /**
    * Create a TextBox example that includes the text box and an optional handler
    * that updates a Label with the currently selected text.
-   * 
+   *
    * @param textBox the text box to handle
    * @param addSelection add handlers to update label
    * @return the Label that will be updated
    */
-  private HorizontalPanel createTextExample(final TextBoxBase textBox,
-      boolean addSelection) {
+  private HorizontalPanel createTextExample(
+      final TextBoxBase textBox, boolean addSelection) {
     // Add the text box and label to a panel
     HorizontalPanel hPanel = new HorizontalPanel();
     hPanel.setSpacing(4);
@@ -113,13 +112,14 @@
 
   /**
    * Update the text in one of the selection labels.
-   * 
+   *
    * @param textBox the text box
    * @param label the label to update
    */
   private void updateSelectionLabel(TextBoxBase textBox, Label label) {
-    label.setText(constants.cwBasicTextSelected() + ": "
-        + textBox.getCursorPos() + ", " + textBox.getSelectionLength());
+    label.setText(
+        constants.cwBasicTextSelected() + ": " + textBox.getCursorPos() + ", "
+            + textBox.getSelectionLength());
   }
 
 </pre>

@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -117,7 +117,8 @@ Standard <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="in
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater&lt;C&gt;</A></B></TD>
-<TD>A <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A> may be added to a Cell to provide updated data.</TD>
+<TD>A <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A> may be added to a <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> to provide updated
+ data.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -137,6 +138,15 @@ Standard <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="in
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="class in com.google.gwt.cell.client">AbstractEditableCell&lt;C,V&gt;</A></B></TD>
 <TD>A default implementation of the <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> interface used for editable
  cells that need to save view data state for specific values.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/AbstractInputCell.html" title="class in com.google.gwt.cell.client">AbstractInputCell&lt;C,V&gt;</A></B></TD>
+<TD>An <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render input elements that can receive focus.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/AbstractSafeHtmlCell.html" title="class in com.google.gwt.cell.client">AbstractSafeHtmlCell&lt;C&gt;</A></B></TD>
+<TD>A superclass for <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>s that render or escape a String argument as
+ HTML.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client">ActionCell&lt;C&gt;</A></B></TD>
@@ -179,11 +189,11 @@ Standard <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="in
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/ImageCell.html" title="class in com.google.gwt.cell.client">ImageCell</A></B></TD>
 <TD>
- A <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render an image.</TD>
+ An <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render an image.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/ImageLoadingCell.html" title="class in com.google.gwt.cell.client">ImageLoadingCell</A></B></TD>
-<TD>A <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render an image.</TD>
+<TD>An <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render an image.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/ImageLoadingCell.DefaultRenderers.html" title="class in com.google.gwt.cell.client">ImageLoadingCell.DefaultRenderers</A></B></TD>
@@ -191,11 +201,15 @@ Standard <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="in
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/ImageResourceCell.html" title="class in com.google.gwt.cell.client">ImageResourceCell</A></B></TD>
-<TD>A <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render an <A HREF="../../../../../com/google/gwt/resources/client/ImageResource.html" title="interface in com.google.gwt.resources.client"><CODE>ImageResource</CODE></A>.</TD>
+<TD>An <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render an <A HREF="../../../../../com/google/gwt/resources/client/ImageResource.html" title="interface in com.google.gwt.resources.client"><CODE>ImageResource</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/NumberCell.html" title="class in com.google.gwt.cell.client">NumberCell</A></B></TD>
 <TD>A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> used to render formatted numbers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/SafeHtmlCell.html" title="class in com.google.gwt.cell.client">SafeHtmlCell</A></B></TD>
+<TD>A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> used to render safe HTML markup.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/SelectionCell.html" title="class in com.google.gwt.cell.client">SelectionCell</A></B></TD>
@@ -207,7 +221,11 @@ Standard <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="in
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/TextInputCell.html" title="class in com.google.gwt.cell.client">TextInputCell</A></B></TD>
-<TD>A <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render a text input.</TD>
+<TD>An <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A> used to render a text input.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/cell/client/TextInputCell.ViewData.html" title="class in com.google.gwt.cell.client">TextInputCell.ViewData</A></B></TD>
+<TD>The <code>ViewData</code> for this cell.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -279,7 +297,7 @@ widget</li>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

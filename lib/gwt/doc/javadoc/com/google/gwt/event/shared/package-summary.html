@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/event/logical/shared/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/http/client/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/event/shared/testing/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/event/shared/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -92,10 +92,6 @@ Shared infrastructure underlying both browser and non-browser events.
 <B>Interface Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A></B></TD>
-<TD>Implemented by objects that dispatch <A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.html" title="class in com.google.gwt.event.shared"><CODE>GwtEvent</CODE></A>s.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/EventHandler.html" title="interface in com.google.gwt.event.shared">EventHandler</A></B></TD>
 <TD>Marker interface for event handlers.</TD>
 </TR>
@@ -122,7 +118,11 @@ Shared infrastructure underlying both browser and non-browser events.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/DefaultHandlerRegistration.html" title="class in com.google.gwt.event.shared">DefaultHandlerRegistration</A></B></TD>
-<TD>Default implementation of <A HREF="../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared"><CODE>HandlerRegistration</CODE></A>.</TD>
+<TD><B>Deprecated.</B>&nbsp;<I>with no replacement; this class is no longer used by any GWT code</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A></B></TD>
+<TD>Dispatches <A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.html" title="class in com.google.gwt.event.shared"><CODE>GwtEvent</CODE></A>s to interested parties.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.html" title="class in com.google.gwt.event.shared">GwtEvent&lt;H extends EventHandler&gt;</A></B></TD>
@@ -134,8 +134,16 @@ Shared infrastructure underlying both browser and non-browser events.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html" title="class in com.google.gwt.event.shared">HandlerManager</A></B></TD>
-<TD>Manager responsible for adding handlers to event sources and firing those
- handlers on passed in events.</TD>
+<TD><B>Deprecated.</B>&nbsp;<I>use <A HREF="../../../../../com/google/gwt/event/shared/SimpleEventBus.html" title="class in com.google.gwt.event.shared"><CODE>SimpleEventBus</CODE></A>.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/ResettableEventBus.html" title="class in com.google.gwt.event.shared">ResettableEventBus</A></B></TD>
+<TD>Wraps an EventBus to hold on to any HandlerRegistrations, so that they can
+ easily all be cleared at once.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD WIDTH="15%"><B><A HREF="../../../../../com/google/gwt/event/shared/SimpleEventBus.html" title="class in com.google.gwt.event.shared">SimpleEventBus</A></B></TD>
+<TD>Basic implementation of <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared"><CODE>EventBus</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -192,14 +200,14 @@ Shared infrastructure underlying both browser and non-browser events. Types
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/event/logical/shared/package-summary.html"><B>PREV PACKAGE</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/http/client/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/event/shared/testing/package-summary.html"><B>NEXT PACKAGE</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/event/shared/package-summary.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="package-summary.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

@@ -46,13 +46,13 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/NullLogHandler.html" title="class in com.google.gwt.logging.client"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html" title="class in com.google.gwt.logging.client"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../com/google/gwt/logging/client/SystemLogHandler.html" title="class in com.google.gwt.logging.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/logging/client/SimpleRemoteLogHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
@@ -73,7 +73,7 @@ GWT 2.1.0.M3</EM>
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_com.google.gwt.logging.client.RemoteLogHandlerBase">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
@@ -91,25 +91,43 @@ Class SimpleRemoteLogHandler</H2>
 <PRE>
 java.lang.Object
   <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">java.util.logging.Handler
-      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.logging.client.SimpleRemoteLogHandler</B>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html" title="class in com.google.gwt.logging.client">com.google.gwt.logging.client.RemoteLogHandlerBase</A>
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.logging.client.SimpleRemoteLogHandler</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public final class <B>SimpleRemoteLogHandler</B><DT>extends java.util.logging.Handler</DL>
+<DT><PRE>public final class <B>SimpleRemoteLogHandler</B><DT>extends <A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html" title="class in com.google.gwt.logging.client">RemoteLogHandlerBase</A></DL>
 </PRE>
 
 <P>
 A very simple handler which sends messages to the server via GWT RPC to be
- logged. Note that this logger should not be used in production. It does not
- do any intelligent batching of RPC's, nor does it disable when the RPC
- calls fail repeatedly.
+ logged. Note that this logger does not do any intelligent batching of RPC's,
+ nor does it disable when the RPC calls fail repeatedly.
 <P>
 
 <P>
 <HR>
 
 <P>
+<!-- =========== FIELD SUMMARY =========== -->
 
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.google.gwt.logging.client.RemoteLogHandlerBase"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class com.google.gwt.logging.client.<A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html" title="class in com.google.gwt.logging.client">RemoteLogHandlerBase</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html#WIRE_LOGGER_NAME">WIRE_LOGGER_NAME</A>, <A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html#wireLogger">wireLogger</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 
 <A NAME="constructor_summary"><!-- --></A>
@@ -137,26 +155,19 @@ A very simple handler which sends messages to the server via GWT RPC to be
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/SimpleRemoteLogHandler.html#close()">close</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/SimpleRemoteLogHandler.html#flush()">flush</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/SimpleRemoteLogHandler.html#publish(java.util.logging.LogRecord)">publish</A></B>(java.util.logging.LogRecord&nbsp;record)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.logging.client.RemoteLogHandlerBase"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.google.gwt.logging.client.<A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html" title="class in com.google.gwt.logging.client">RemoteLogHandlerBase</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html#close()">close</A>, <A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html#flush()">flush</A>, <A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html#isLoggable(java.util.logging.LogRecord)">isLoggable</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.util.logging.Handler"><!-- --></A>
@@ -165,7 +176,7 @@ A very simple handler which sends messages to the server via GWT RPC to be
 <TH ALIGN="left"><B>Methods inherited from class java.util.logging.Handler</B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>getEncoding, getErrorManager, getFilter, getFormatter, getLevel, isLoggable, reportError, setEncoding, setErrorManager, setFilter, setFormatter, setLevel</CODE></TD>
+<TD><CODE>getEncoding, getErrorManager, getFilter, getFormatter, getLevel, reportError, setEncoding, setErrorManager, setFilter, setFormatter, setLevel</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -207,34 +218,6 @@ public <B>SimpleRemoteLogHandler</B>()</PRE>
 </TR>
 </TABLE>
 
-<A NAME="close()"><!-- --></A><H3>
-close</H3>
-<PRE>
-public void <B>close</B>()</PRE>
-<DL>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE>close</CODE> in class <CODE>java.util.logging.Handler</CODE></DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="flush()"><!-- --></A><H3>
-flush</H3>
-<PRE>
-public void <B>flush</B>()</PRE>
-<DL>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE>flush</CODE> in class <CODE>java.util.logging.Handler</CODE></DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
 <A NAME="publish(java.util.logging.LogRecord)"><!-- --></A><H3>
 publish</H3>
 <PRE>
@@ -271,13 +254,13 @@ public void <B>publish</B>(java.util.logging.LogRecord&nbsp;record)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/NullLogHandler.html" title="class in com.google.gwt.logging.client"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/RemoteLogHandlerBase.html" title="class in com.google.gwt.logging.client"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../com/google/gwt/logging/client/SystemLogHandler.html" title="class in com.google.gwt.logging.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/logging/client/SimpleRemoteLogHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
@@ -298,7 +281,7 @@ GWT 2.1.0.M3</EM>
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#fields_inherited_from_class_com.google.gwt.logging.client.RemoteLogHandlerBase">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>

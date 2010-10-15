@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -105,6 +105,15 @@ java.lang.Object
 
 <P>
 <A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.html" title="class in com.google.gwt.user.client.ui"><CODE>SuggestOracle</CODE></A> response.
+ 
+ <p>Can optionally have truncation information provided. To indicate that
+ there are more results but the number is not known, use:
+ 
+ <p><code>response.setMoreSuggestions(true);</code>
+ 
+ <p>Or to indicate more results with an exact number, use:
+ 
+ <p><code>response.setMoreSuggestionsCount(102);</code>
 <P>
 
 <P>
@@ -144,11 +153,47 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Response.html#getMoreSuggestionsCount()">getMoreSuggestionsCount</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets how many more suggestions there are.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.util.Collection&lt;? extends <A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Suggestion.html" title="interface in com.google.gwt.user.client.ui">SuggestOracle.Suggestion</A>&gt;</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Response.html#getSuggestions()">getSuggestions</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the collection of suggestions.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Response.html#hasMoreSuggestions()">hasMoreSuggestions</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets whether or not the suggestion list was truncated due to the
+ .</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Response.html#setMoreSuggestions(boolean)">setMoreSuggestions</A></B>(boolean&nbsp;moreSuggestions)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets whether or not the suggestion list was truncated due to the
+ .</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Response.html#setMoreSuggestionsCount(int)">setMoreSuggestionsCount</A></B>(int&nbsp;count)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets whether or not the suggestion list was truncated due to the
+ , by providing an exact count of remaining 
+ suggestions.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -213,6 +258,24 @@ public <B>SuggestOracle.Response</B>(java.util.Collection&lt;? extends <A HREF="
 </TR>
 </TABLE>
 
+<A NAME="getMoreSuggestionsCount()"><!-- --></A><H3>
+getMoreSuggestionsCount</H3>
+<PRE>
+public int <B>getMoreSuggestionsCount</B>()</PRE>
+<DL>
+<DD>Gets how many more suggestions there are.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the count. if there no more suggestions or the number of more
+         suggestions is unknown, returns 0.</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getSuggestions()"><!-- --></A><H3>
 getSuggestions</H3>
 <PRE>
@@ -227,6 +290,60 @@ public java.util.Collection&lt;? extends <A HREF="../../../../../../com/google/g
 <DD><DL>
 
 <DT><B>Returns:</B><DD>the collection of suggestions</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hasMoreSuggestions()"><!-- --></A><H3>
+hasMoreSuggestions</H3>
+<PRE>
+public boolean <B>hasMoreSuggestions</B>()</PRE>
+<DL>
+<DD>Gets whether or not the suggestion list was truncated due to the
+ .
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMoreSuggestions(boolean)"><!-- --></A><H3>
+setMoreSuggestions</H3>
+<PRE>
+public void <B>setMoreSuggestions</B>(boolean&nbsp;moreSuggestions)</PRE>
+<DL>
+<DD>Sets whether or not the suggestion list was truncated due to the
+ .
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMoreSuggestionsCount(int)"><!-- --></A><H3>
+setMoreSuggestionsCount</H3>
+<PRE>
+public void <B>setMoreSuggestionsCount</B>(int&nbsp;count)</PRE>
+<DL>
+<DD>Sets whether or not the suggestion list was truncated due to the
+ , by providing an exact count of remaining 
+ suggestions.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>count</CODE> - number of truncated suggestions. Pass 0 to indicate there
+        are no other suggestions, which is equivlent to 
+        <CODE>#setMoreSuggestions(false)</CODE>.</DL>
 </DD>
 </DL>
 <HR>
@@ -270,7 +387,7 @@ public void <B>setSuggestions</B>(java.util.Collection&lt;? extends <A HREF="../
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -105,10 +105,6 @@ java.lang.Object
 
 <P>
 A simple selection model that allows multiple objects to be selected.
-
- <p>
- Note: This class is new and its interface subject to change.
- </p>
 <P>
 
 <P>
@@ -147,7 +143,13 @@ A simple selection model that allows multiple objects to be selected.
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html#MultiSelectionModel()">MultiSelectionModel</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a MultiSelectionModel without a key provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html#MultiSelectionModel(com.google.gwt.view.client.ProvidesKey)">MultiSelectionModel</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html" title="type parameter in MultiSelectionModel">T</A>&gt;&nbsp;keyProvider)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a MultiSelectionModel with the given key provider.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -165,7 +167,7 @@ A simple selection model that allows multiple objects to be selected.
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html#fireSelectionChangeEvent()">fireSelectionChangeEvent</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fire a <A HREF="../../../../../com/google/gwt/view/client/SelectionChangeEvent.html" title="class in com.google.gwt.view.client"><CODE>SelectionChangeEvent</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -201,7 +203,7 @@ A simple selection model that allows multiple objects to be selected.
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.view.client.<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="class in com.google.gwt.view.client">SelectionModel.AbstractSelectionModel</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#addSelectionChangeHandler(com.google.gwt.view.client.SelectionChangeEvent.Handler)">addSelectionChangeHandler</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKey(T)">getKey</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKeyProvider()">getKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventCancelled()">isEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventScheduled()">isEventScheduled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#scheduleSelectionChangeEvent()">scheduleSelectionChangeEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventCancelled(boolean)">setEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventScheduled(boolean)">setEventScheduled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setKeyProvider(com.google.gwt.view.client.ProvidesKey)">setKeyProvider</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#addSelectionChangeHandler(com.google.gwt.view.client.SelectionChangeEvent.Handler)">addSelectionChangeHandler</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKey(T)">getKey</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKeyProvider()">getKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventCancelled()">isEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventScheduled()">isEventScheduled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#scheduleSelectionChangeEvent()">scheduleSelectionChangeEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventCancelled(boolean)">setEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventScheduled(boolean)">setEventScheduled</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -231,6 +233,21 @@ MultiSelectionModel</H3>
 <PRE>
 public <B>MultiSelectionModel</B>()</PRE>
 <DL>
+<DD>Constructs a MultiSelectionModel without a key provider.
+<P>
+</DL>
+<HR>
+
+<A NAME="MultiSelectionModel(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
+MultiSelectionModel</H3>
+<PRE>
+public <B>MultiSelectionModel</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html" title="type parameter in MultiSelectionModel">T</A>&gt;&nbsp;keyProvider)</PRE>
+<DL>
+<DD>Constructs a MultiSelectionModel with the given key provider.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>keyProvider</CODE> - an instance of ProvidesKey<T>, or null if the record
+        object should act as its own key</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -296,6 +313,9 @@ fireSelectionChangeEvent</H3>
 <PRE>
 protected void <B>fireSelectionChangeEvent</B>()</PRE>
 <DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireSelectionChangeEvent()">SelectionModel.AbstractSelectionModel</A></CODE></B></DD>
+<DD>Fire a <A HREF="../../../../../com/google/gwt/view/client/SelectionChangeEvent.html" title="class in com.google.gwt.view.client"><CODE>SelectionChangeEvent</CODE></A>.  Multiple firings may be coalesced.
+<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireSelectionChangeEvent()">fireSelectionChangeEvent</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="class in com.google.gwt.view.client">SelectionModel.AbstractSelectionModel</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html" title="type parameter in MultiSelectionModel">T</A>&gt;</CODE></DL>
 </DD>
@@ -327,7 +347,7 @@ protected void <B>fireSelectionChangeEvent</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

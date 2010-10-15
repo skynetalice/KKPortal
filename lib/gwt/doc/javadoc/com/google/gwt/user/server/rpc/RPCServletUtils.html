@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -164,6 +164,23 @@ Utility class containing helper methods used by servlets that integrate with
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the content of an <CODE>HttpServletRequest</CODE>, after verifying a
  <code>gwt/x-gwt-rpc; charset=utf-8</code> content type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/server/rpc/RPCServletUtils.html#readContentAsUtf8(javax.servlet.http.HttpServletRequest)">readContentAsUtf8</A></B>(javax.servlet.http.HttpServletRequest&nbsp;request)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <CODE>readContent</CODE> instead.</I></TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/server/rpc/RPCServletUtils.html#readContentAsUtf8(javax.servlet.http.HttpServletRequest, boolean)">readContentAsUtf8</A></B>(javax.servlet.http.HttpServletRequest&nbsp;request,
+                  boolean&nbsp;checkHeaders)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <CODE>readContent</CODE> instead.</I></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -336,6 +353,64 @@ public static java.lang.String <B>readContentAsGwtRpc</B>(javax.servlet.http.Htt
 </DL>
 <HR>
 
+<A NAME="readContentAsUtf8(javax.servlet.http.HttpServletRequest)"><!-- --></A><H3>
+readContentAsUtf8</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>public static java.lang.String <B>readContentAsUtf8</B>(javax.servlet.http.HttpServletRequest&nbsp;request)
+                                          throws java.io.IOException,
+                                                 javax.servlet.ServletException</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use <CODE>readContent</CODE> instead.</I>
+<P>
+<DD>Returns the content of an <CODE>HttpServletRequest</CODE> by decoding it using
+ the UTF-8 charset.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - the servlet request whose content we want to read
+<DT><B>Returns:</B><DD>the content of an <CODE>HttpServletRequest</CODE> by decoding it using
+         the UTF-8 charset
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if the requests input stream cannot be accessed, read
+           from or closed
+<DD><CODE>javax.servlet.ServletException</CODE> - if the content length of the request is not
+           specified of if the request's content type is not
+           'text/x-gwt-rpc' and 'charset=utf-8'</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readContentAsUtf8(javax.servlet.http.HttpServletRequest, boolean)"><!-- --></A><H3>
+readContentAsUtf8</H3>
+<PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>public static java.lang.String <B>readContentAsUtf8</B>(javax.servlet.http.HttpServletRequest&nbsp;request,
+                                                            boolean&nbsp;checkHeaders)
+                                          throws java.io.IOException,
+                                                 javax.servlet.ServletException</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<I>Use <CODE>readContent</CODE> instead.</I>
+<P>
+<DD>Returns the content of an <CODE>HttpServletRequest</CODE> by decoding it using
+ the UTF-8 charset.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>request</CODE> - the servlet request whose content we want to read<DD><CODE>checkHeaders</CODE> - Specify 'true' to check the Content-Type header to see
+          that it matches the expected value 'text/x-gwt-rpc' and the
+          content encoding is UTF-8. Disabling this check may allow some
+          types of cross type security attacks.
+<DT><B>Returns:</B><DD>the content of an <CODE>HttpServletRequest</CODE> by decoding it using
+         the UTF-8 charset
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if the requests input stream cannot be accessed, read
+           from or closed
+<DD><CODE>javax.servlet.ServletException</CODE> - if the content length of the request is not
+           specified of if the request's content type is not
+           'text/x-gwt-rpc' and 'charset=utf-8'</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="setGzipEncodingHeader(javax.servlet.http.HttpServletResponse)"><!-- --></A><H3>
 setGzipEncodingHeader</H3>
 <PRE>
@@ -427,7 +502,7 @@ public static void <B>writeResponseForUnexpectedFailure</B>(javax.servlet.Servle
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

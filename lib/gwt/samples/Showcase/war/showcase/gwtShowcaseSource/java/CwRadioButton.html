@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String[] cwRadioButtonColors();
 
     String cwRadioButtonDescription();
@@ -19,7 +18,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -50,8 +49,8 @@
     for (int i = 0; i &lt; sports.length; i++) {
       String sport = sports[i];
       RadioButton radioButton = new RadioButton("sport", sport);
-      radioButton.ensureDebugId("cwRadioButton-sport-"
-          + sport.replaceAll(" ", ""));
+      radioButton.ensureDebugId(
+          "cwRadioButton-sport-" + sport.replaceAll(" ", ""));
       if (i == 2) {
         radioButton.setValue(true);
       }

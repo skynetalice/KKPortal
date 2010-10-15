@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwBasicButtonClickMessage();
 
     String cwBasicButtonDescription();
@@ -17,7 +16,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -29,8 +28,8 @@
     hPanel.setSpacing(10);
 
     // Add a normal button
-    Button normalButton = new Button(constants.cwBasicButtonNormal(),
-        new ClickHandler() {
+    Button normalButton = new Button(
+        constants.cwBasicButtonNormal(), new ClickHandler() {
           public void onClick(ClickEvent event) {
             Window.alert(constants.cwBasicButtonClickMessage());
           }

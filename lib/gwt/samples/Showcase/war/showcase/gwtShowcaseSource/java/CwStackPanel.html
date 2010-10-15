@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String[] cwStackPanelContacts();
 
     String[] cwStackPanelContactsEmails();
@@ -24,7 +23,7 @@
 
   /**
    * Specifies the images that will be bundled for this example.
-   * 
+   *
    * We will override the leaf image used in the tree. Instead of using a blank
    * 16x16 image, we will use a blank 1x1 image so it does not take up any
    * space. Each TreeItem will use its own custom image.
@@ -58,7 +57,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -73,8 +72,8 @@
     stackPanel.setWidth("200px");
 
     // Add the Mail folders
-    String mailHeader = getHeaderString(constants.cwStackPanelMailHeader(),
-        images.mailgroup());
+    String mailHeader = getHeaderString(
+        constants.cwStackPanelMailHeader(), images.mailgroup());
     stackPanel.add(createMailItem(images), mailHeader, true);
 
     // Add a list of filters
@@ -94,7 +93,7 @@
 
   /**
    * Create the list of Contacts.
-   * 
+   *
    * @param images the {@link Images} used in the Contacts
    * @return the list of contacts
    */
@@ -116,8 +115,7 @@
     for (int i = 0; i &lt; contactNames.length; i++) {
       final String contactName = contactNames[i];
       final String contactEmail = contactEmails[i];
-      final HTML contactLink = new HTML("&lt;a href=\"javascript:undefined;\"&gt;"
-          + contactName + "&lt;/a&gt;");
+      final Anchor contactLink = new Anchor(contactName);
       contactsPanel.add(contactLink);
 
       // Open the contact info popup when the user clicks a contact
@@ -139,7 +137,7 @@
 
   /**
    * Create the list of filters for the Filters item.
-   * 
+   *
    * @return the list of filters
    */
   private VerticalPanel createFiltersItem() {
@@ -153,7 +151,7 @@
 
   /**
    * Create the {@link Tree} of Mail options.
-   * 
+   *
    * @param images the {@link Images} used in the Mail options
    * @return the {@link Tree} of mail options
    */
@@ -173,7 +171,7 @@
   /**
    * Get a string representation of the header that includes an image and some
    * text.
-   * 
+   *
    * @param text the header text
    * @param image the {@link ImageResource} to add next to the header
    * @return the header as a string

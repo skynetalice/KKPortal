@@ -46,13 +46,13 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="class in com.google.gwt.user.cellview.client"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.html" title="enum in com.google.gwt.user.cellview.client"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="class in com.google.gwt.user.cellview.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../../index.html?com/google/gwt/user/cellview/client/Header.html" target="_top"><B>FRAMES</B></A>  &nbsp;
@@ -93,9 +93,9 @@ java.lang.Object
   <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.cellview.client.Header&lt;H&gt;</B>
 </PRE>
 <DL>
-<DT><DT><B>Type Parameters:</B><DD><CODE>H</CODE> - the {#link Cell} type</DL>
+<DT><DT><B>Type Parameters:</B><DD><CODE>H</CODE> - the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> type</DL>
 <DL>
-<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/cellview/client/TextHeader.html" title="class in com.google.gwt.user.cellview.client">TextHeader</A></DD>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/cellview/client/SafeHtmlHeader.html" title="class in com.google.gwt.user.cellview.client">SafeHtmlHeader</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/TextHeader.html" title="class in com.google.gwt.user.cellview.client">TextHeader</A></DD>
 </DL>
 <HR>
 <DL>
@@ -123,7 +123,7 @@ A table column header or footer.
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html#Header(com.google.gwt.cell.client.Cell)">Header</A></B>(<A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="type parameter in Header">H</A>&gt;&nbsp;cell)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a Header with a given <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -141,7 +141,7 @@ A table column header or footer.
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html#getCell()">getCell</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> responsible for rendering items in the header.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -157,7 +157,7 @@ A table column header or footer.
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html#getValue()">getValue</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the header value.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -166,15 +166,15 @@ A table column header or footer.
                <A HREF="../../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handle a browser event that took place within the header.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html#render(java.lang.StringBuilder)">render</A></B>(java.lang.StringBuilder&nbsp;sb)</CODE>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html#render(com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render the header.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -182,7 +182,7 @@ A table column header or footer.
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html#setUpdater(com.google.gwt.cell.client.ValueUpdater)">setUpdater</A></B>(<A HREF="../../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="type parameter in Header">H</A>&gt;&nbsp;updater)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the <A HREF="../../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -212,6 +212,8 @@ Header</H3>
 <PRE>
 public <B>Header</B>(<A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="type parameter in Header">H</A>&gt;&nbsp;cell)</PRE>
 <DL>
+<DD>Construct a Header with a given <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.
+<P>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -229,6 +231,8 @@ getCell</H3>
 <PRE>
 public <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="type parameter in Header">H</A>&gt; <B>getCell</B>()</PRE>
 <DL>
+<DD>Return the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> responsible for rendering items in the header.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -240,6 +244,8 @@ getValue</H3>
 <PRE>
 public abstract <A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="type parameter in Header">H</A> <B>getValue</B>()</PRE>
 <DL>
+<DD>Return the header value.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -252,19 +258,23 @@ onBrowserEvent</H3>
 public void <B>onBrowserEvent</B>(<A HREF="../../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;elem,
                            <A HREF="../../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event)</PRE>
 <DL>
+<DD>Handle a browser event that took place within the header.
+<P>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>elem</CODE> - the parent Element<DD><CODE>event</CODE> - the native browser event</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="render(java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
-public void <B>render</B>(java.lang.StringBuilder&nbsp;sb)</PRE>
+public void <B>render</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
+<DD>Render the header.
+<P>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>sb</CODE> - a <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to render into</DL>
 </DD>
 </DL>
 <HR>
@@ -274,6 +284,8 @@ setUpdater</H3>
 <PRE>
 public void <B>setUpdater</B>(<A HREF="../../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="type parameter in Header">H</A>&gt;&nbsp;updater)</PRE>
 <DL>
+<DD>Set the <A HREF="../../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A>.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -317,13 +329,13 @@ protected java.lang.Object <B>getKey</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="class in com.google.gwt.user.cellview.client"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/HasKeyboardSelectionPolicy.KeyboardSelectionPolicy.html" title="enum in com.google.gwt.user.cellview.client"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="class in com.google.gwt.user.cellview.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../../index.html?com/google/gwt/user/cellview/client/Header.html" target="_top"><B>FRAMES</B></A>  &nbsp;

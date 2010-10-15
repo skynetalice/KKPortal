@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -119,21 +119,35 @@ Generated class containing all the CurrencyImpl instances.  This is just
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#dataMap">dataMap</A></B></CODE>
+<CODE>protected &nbsp;java.util.HashMap&lt;java.lang.String,<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#dataMapJava">dataMapJava</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JS Object which contains a map of currency codes to CurrencyDataImpl
- objects.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map of currency codes to CurrencyData.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#namesMap">namesMap</A></B></CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#dataMapNative">dataMapNative</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JS Object which contains a map of currency codes to localized currency
- names.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JS map of currency codes to CurrencyData objects.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.util.HashMap&lt;java.lang.String,java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#namesMapJava">namesMapJava</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Map of currency codes to localized currency names.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#namesMapNative">namesMapNative</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JS map of currency codes to localized currency names.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -163,22 +177,6 @@ Generated class containing all the CurrencyImpl instances.  This is just
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#ensureCurrencyMap()">ensureCurrencyMap</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the map of currency data has been initialized.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#ensureNamesMap()">ensureNamesMap</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the map of currency data has been initialized.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html" title="class in com.google.gwt.i18n.client">CurrencyList</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#get()">get</A></B>()</CODE>
 
@@ -196,26 +194,18 @@ Generated class containing all the CurrencyImpl instances.  This is just
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#getEntry(java.lang.String)">getEntry</A></B>(java.lang.String&nbsp;code)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#getDefaultJava()">getDefaultJava</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Directly reference an entry in the currency map JSO.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the default currency data for this locale.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#getNamesEntry(java.lang.String)">getNamesEntry</A></B>(java.lang.String&nbsp;code)</CODE>
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#getDefaultNative()">getDefaultNative</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Directly reference an entry in the currency names map JSO.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected static&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#isDeprecated(com.google.gwt.i18n.client.CurrencyData)">isDeprecated</A></B>(<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A>&nbsp;currencyData)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the default currency data for this locale.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -236,16 +226,32 @@ Generated class containing all the CurrencyImpl instances.  This is just
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#loadCurrencyMap()">loadCurrencyMap</A></B>()</CODE>
+<CODE>protected &nbsp;java.util.HashMap&lt;java.lang.String,<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#loadCurrencyMapJava()">loadCurrencyMapJava</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads the currency map.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#loadCurrencyMapNative()">loadCurrencyMapNative</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads the currency map from a JS object literal.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#loadNamesMap()">loadNamesMap</A></B>()</CODE>
+<CODE>protected &nbsp;java.util.HashMap&lt;java.lang.String,java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#loadNamesMapJava()">loadNamesMapJava</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads the currency names map.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#loadNamesMapNative()">loadNamesMapNative</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loads the currency names map from a JS object literal.</TD>
@@ -268,20 +274,12 @@ Generated class containing all the CurrencyImpl instances.  This is just
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#overrideCurrencyMap(com.google.gwt.core.client.JavaScriptObject)">overrideCurrencyMap</A></B>(<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;override)</CODE>
+<CODE>protected static&nbsp;<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#overrideMap(com.google.gwt.core.client.JavaScriptObject, com.google.gwt.core.client.JavaScriptObject)">overrideMap</A></B>(<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;original,
+            <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;override)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add all entries in <code>override</code> to the currency data map, replacing
- any existing entries.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#overrideNamesMap(com.google.gwt.core.client.JavaScriptObject)">overrideNamesMap</A></B>(<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;override)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add all entries in <code>override</code> to the currency name map, replacing
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add all entries in <code>override</code> to the original map, replacing
  any existing entries.</TD>
 </TR>
 </TABLE>
@@ -307,28 +305,54 @@ Generated class containing all the CurrencyImpl instances.  This is just
 </TR>
 </TABLE>
 
-<A NAME="dataMap"><!-- --></A><H3>
-dataMap</H3>
+<A NAME="dataMapJava"><!-- --></A><H3>
+dataMapJava</H3>
 <PRE>
-protected <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>dataMap</B></PRE>
+protected java.util.HashMap&lt;java.lang.String,<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A>&gt; <B>dataMapJava</B></PRE>
 <DL>
-<DD>JS Object which contains a map of currency codes to CurrencyDataImpl
- objects.  Each currency code is assumed to be a valid JS object key.
+<DD>Map of currency codes to CurrencyData.
 <P>
 <DL>
 </DL>
 </DL>
 <HR>
 
-<A NAME="namesMap"><!-- --></A><H3>
-namesMap</H3>
+<A NAME="dataMapNative"><!-- --></A><H3>
+dataMapNative</H3>
 <PRE>
-protected <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>namesMap</B></PRE>
+protected <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>dataMapNative</B></PRE>
 <DL>
-<DD>JS Object which contains a map of currency codes to localized currency
- names. This is kept separate from <A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#dataMap"><CODE>dataMap</CODE></A> above so that the names
- can be completely removed by the compiler if they are not used. Each
- currency code is assumed to be a valid JS object key.
+<DD>JS map of currency codes to CurrencyData objects. Each currency code is
+ assumed to be a valid JS object key.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="namesMapJava"><!-- --></A><H3>
+namesMapJava</H3>
+<PRE>
+protected java.util.HashMap&lt;java.lang.String,java.lang.String&gt; <B>namesMapJava</B></PRE>
+<DL>
+<DD>Map of currency codes to localized currency names. This is kept separate
+ from <CODE>#dataMap</CODE> above so that the names can be completely removed by
+ the compiler if they are not used.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="namesMapNative"><!-- --></A><H3>
+namesMapNative</H3>
+<PRE>
+protected <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>namesMapNative</B></PRE>
+<DL>
+<DD>JS map of currency codes to localized currency names. This is kept separate
+ from <A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.html#dataMapNative"><CODE>dataMapNative</CODE></A> above so that the names can be completely
+ removed by the compiler if they are not used. Each currency code is assumed
+ to be a valid JS object key.
 <P>
 <DL>
 </DL>
@@ -377,11 +401,16 @@ public static <A HREF="../../../../../com/google/gwt/i18n/client/CurrencyList.ht
 </DL>
 <HR>
 
-<A NAME="isDeprecated(com.google.gwt.i18n.client.CurrencyData)"><!-- --></A><H3>
-isDeprecated</H3>
+<A NAME="overrideMap(com.google.gwt.core.client.JavaScriptObject, com.google.gwt.core.client.JavaScriptObject)"><!-- --></A><H3>
+overrideMap</H3>
 <PRE>
-protected static boolean <B>isDeprecated</B>(<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A>&nbsp;currencyData)</PRE>
+protected static final <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>overrideMap</B>(<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;original,
+                                                    <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;override)</PRE>
 <DL>
+<DD>Add all entries in <code>override</code> to the original map, replacing
+ any existing entries.  This is used by subclasses that need to slightly
+ alter the data used by the parent locale.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -478,12 +507,14 @@ public final java.lang.String <B>lookupName</B>(java.lang.String&nbsp;currencyCo
 </DL>
 <HR>
 
-<A NAME="ensureCurrencyMap()"><!-- --></A><H3>
-ensureCurrencyMap</H3>
+<A NAME="getDefaultJava()"><!-- --></A><H3>
+getDefaultJava</H3>
 <PRE>
-protected final void <B>ensureCurrencyMap</B>()</PRE>
+protected <A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A> <B>getDefaultJava</B>()</PRE>
 <DL>
-<DD>Ensure that the map of currency data has been initialized.
+<DD>Return the default currency data for this locale.
+ 
+ Generated implementations override this method.
 <P>
 <DD><DL>
 </DL>
@@ -494,12 +525,14 @@ protected final void <B>ensureCurrencyMap</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="ensureNamesMap()"><!-- --></A><H3>
-ensureNamesMap</H3>
+<A NAME="getDefaultNative()"><!-- --></A><H3>
+getDefaultNative</H3>
 <PRE>
-protected final void <B>ensureNamesMap</B>()</PRE>
+protected <A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A> <B>getDefaultNative</B>()</PRE>
 <DL>
-<DD>Ensure that the map of currency data has been initialized.
+<DD>Return the default currency data for this locale.
+ 
+ Generated implementations override this method.
 <P>
 <DD><DL>
 </DL>
@@ -510,44 +543,28 @@ protected final void <B>ensureNamesMap</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="getEntry(java.lang.String)"><!-- --></A><H3>
-getEntry</H3>
+<A NAME="loadCurrencyMapJava()"><!-- --></A><H3>
+loadCurrencyMapJava</H3>
 <PRE>
-protected final <A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A> <B>getEntry</B>(java.lang.String&nbsp;code)</PRE>
+protected java.util.HashMap&lt;java.lang.String,<A HREF="../../../../../com/google/gwt/i18n/client/CurrencyData.html" title="interface in com.google.gwt.i18n.client">CurrencyData</A>&gt; <B>loadCurrencyMapJava</B>()</PRE>
 <DL>
-<DD>Directly reference an entry in the currency map JSO.
+<DD>Loads the currency map.
+ 
+ Generated implementations override this method.
 <P>
 <DD><DL>
 </DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>code</CODE> - ISO4217 currency code
-<DT><B>Returns:</B><DD>currency data</DL>
+</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="getNamesEntry(java.lang.String)"><!-- --></A><H3>
-getNamesEntry</H3>
+<A NAME="loadCurrencyMapNative()"><!-- --></A><H3>
+loadCurrencyMapNative</H3>
 <PRE>
-protected final java.lang.String <B>getNamesEntry</B>(java.lang.String&nbsp;code)</PRE>
-<DL>
-<DD>Directly reference an entry in the currency names map JSO.
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>code</CODE> - ISO4217 currency code
-<DT><B>Returns:</B><DD>currency name, or the currency code if not known</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="loadCurrencyMap()"><!-- --></A><H3>
-loadCurrencyMap</H3>
-<PRE>
-protected void <B>loadCurrencyMap</B>()</PRE>
+protected <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>loadCurrencyMapNative</B>()</PRE>
 <DL>
 <DD>Loads the currency map from a JS object literal.
  
@@ -562,12 +579,12 @@ protected void <B>loadCurrencyMap</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="loadNamesMap()"><!-- --></A><H3>
-loadNamesMap</H3>
+<A NAME="loadNamesMapJava()"><!-- --></A><H3>
+loadNamesMapJava</H3>
 <PRE>
-protected void <B>loadNamesMap</B>()</PRE>
+protected java.util.HashMap&lt;java.lang.String,java.lang.String&gt; <B>loadNamesMapJava</B>()</PRE>
 <DL>
-<DD>Loads the currency names map from a JS object literal.
+<DD>Loads the currency names map.
  
  Generated implementations override this method.
 <P>
@@ -580,38 +597,20 @@ protected void <B>loadNamesMap</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="overrideCurrencyMap(com.google.gwt.core.client.JavaScriptObject)"><!-- --></A><H3>
-overrideCurrencyMap</H3>
+<A NAME="loadNamesMapNative()"><!-- --></A><H3>
+loadNamesMapNative</H3>
 <PRE>
-protected final void <B>overrideCurrencyMap</B>(<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;override)</PRE>
+protected <A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A> <B>loadNamesMapNative</B>()</PRE>
 <DL>
-<DD>Add all entries in <code>override</code> to the currency data map, replacing
- any existing entries.  This is used by subclasses that need to slightly
- alter the data used by the parent locale.
+<DD>Loads the currency names map from a JS object literal.
+ 
+ Generated implementations override this method.
 <P>
 <DD><DL>
 </DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>override</CODE> - JS object with currency code -> CurrencyData pairs</DL>
-</DD>
 </DL>
-<HR>
-
-<A NAME="overrideNamesMap(com.google.gwt.core.client.JavaScriptObject)"><!-- --></A><H3>
-overrideNamesMap</H3>
-<PRE>
-protected final void <B>overrideNamesMap</B>(<A HREF="../../../../../com/google/gwt/core/client/JavaScriptObject.html" title="class in com.google.gwt.core.client">JavaScriptObject</A>&nbsp;override)</PRE>
-<DL>
-<DD>Add all entries in <code>override</code> to the currency name map, replacing
- any existing entries.  This is used by subclasses that need to slightly
- alter the data used by the parent locale.
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>override</CODE> - JS object with currency code -> name pairs</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -638,7 +637,7 @@ protected final void <B>overrideNamesMap</B>(<A HREF="../../../../../com/google/
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

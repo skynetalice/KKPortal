@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -107,10 +107,6 @@ java.lang.Object
 A selection model that does not allow selection, but fires selection change
  events. Use this model if you want to know when a user selects an item, but
  do not want the view to update based on the selection.
- 
- <p>
- Note: This class is new and its interface subject to change.
- </p>
 <P>
 
 <P>
@@ -149,7 +145,13 @@ A selection model that does not allow selection, but fires selection change
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/NoSelectionModel.html#NoSelectionModel()">NoSelectionModel</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a NoSelectionModel without a key provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/NoSelectionModel.html#NoSelectionModel(com.google.gwt.view.client.ProvidesKey)">NoSelectionModel</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/NoSelectionModel.html" title="type parameter in NoSelectionModel">T</A>&gt;&nbsp;keyProvider)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a NoSelectionModel with the given key provider.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -195,7 +197,7 @@ A selection model that does not allow selection, but fires selection change
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.view.client.<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="class in com.google.gwt.view.client">SelectionModel.AbstractSelectionModel</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#addSelectionChangeHandler(com.google.gwt.view.client.SelectionChangeEvent.Handler)">addSelectionChangeHandler</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireSelectionChangeEvent()">fireSelectionChangeEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKey(T)">getKey</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKeyProvider()">getKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventCancelled()">isEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventScheduled()">isEventScheduled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#scheduleSelectionChangeEvent()">scheduleSelectionChangeEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventCancelled(boolean)">setEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventScheduled(boolean)">setEventScheduled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setKeyProvider(com.google.gwt.view.client.ProvidesKey)">setKeyProvider</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#addSelectionChangeHandler(com.google.gwt.view.client.SelectionChangeEvent.Handler)">addSelectionChangeHandler</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireSelectionChangeEvent()">fireSelectionChangeEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKey(T)">getKey</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#getKeyProvider()">getKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventCancelled()">isEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventScheduled()">isEventScheduled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#scheduleSelectionChangeEvent()">scheduleSelectionChangeEvent</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventCancelled(boolean)">setEventCancelled</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventScheduled(boolean)">setEventScheduled</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -225,6 +227,21 @@ NoSelectionModel</H3>
 <PRE>
 public <B>NoSelectionModel</B>()</PRE>
 <DL>
+<DD>Constructs a NoSelectionModel without a key provider.
+<P>
+</DL>
+<HR>
+
+<A NAME="NoSelectionModel(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
+NoSelectionModel</H3>
+<PRE>
+public <B>NoSelectionModel</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/NoSelectionModel.html" title="type parameter in NoSelectionModel">T</A>&gt;&nbsp;keyProvider)</PRE>
+<DL>
+<DD>Constructs a NoSelectionModel with the given key provider.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>keyProvider</CODE> - an instance of ProvidesKey<T>, or null if the record
+        object should act as its own key</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -307,7 +324,7 @@ public void <B>setSelected</B>(<A HREF="../../../../../com/google/gwt/view/clien
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

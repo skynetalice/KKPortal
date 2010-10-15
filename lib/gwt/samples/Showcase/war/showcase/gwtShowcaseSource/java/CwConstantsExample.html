@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwConstantsExampleDescription();
 
     String cwConstantsExampleLinkText();
@@ -13,7 +12,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -29,11 +28,11 @@
     layout.setCellSpacing(5);
 
     // Add a link to the source code of the Interface
-    HTML link = new HTML(
-        " &lt;a href=\"javascript:void(0);\"&gt;ExampleConstants&lt;/a&gt;");
+    final String rawFile = getSimpleName(ExampleConstants.class);
+    Anchor link = new Anchor(rawFile);
     link.addClickHandler(new ClickHandler() {
       public void onClick(ClickEvent event) {
-        selectTab(2);
+        fireRawSourceRequest(rawFile + ".java");
       }
     });
     HorizontalPanel linkPanel = new HorizontalPanel();

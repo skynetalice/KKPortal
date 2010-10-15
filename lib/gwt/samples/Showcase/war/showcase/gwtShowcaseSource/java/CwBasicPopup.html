@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwBasicPopupClickOutsideInstructions();
 
     String cwBasicPopupDescription();
@@ -17,7 +16,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -28,12 +27,12 @@
     final DecoratedPopupPanel simplePopup = new DecoratedPopupPanel(true);
     simplePopup.ensureDebugId("cwBasicPopup-simplePopup");
     simplePopup.setWidth("150px");
-    simplePopup.setWidget(new HTML(
-        constants.cwBasicPopupClickOutsideInstructions()));
+    simplePopup.setWidget(
+        new HTML(constants.cwBasicPopupClickOutsideInstructions()));
 
     // Create a button to show the popup
-    Button openButton = new Button(constants.cwBasicPopupShowButton(),
-        new ClickHandler() {
+    Button openButton = new Button(
+        constants.cwBasicPopupShowButton(), new ClickHandler() {
           public void onClick(ClickEvent event) {
             // Reposition the popup relative to the button
             Widget source = (Widget) event.getSource();

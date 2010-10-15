@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -116,14 +116,6 @@ Utility methods for dealing with locales.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/rebind/LocaleUtils.html#clear()">clear</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear any static state associated with LocaleUtils.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.util.Set&lt;<A HREF="../../../../../com/google/gwt/i18n/shared/GwtLocale.html" title="interface in com.google.gwt.i18n.shared">GwtLocale</A>&gt;</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/rebind/LocaleUtils.html#getAllCompileLocales()">getAllCompileLocales</A></B>()</CODE>
 
@@ -150,8 +142,9 @@ Utility methods for dealing with locales.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;<A HREF="../../../../../com/google/gwt/i18n/rebind/LocaleUtils.html" title="class in com.google.gwt.i18n.rebind">LocaleUtils</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/rebind/LocaleUtils.html#getInstance(com.google.gwt.core.ext.TreeLogger, com.google.gwt.core.ext.PropertyOracle)">getInstance</A></B>(<A HREF="../../../../../com/google/gwt/core/ext/TreeLogger.html" title="class in com.google.gwt.core.ext">TreeLogger</A>&nbsp;logger,
-            <A HREF="../../../../../com/google/gwt/core/ext/PropertyOracle.html" title="interface in com.google.gwt.core.ext">PropertyOracle</A>&nbsp;propertyOracle)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/i18n/rebind/LocaleUtils.html#getInstance(com.google.gwt.core.ext.TreeLogger, com.google.gwt.core.ext.PropertyOracle, com.google.gwt.core.ext.GeneratorContext)">getInstance</A></B>(<A HREF="../../../../../com/google/gwt/core/ext/TreeLogger.html" title="class in com.google.gwt.core.ext">TreeLogger</A>&nbsp;logger,
+            <A HREF="../../../../../com/google/gwt/core/ext/PropertyOracle.html" title="interface in com.google.gwt.core.ext">PropertyOracle</A>&nbsp;propertyOracle,
+            <A HREF="../../../../../com/google/gwt/core/ext/GeneratorContext.html" title="interface in com.google.gwt.core.ext">GeneratorContext</A>&nbsp;context)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new LocaleUtils instance for the given PropertyOracle.</TD>
@@ -196,24 +189,12 @@ Utility methods for dealing with locales.
 </TR>
 </TABLE>
 
-<A NAME="clear()"><!-- --></A><H3>
-clear</H3>
-<PRE>
-public static void <B>clear</B>()</PRE>
-<DL>
-<DD>Clear any static state associated with LocaleUtils.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getInstance(com.google.gwt.core.ext.TreeLogger, com.google.gwt.core.ext.PropertyOracle)"><!-- --></A><H3>
+<A NAME="getInstance(com.google.gwt.core.ext.TreeLogger, com.google.gwt.core.ext.PropertyOracle, com.google.gwt.core.ext.GeneratorContext)"><!-- --></A><H3>
 getInstance</H3>
 <PRE>
 public static <A HREF="../../../../../com/google/gwt/i18n/rebind/LocaleUtils.html" title="class in com.google.gwt.i18n.rebind">LocaleUtils</A> <B>getInstance</B>(<A HREF="../../../../../com/google/gwt/core/ext/TreeLogger.html" title="class in com.google.gwt.core.ext">TreeLogger</A>&nbsp;logger,
-                                      <A HREF="../../../../../com/google/gwt/core/ext/PropertyOracle.html" title="interface in com.google.gwt.core.ext">PropertyOracle</A>&nbsp;propertyOracle)</PRE>
+                                      <A HREF="../../../../../com/google/gwt/core/ext/PropertyOracle.html" title="interface in com.google.gwt.core.ext">PropertyOracle</A>&nbsp;propertyOracle,
+                                      <A HREF="../../../../../com/google/gwt/core/ext/GeneratorContext.html" title="interface in com.google.gwt.core.ext">GeneratorContext</A>&nbsp;context)</PRE>
 <DL>
 <DD>Create a new LocaleUtils instance for the given PropertyOracle.  Returned
  instances will be immutable and can be shared across threads.
@@ -317,7 +298,7 @@ public java.util.Set&lt;<A HREF="../../../../../com/google/gwt/i18n/shared/GwtLo
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

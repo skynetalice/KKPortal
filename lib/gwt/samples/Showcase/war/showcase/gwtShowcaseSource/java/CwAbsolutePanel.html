@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwAbsolutePanelClickMe();
 
     String cwAbsolutePanelDescription();
@@ -23,7 +22,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * The input field used to set the left position of a {@link Widget}.
@@ -111,7 +110,7 @@
   /**
    * Create an options panel that allows users to select a widget and reposition
    * it.
-   * 
+   *
    * @return the new options panel
    */
   private Widget createOptionsBar() {

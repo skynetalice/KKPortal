@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -108,7 +108,69 @@ An implementation of <A HREF="../../../../../com/google/gwt/view/client/Abstract
  modified.
 
  <p>
- Note: This class is new and its interface subject to change.
+ <h3>Example</h3>
+ <blockquote><pre>public class AsyncDataProviderExample implements EntryPoint {
+
+  /**
+   * A custom {@link AsyncDataProvider}.
+   */
+  private static class MyDataProvider extends AsyncDataProvider<String> {
+    /**
+     * {@link #onRangeChanged(HasData)} is called when the table requests a new
+     * range of data. You can push data back to the displays using
+     * {@link #updateRowData(int, List)}.
+     */
+    @Override
+    protected void onRangeChanged(HasData<String> display) {
+      // Get the new range.
+      final Range range = display.getVisibleRange();
+
+      /*
+       * Query the data asynchronously. If you are using a database, you can
+       * make an RPC call here. We'll use a Timer to simulate a delay.
+       */
+      new Timer() {
+        @Override
+        public void run() {
+          // We are creating fake data. Normally, the data will come from a
+          // server.
+          int start = range.getStart();
+          int length = range.getLength();
+          List<String> newData = new ArrayList<String>();
+          for (int i = start; i < start + length; i++) {
+            newData.add("Item " + i);
+          }
+
+          // Push the data to the displays. AsyncDataProvider will only update
+          // displays that are within range of the data.
+          updateRowData(start, newData);
+        }
+      }.schedule(3000);
+    }
+  }
+
+  public void onModuleLoad() {
+    // Create a CellList.
+    CellList<String> cellList = new CellList<String>(new TextCell());
+
+    // Create a data provider.
+    MyDataProvider dataProvider = new MyDataProvider();
+
+    // Add the cellList to the dataProvider.
+    dataProvider.addDataDisplay(cellList);
+
+    // Create paging controls.
+    SimplePager pager = new SimplePager();
+    pager.setDisplay(cellList);
+
+    // Add the widgets to the root panel.
+    VerticalPanel vPanel = new VerticalPanel();
+    vPanel.add(pager);
+    vPanel.add(cellList);
+    RootPanel.get().add(vPanel);
+  }
+}
+</pre></blockquote>
  </p>
 <P>
 
@@ -126,10 +188,20 @@ An implementation of <A HREF="../../../../../com/google/gwt/view/client/Abstract
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/AsyncDataProvider.html#AsyncDataProvider()">AsyncDataProvider</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an AsyncDataProvider without a key provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/AsyncDataProvider.html#AsyncDataProvider(com.google.gwt.view.client.ProvidesKey)">AsyncDataProvider</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AsyncDataProvider.html" title="type parameter in AsyncDataProvider">T</A>&gt;&nbsp;keyProvider)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs an AsyncDataProvider with the given key provider.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -166,7 +238,7 @@ An implementation of <A HREF="../../../../../com/google/gwt/view/client/Abstract
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.view.client.<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="class in com.google.gwt.view.client">AbstractDataProvider</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#addDataDisplay(com.google.gwt.view.client.HasData)">addDataDisplay</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getDataDisplays()">getDataDisplays</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getKey(T)">getKey</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getKeyProvider()">getKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getRanges()">getRanges</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#onRangeChanged(com.google.gwt.view.client.HasData)">onRangeChanged</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#removeDataDisplay(com.google.gwt.view.client.HasData)">removeDataDisplay</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#setKeyProvider(com.google.gwt.view.client.ProvidesKey)">setKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#updateRowData(com.google.gwt.view.client.HasData, int, java.util.List)">updateRowData</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#addDataDisplay(com.google.gwt.view.client.HasData)">addDataDisplay</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getDataDisplays()">getDataDisplays</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getKey(T)">getKey</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getKeyProvider()">getKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#getRanges()">getRanges</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#onRangeChanged(com.google.gwt.view.client.HasData)">onRangeChanged</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#removeDataDisplay(com.google.gwt.view.client.HasData)">removeDataDisplay</A>, <A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#updateRowData(com.google.gwt.view.client.HasData, int, java.util.List)">updateRowData</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -194,8 +266,23 @@ An implementation of <A HREF="../../../../../com/google/gwt/view/client/Abstract
 <A NAME="AsyncDataProvider()"><!-- --></A><H3>
 AsyncDataProvider</H3>
 <PRE>
-public <B>AsyncDataProvider</B>()</PRE>
+protected <B>AsyncDataProvider</B>()</PRE>
 <DL>
+<DD>Constructs an AsyncDataProvider without a key provider.
+<P>
+</DL>
+<HR>
+
+<A NAME="AsyncDataProvider(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
+AsyncDataProvider</H3>
+<PRE>
+protected <B>AsyncDataProvider</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AsyncDataProvider.html" title="type parameter in AsyncDataProvider">T</A>&gt;&nbsp;keyProvider)</PRE>
+<DL>
+<DD>Constructs an AsyncDataProvider with the given key provider.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>keyProvider</CODE> - an instance of ProvidesKey<T>, or null if the record
+        object should act as its own key</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -266,7 +353,7 @@ public void <B>updateRowData</B>(int&nbsp;start,
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

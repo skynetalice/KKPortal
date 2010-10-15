@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractInputCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/cell/client/AbstractEditableCell.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="AbstractEditableCell.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -99,7 +99,7 @@ java.lang.Object
 <DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;C&gt;</DD>
 </DL>
 <DL>
-<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../com/google/gwt/cell/client/CheckboxCell.html" title="class in com.google.gwt.cell.client">CheckboxCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html" title="class in com.google.gwt.cell.client">DatePickerCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/EditTextCell.html" title="class in com.google.gwt.cell.client">EditTextCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/SelectionCell.html" title="class in com.google.gwt.cell.client">SelectionCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/TextInputCell.html" title="class in com.google.gwt.cell.client">TextInputCell</A></DD>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../com/google/gwt/cell/client/AbstractInputCell.html" title="class in com.google.gwt.cell.client">AbstractInputCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/CheckboxCell.html" title="class in com.google.gwt.cell.client">CheckboxCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html" title="class in com.google.gwt.cell.client">DatePickerCell</A>, <A HREF="../../../../../com/google/gwt/cell/client/EditTextCell.html" title="class in com.google.gwt.cell.client">EditTextCell</A></DD>
 </DL>
 <HR>
 <DL>
@@ -111,7 +111,185 @@ A default implementation of the <A HREF="../../../../../com/google/gwt/cell/clie
  cells that need to save view data state for specific values.
 
  <p>
- Note: This class is new and its interface subject to change.
+ <h3>Example</h3>
+ <blockquote><pre>public class EditableCellExample implements EntryPoint {
+
+  /**
+   * A simple data type that represents a contact.
+   */
+  private static class Contact {
+    private final String address;
+    private final String name;
+
+    public Contact(String name, String address) {
+      this.name = name;
+      this.address = address;
+    }
+  }
+
+  /**
+   * A custom {@link Cell} used to render a {@link Contact}. We extend
+   * {@link AbstractCell} because it provides reasonable implementations of
+   * methods that work for most use cases.
+   */
+  private class ContactCell extends AbstractCell<Contact> {
+
+    public ContactCell() {
+      // Our cell responds to change events and keydown events.
+      super("change", "keydown");
+    }
+
+    @Override
+    public void onBrowserEvent(Element parent, Contact value, Object key,
+        NativeEvent event, ValueUpdater<Contact> valueUpdater) {
+      // Check that the value is not null.
+      if (value == null) {
+        return;
+      }
+
+      // Call the super handler, which handlers the enter key.
+      super.onBrowserEvent(parent, value, key, event, valueUpdater);
+
+      // Handle click events.
+      if ("change".equals(event.getType())) {
+        updateFavorites(parent, value);
+        showCurrentFavorites();
+      }
+    }
+
+    @Override
+    public void render(Contact value, Object key, SafeHtmlBuilder sb) {
+      /*
+       * Always do a null check on the value. Cell widgets can pass null to
+       * cells if the underlying data contains a null, or if the data arrives
+       * out of order.
+       */
+      if (value == null) {
+        return;
+      }
+
+      // Add a checkbox. If the contact is a favorite, the box will be checked.
+      sb.appendHtmlConstant("<table><tr><td valign=\"top\">");
+      if (favorites.contains(value)) {
+        sb.appendHtmlConstant("<input type=\"checkbox\" checked=checked/>");
+      } else {
+        sb.appendHtmlConstant("<input type=\"checkbox\" />");
+      }
+      sb.appendHtmlConstant("</td><td>");
+
+      // Display the name in big letters.
+      sb.appendHtmlConstant("<div style=\"size:200%;font-weight:bold;\">");
+      sb.appendEscaped(value.name);
+      sb.appendHtmlConstant("</div>");
+
+      // Display the address in normal text.
+      sb.appendHtmlConstant("<div style=\"padding-left:10px;\">");
+      sb.appendEscaped(value.address);
+      sb.appendHtmlConstant("</div>");
+
+      sb.appendHtmlConstant("</td></tr></table>");
+    }
+
+    /**
+     * By convention, cells that respond to user events should handle the enter
+     * key. This provides a consistent user experience when users use keyboard
+     * navigation in the widget. Our cell will toggle the checkbox on Enter.
+     */
+    @Override
+    protected void onEnterKeyDown(Element parent, Contact value, Object key,
+        NativeEvent event, ValueUpdater<Contact> valueUpdater) {
+      // Toggle the checkbox.
+      InputElement input = getInputElement(parent);
+      input.setChecked(!input.isChecked());
+
+      // Update the favorites based on the new state.
+      updateFavorites(parent, value);
+
+      // Show the new list of favorites.
+      showCurrentFavorites();
+    }
+
+    /**
+     * Get the checkbox input element from the parent element that wraps our
+     * cell.
+     * 
+     * @param parent the parent element
+     * @return the checkbox
+     */
+    private InputElement getInputElement(Element parent) {
+      // We need to navigate down to our input element.
+      TableElement table = parent.getFirstChildElement().cast();
+      TableRowElement tr = table.getRows().getItem(0);
+      TableCellElement td = tr.getCells().getItem(0);
+      InputElement input = td.getFirstChildElement().cast();
+      return input;
+    }
+
+    /**
+     * Update the favorites list based on the state of the input element.
+     */
+    private void updateFavorites(Element parent, Contact value) {
+      // Get the input element.
+      InputElement input = getInputElement(parent);
+
+      // Update the favorites based on the checked state.
+      if (input.isChecked()) {
+        favorites.add(value);
+      } else {
+        favorites.remove(value);
+      }
+    }
+  }
+
+  /**
+   * The list of data to display.
+   */
+  private static final List<Contact> CONTACTS = Arrays.asList(new Contact(
+      "John", "123 Fourth Avenue"), new Contact("Joe", "22 Lance Ln"),
+      new Contact("Michael", "1283 Berry Blvd"), new Contact("Sarah",
+          "100 Hundred St."), new Contact("George", "1600 Pennsylvania Avenue"));
+
+  /**
+   * Our list of favorite contacts.
+   */
+  private final List<Contact> favorites = new ArrayList<EditableCellExample.Contact>();
+
+  public void onModuleLoad() {
+    // Create a cell to render each value.
+    ContactCell contactCell = new ContactCell();
+
+    // Use the cell in a CellList.
+    CellList<Contact> cellList = new CellList<Contact>(contactCell);
+
+    // Push the data into the widget.
+    cellList.setRowData(0, CONTACTS);
+
+    // Add it to the root panel.
+    RootPanel.get().add(cellList);
+  }
+
+  /**
+   * Show the list of favorites.
+   */
+  private void showCurrentFavorites() {
+    if (favorites.size() > 0) {
+      String text = "You favorite contacts are ";
+      boolean first = true;
+      for (Contact contact : favorites) {
+        if (!first) {
+          text += ", ";
+        } else {
+          first = false;
+        }
+        text += contact.name;
+      }
+      Window.alert(text);
+    } else {
+      Window.alert("You have not selected any favorites.");
+    }
+  }
+}
+</pre></blockquote>
  </p>
 <P>
 
@@ -170,15 +348,14 @@ A default implementation of the <A HREF="../../../../../com/google/gwt/cell/clie
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>abstract &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
-               <A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&nbsp;value,
-               java.lang.Object&nbsp;key,
-               <A HREF="../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
-               <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&gt;&nbsp;valueUpdater)</CODE>
+<CODE>abstract &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+          <A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&nbsp;value,
+          java.lang.Object&nbsp;key)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handle a browser event that took place within the cell.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if the cell is currently editing the data identified by the
+ given element and key.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -196,7 +373,7 @@ A default implementation of the <A HREF="../../../../../com/google/gwt/cell/clie
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.cell.client.<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -283,28 +460,23 @@ public <A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.h
 </DL>
 <HR>
 
-<A NAME="onBrowserEvent(com.google.gwt.dom.client.Element,java.lang.Object,java.lang.Object,com.google.gwt.dom.client.NativeEvent,com.google.gwt.cell.client.ValueUpdater)"><!-- --></A><A NAME="onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><!-- --></A><H3>
-onBrowserEvent</H3>
+<A NAME="isEditing(com.google.gwt.dom.client.Element,java.lang.Object,java.lang.Object)"><!-- --></A><A NAME="isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)"><!-- --></A><H3>
+isEditing</H3>
 <PRE>
-public abstract void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
-                                    <A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&nbsp;value,
-                                    java.lang.Object&nbsp;key,
-                                    <A HREF="../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
-                                    <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&gt;&nbsp;valueUpdater)</PRE>
+public abstract boolean <B>isEditing</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+                                  <A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&nbsp;value,
+                                  java.lang.Object&nbsp;key)</PRE>
 <DL>
-<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">AbstractCell</A></CODE></B></DD>
-<DD>Handle a browser event that took place within the cell. The default
- implementation returns null.
-
- This method is a no-op in <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A>. If you override this method
- to add support for events, remember to pass the event types that the cell
- expects into the constructor.
+<DD>Returns true if the cell is currently editing the data identified by the
+ given element and key. While a cell is editing, widgets containing the cell
+ may choose to pass keystrokes directly to the cell rather than using them
+ for navigation purposes.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="type parameter in AbstractEditableCell">C</A>&gt;</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>parent</CODE> - the parent Element<DD><CODE>value</CODE> - the value associated with the cell<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>event</CODE> - the native browser event<DD><CODE>valueUpdater</CODE> - a <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A>, or null if not specified</DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - the parent Element<DD><CODE>value</CODE> - the value associated with the cell<DD><CODE>key</CODE> - the unique key associated with the row object</DL>
 </DD>
 </DL>
 <HR>
@@ -346,14 +518,14 @@ public void <B>setViewData</B>(java.lang.Object&nbsp;key,
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/ActionCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/cell/client/AbstractInputCell.html" title="class in com.google.gwt.cell.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/cell/client/AbstractEditableCell.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="AbstractEditableCell.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

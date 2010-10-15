@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -127,11 +127,11 @@ Interface RequestDefinition</H2>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/server/RequestDefinition.html#getDomainMethodName()">getDomainMethodName</A></B>()</CODE>
+<CODE>&nbsp;java.lang.reflect.Method</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/server/RequestDefinition.html#getDomainMethod()">getDomainMethod</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the method to be invoked on the server.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the method to be invoked on the server.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -164,15 +164,6 @@ Interface RequestDefinition</H2>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if the domain method is an instance method.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/server/RequestDefinition.html#isReturnTypeList()">isReturnTypeList</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if the request returns Lists of <A HREF="../../../../../com/google/gwt/requestfactory/server/RequestDefinition.html#getReturnType()"><CODE>getReturnType()</CODE></A>,
- false for single instances.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -210,12 +201,12 @@ java.lang.String <B>getDomainClassName</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="getDomainMethodName()"><!-- --></A><H3>
-getDomainMethodName</H3>
+<A NAME="getDomainMethod()"><!-- --></A><H3>
+getDomainMethod</H3>
 <PRE>
-java.lang.String <B>getDomainMethodName</B>()</PRE>
+java.lang.reflect.Method <B>getDomainMethod</B>()</PRE>
 <DL>
-<DD>Returns the name of the method to be invoked on the server.
+<DD>Returns the method to be invoked on the server.
 <P>
 <DD><DL>
 </DL>
@@ -273,20 +264,6 @@ boolean <B>isInstance</B>()</PRE>
 </DL>
 <HR>
 
-<A NAME="isReturnTypeList()"><!-- --></A><H3>
-isReturnTypeList</H3>
-<PRE>
-boolean <B>isReturnTypeList</B>()</PRE>
-<DL>
-<DD>Returns true if the request returns Lists of <A HREF="../../../../../com/google/gwt/requestfactory/server/RequestDefinition.html#getReturnType()"><CODE>getReturnType()</CODE></A>,
- false for single instances.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
 <A NAME="name()"><!-- --></A><H3>
 name</H3>
 <PRE>
@@ -322,7 +299,7 @@ java.lang.String <B>name</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

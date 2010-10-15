@@ -23,6 +23,7 @@ import com.google.gwt.cell.client.TextCell;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.RunAsyncCallback;
 import com.google.gwt.i18n.client.Constants;
+import com.google.gwt.safehtml.shared.SafeHtmlUtils;
 import com.google.gwt.sample.showcase.client.ContentWidget;
 import com.google.gwt.sample.showcase.client.ShowcaseAnnotations.ShowcaseData;
 import com.google.gwt.sample.showcase.client.ShowcaseAnnotations.ShowcaseRaw;
@@ -60,8 +61,7 @@ public class CwCellTable extends ContentWidget {
    * The constants used in this Content Widget.
    */
   @ShowcaseSource
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCellTableColumnAddress();
 
     String cwCellTableColumnCategory();
@@ -93,7 +93,7 @@ public class CwCellTable extends ContentWidget {
    * An instance of the constants.
    */
   @ShowcaseData
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Constructor.
@@ -101,25 +101,9 @@ public class CwCellTable extends ContentWidget {
    * @param constants the constants
    */
   public CwCellTable(CwConstants constants) {
-    super(constants);
+    super(constants.cwCellTableName(), constants.cwCellTableDescription(),
+        false, "ContactDatabase.java", "CwCellTable.ui.xml");
     this.constants = constants;
-    registerSource("ContactDatabase.java");
-    registerSource("CwCellTable.ui.xml");
-  }
-
-  @Override
-  public String getDescription() {
-    return constants.cwCellTableDescription();
-  }
-
-  @Override
-  public String getName() {
-    return constants.cwCellTableName();
-  }
-
-  @Override
-  public boolean hasStyle() {
-    return false;
   }
 
   /**
@@ -129,7 +113,11 @@ public class CwCellTable extends ContentWidget {
   @Override
   public Widget onInitialize() {
     // Create a CellTable.
-    cellTable = new CellTable<ContactInfo>();
+
+    // Set a key provider that provides a unique key for each contact. If key is
+    // used to identify contacts when fields (such as the name and address)
+    // change.
+    cellTable = new CellTable<ContactInfo>(ContactDatabase.ContactInfo.KEY_PROVIDER);
 
     // Create a Pager to control the table.
     SimplePager.Resources pagerResources = GWT.create(
@@ -139,17 +127,11 @@ public class CwCellTable extends ContentWidget {
     pager.setDisplay(cellTable);
 
     // Add a selection model so we can select cells.
-    final MultiSelectionModel<ContactInfo> selectionModel = new MultiSelectionModel<ContactInfo>();
+    final MultiSelectionModel<ContactInfo> selectionModel = new MultiSelectionModel<ContactInfo>(ContactDatabase.ContactInfo.KEY_PROVIDER);
     cellTable.setSelectionModel(selectionModel);
 
     // Initialize the columns.
     initTableColumns(selectionModel);
-
-    // Set a key provider that provides a unique key for each contact. If key is
-    // used to identify contacts when fields (such as the name and address)
-    // change.
-    cellTable.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
-    selectionModel.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
 
     // Add the CellList to the adapter in the database.
     ContactDatabase.get().addDataDisplay(cellTable);
@@ -175,11 +157,6 @@ public class CwCellTable extends ContentWidget {
     });
   }
 
-  @Override
-  protected void setRunAsyncPrefetches() {
-    prefetchCellWidgets();
-  }
-
   /**
    * Add the columns to the table.
    */
@@ -203,7 +180,7 @@ public class CwCellTable extends ContentWidget {
         selectionModel.setSelected(object, value);
       }
     });
-    cellTable.addColumn(checkColumn, "<br>");
+    cellTable.addColumn(checkColumn, SafeHtmlUtils.fromSafeConstant("<br>"));
 
     // First name.
     Column<ContactInfo, String> firstNameColumn = new Column<

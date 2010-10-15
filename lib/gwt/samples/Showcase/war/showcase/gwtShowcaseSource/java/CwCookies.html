@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCookiesDeleteCookie();
 
     String cwCookiesDescription();
@@ -28,7 +27,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * A {@link TextBox} that holds the name of the cookie.
@@ -57,8 +56,8 @@
     existingCookiesBox = new ListBox();
     Button deleteCookieButton = new Button(constants.cwCookiesDeleteCookie());
     deleteCookieButton.addStyleName("sc-FixedWidthButton");
-    mainLayout.setHTML(0, 0, "&lt;b&gt;" + constants.cwCookiesExistingLabel()
-        + "&lt;/b&gt;");
+    mainLayout.setHTML(
+        0, 0, "&lt;b&gt;" + constants.cwCookiesExistingLabel() + "&lt;/b&gt;");
     mainLayout.setWidget(0, 1, existingCookiesBox);
     mainLayout.setWidget(0, 2, deleteCookieButton);
 
@@ -122,7 +121,7 @@
 
   /**
    * Refresh the list of existing cookies.
-   * 
+   *
    * @param selectedCookie the cookie to select by default
    */
   private void refreshExistingCookies(String selectedCookie) {

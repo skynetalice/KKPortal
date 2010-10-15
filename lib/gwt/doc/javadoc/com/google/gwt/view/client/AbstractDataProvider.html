@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -107,10 +107,6 @@ java.lang.Object
 
 <P>
 A base implementation of a data source for <A HREF="../../../../../com/google/gwt/view/client/HasData.html" title="interface in com.google.gwt.view.client"><CODE>HasData</CODE></A> implementations.
-
- <p>
- Note: This class is new and its interface subject to change.
- </p>
 <P>
 
 <P>
@@ -127,10 +123,20 @@ A base implementation of a data source for <A HREF="../../../../../com/google/gw
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#AbstractDataProvider()">AbstractDataProvider</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct an AbstractDataProvider without a key provider.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#AbstractDataProvider(com.google.gwt.view.client.ProvidesKey)">AbstractDataProvider</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="type parameter in AbstractDataProvider">T</A>&gt;&nbsp;keyProvider)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct an AbstractDataProvider with a given key provider.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -196,15 +202,7 @@ A base implementation of a data source for <A HREF="../../../../../com/google/gw
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#removeDataDisplay(com.google.gwt.view.client.HasData)">removeDataDisplay</A></B>(<A HREF="../../../../../com/google/gwt/view/client/HasData.html" title="interface in com.google.gwt.view.client">HasData</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="type parameter in AbstractDataProvider">T</A>&gt;&nbsp;display)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html#setKeyProvider(com.google.gwt.view.client.ProvidesKey)">setKeyProvider</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="type parameter in AbstractDataProvider">T</A>&gt;&nbsp;keyProvider)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the <A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client"><CODE>ProvidesKey</CODE></A> that provides keys for list items.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove the given data display.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -260,8 +258,20 @@ A base implementation of a data source for <A HREF="../../../../../com/google/gw
 <A NAME="AbstractDataProvider()"><!-- --></A><H3>
 AbstractDataProvider</H3>
 <PRE>
-public <B>AbstractDataProvider</B>()</PRE>
+protected <B>AbstractDataProvider</B>()</PRE>
 <DL>
+<DD>Construct an AbstractDataProvider without a key provider.
+<P>
+</DL>
+<HR>
+
+<A NAME="AbstractDataProvider(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
+AbstractDataProvider</H3>
+<PRE>
+protected <B>AbstractDataProvider</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="type parameter in AbstractDataProvider">T</A>&gt;&nbsp;keyProvider)</PRE>
+<DL>
+<DD>Construct an AbstractDataProvider with a given key provider.
+<P>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -365,27 +375,15 @@ removeDataDisplay</H3>
 <PRE>
 public void <B>removeDataDisplay</B>(<A HREF="../../../../../com/google/gwt/view/client/HasData.html" title="interface in com.google.gwt.view.client">HasData</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="type parameter in AbstractDataProvider">T</A>&gt;&nbsp;display)</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setKeyProvider(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
-setKeyProvider</H3>
-<PRE>
-public void <B>setKeyProvider</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="type parameter in AbstractDataProvider">T</A>&gt;&nbsp;keyProvider)</PRE>
-<DL>
-<DD>Set the <A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client"><CODE>ProvidesKey</CODE></A> that provides keys for list items.
+<DD>Remove the given data display.
 <P>
 <DD><DL>
 </DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>keyProvider</CODE> - the <A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client"><CODE>ProvidesKey</CODE></A></DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.lang.IllegalStateException</CODE> - if the display is not present</DL>
 </DD>
 </DL>
 <HR>
@@ -480,7 +478,7 @@ protected void <B>updateRowData</B>(<A HREF="../../../../../com/google/gwt/view/
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

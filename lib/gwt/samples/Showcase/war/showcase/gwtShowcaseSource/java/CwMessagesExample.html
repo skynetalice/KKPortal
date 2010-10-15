@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwMessagesExampleArg0Label();
 
     String cwMessagesExampleArg1Label();
@@ -38,7 +37,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * The error messages used in this example.
@@ -64,10 +63,11 @@
     layout.setCellSpacing(5);
 
     // Add a link to the source code of the Interface
-    HTML link = new HTML(" &lt;a href=\"javascript:void(0);\"&gt;ErrorMessages&lt;/a&gt;");
+    final String rawFile = getSimpleName(ErrorMessages.class);
+    Anchor link = new Anchor(rawFile);
     link.addClickHandler(new ClickHandler() {
       public void onClick(ClickEvent event) {
-        selectTab(2);
+        fireRawSourceRequest(rawFile + ".java");
       }
     });
     HorizontalPanel linkPanel = new HorizontalPanel();

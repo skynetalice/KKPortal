@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -441,6 +441,10 @@ public <A HREF="../../../../../com/google/gwt/regexp/shared/SplitResult.html" ti
  regular expression is completely empty, splits the input string into its
  constituent characters. If the regular expression is not empty but matches
  an empty string, the results are not well defined.
+ 
+ Note: There are some browser inconsistencies with this implementation, as 
+ it is delegated to the browser, and no browser follows the spec completely.
+ A major difference is that IE will exclude empty strings in the result.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>input</CODE> - the string to be split.<DD><CODE>limit</CODE> - the the maximum number of strings to split off and return,
@@ -489,7 +493,7 @@ public boolean <B>test</B>(java.lang.String&nbsp;input)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

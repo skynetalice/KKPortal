@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/CellTree.Style.html" title="interface in com.google.gwt.user.cellview.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="class in com.google.gwt.user.cellview.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/HasKeyboardPagingPolicy.html" title="interface in com.google.gwt.user.cellview.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../../index.html?com/google/gwt/user/cellview/client/Column.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Column.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -109,7 +109,7 @@ java.lang.Object
 A representation of a column in a table. The column may maintain view data
  for each cell on demand. New view data, if needed, is created by the cell's
  onBrowserEvent method, stored in the Column, and passed to future calls to
- Cell's <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>Cell.onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater<C>)</CODE></A> and @link{Cell#render} methods.
+ Cell's <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>Cell.onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater<C>)</CODE></A> and <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><CODE>Cell.render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)</CODE></A> methods.
 <P>
 
 <P>
@@ -130,7 +130,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#cell">cell</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> responsible for rendering items in the column.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -138,7 +138,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#fieldUpdater">fieldUpdater</A></B></CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> used for updating values in the column.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -154,7 +154,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#Column(com.google.gwt.cell.client.Cell)">Column</A></B>(<A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;&nbsp;cell)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new Column with a given <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -172,7 +172,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getCell()">getCell</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> of type C.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> responsible for rendering items in the column.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -180,7 +180,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getFieldUpdater()">getFieldUpdater</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> instance.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> used for updating values in the column.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -188,7 +188,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getValue(T)">getValue</A></B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the value of type C extracted from the record of type T.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the column value from within the underlying data object.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -197,17 +197,17 @@ A representation of a column in a table. The column may maintain view data
                int&nbsp;index,
                <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object,
                <A HREF="../../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
-               <A HREF="../../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&gt;&nbsp;providesKey)</CODE>
+               <A HREF="../../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&gt;&nbsp;keyProvider)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Handle a browser event that took place within the column.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#render(T, com.google.gwt.view.client.ProvidesKey, java.lang.StringBuilder)">render</A></B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object,
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#render(T, com.google.gwt.view.client.ProvidesKey, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object,
        <A HREF="../../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&gt;&nbsp;keyProvider,
-       java.lang.StringBuilder&nbsp;sb)</CODE>
+       <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render the object into the cell.</TD>
@@ -218,7 +218,7 @@ A representation of a column in a table. The column may maintain view data
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#setFieldUpdater(com.google.gwt.cell.client.FieldUpdater)">setFieldUpdater</A></B>(<A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client">FieldUpdater</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;&nbsp;fieldUpdater)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> used for updating values in the column.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -248,6 +248,8 @@ cell</H3>
 <PRE>
 protected final <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt; <B>cell</B></PRE>
 <DL>
+<DD>The <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> responsible for rendering items in the column.
+<P>
 <DL>
 </DL>
 </DL>
@@ -258,6 +260,8 @@ fieldUpdater</H3>
 <PRE>
 protected <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client">FieldUpdater</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt; <B>fieldUpdater</B></PRE>
 <DL>
+<DD>The <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> used for updating values in the column.
+<P>
 <DL>
 </DL>
 </DL>
@@ -277,6 +281,8 @@ Column</H3>
 <PRE>
 public <B>Column</B>(<A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;&nbsp;cell)</PRE>
 <DL>
+<DD>Construct a new Column with a given <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.
+<P>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -294,8 +300,7 @@ getCell</H3>
 <PRE>
 public <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt; <B>getCell</B>()</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getCell()">HasCell</A></CODE></B></DD>
-<DD>Returns the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> of type C.
+<DD>Return the <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> responsible for rendering items in the column.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getCell()">getCell</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client">HasCell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;</CODE></DL>
@@ -311,8 +316,7 @@ getFieldUpdater</H3>
 <PRE>
 public <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client">FieldUpdater</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt; <B>getFieldUpdater</B>()</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getFieldUpdater()">HasCell</A></CODE></B></DD>
-<DD>Returns the <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> instance.
+<DD>Return the <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> used for updating values in the column.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getFieldUpdater()">getFieldUpdater</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client">HasCell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;</CODE></DL>
@@ -329,8 +333,7 @@ getValue</H3>
 <PRE>
 public abstract <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A> <B>getValue</B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getValue(T)">HasCell</A></CODE></B></DD>
-<DD>Returns the value of type C extracted from the record of type T.
+<DD>Return the column value from within the underlying data object.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getValue(T)">getValue</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client">HasCell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;</CODE></DL>
@@ -349,24 +352,26 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../../com/google/gwt/dom/
                            int&nbsp;index,
                            <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object,
                            <A HREF="../../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
-                           <A HREF="../../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&gt;&nbsp;providesKey)</PRE>
+                           <A HREF="../../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&gt;&nbsp;keyProvider)</PRE>
 <DL>
+<DD>Handle a browser event that took place within the column.
+<P>
 <DD><DL>
 </DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>providesKey</CODE> - an instance of ProvidesKey<T>, or null if the record
+<DT><B>Parameters:</B><DD><CODE>elem</CODE> - the parent Element<DD><CODE>index</CODE> - the current row index of the object<DD><CODE>object</CODE> - the base object to be updated<DD><CODE>event</CODE> - the native browser event<DD><CODE>keyProvider</CODE> - an instance of ProvidesKey<T>, or null if the record
           object should act as its own key.</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="render(java.lang.Object,com.google.gwt.view.client.ProvidesKey,java.lang.StringBuilder)"><!-- --></A><A NAME="render(T, com.google.gwt.view.client.ProvidesKey, java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(java.lang.Object,com.google.gwt.view.client.ProvidesKey,com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><A NAME="render(T, com.google.gwt.view.client.ProvidesKey, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
 public void <B>render</B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&nbsp;object,
                    <A HREF="../../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>&gt;&nbsp;keyProvider,
-                   java.lang.StringBuilder&nbsp;sb)</PRE>
+                   <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
 <DD>Render the object into the cell.
 <P>
@@ -384,6 +389,8 @@ setFieldUpdater</H3>
 <PRE>
 public void <B>setFieldUpdater</B>(<A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client">FieldUpdater</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="type parameter in Column">C</A>&gt;&nbsp;fieldUpdater)</PRE>
 <DL>
+<DD>Set the <A HREF="../../../../../../com/google/gwt/cell/client/FieldUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>FieldUpdater</CODE></A> used for updating values in the column.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -415,14 +422,14 @@ public void <B>setFieldUpdater</B>(<A HREF="../../../../../../com/google/gwt/cel
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/CellTree.Style.html" title="interface in com.google.gwt.user.cellview.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/Header.html" title="class in com.google.gwt.user.cellview.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../../com/google/gwt/user/cellview/client/HasKeyboardPagingPolicy.html" title="interface in com.google.gwt.user.cellview.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../../index.html?com/google/gwt/user/cellview/client/Column.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="Column.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

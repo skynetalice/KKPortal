@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -169,6 +169,14 @@ Provides basic information about symbols in the generated JavaScript.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/linker/SymbolData.html#getQueryId()">getQueryId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the queryId for castability comparisons.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/linker/SymbolData.html#getSourceLine()">getSourceLine</A></B>()</CODE>
 
 <BR>
@@ -190,14 +198,6 @@ Provides basic information about symbols in the generated JavaScript.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the JavaScript symbol this data maps to.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/linker/SymbolData.html#getTypeId()">getTypeId</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the typeId or <code>0</code> if the type does not have a typeId.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -303,6 +303,22 @@ java.lang.String <B>getMemberName</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="getQueryId()"><!-- --></A><H3>
+getQueryId</H3>
+<PRE>
+int <B>getQueryId</B>()</PRE>
+<DL>
+<DD>Returns the queryId for castability comparisons.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getSourceLine()"><!-- --></A><H3>
 getSourceLine</H3>
 <PRE>
@@ -344,22 +360,6 @@ getSymbolName</H3>
 java.lang.String <B>getSymbolName</B>()</PRE>
 <DL>
 <DD>Returns the JavaScript symbol this data maps to.
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getTypeId()"><!-- --></A><H3>
-getTypeId</H3>
-<PRE>
-int <B>getTypeId</B>()</PRE>
-<DL>
-<DD>Returns the typeId or <code>0</code> if the type does not have a typeId.
 <P>
 <DD><DL>
 </DL>
@@ -440,7 +440,7 @@ boolean <B>isMethod</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

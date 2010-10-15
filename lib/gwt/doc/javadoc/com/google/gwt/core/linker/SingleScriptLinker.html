@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -146,7 +146,7 @@ A Linker for producing a single JavaScript file from a GWT module. The use of
 <TH ALIGN="left"><B>Fields inherited from class com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>FRAGMENT_EXTENSION, FRAGMENT_SUBDIR</CODE></TD>
+<TD><CODE>COMPUTE_SCRIPT_BASE_JS, FRAGMENT_EXTENSION, FRAGMENT_SUBDIR, PERMUTATIONS_JS, PROCESS_METAS_JS</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -258,7 +258,7 @@ A Linker for producing a single JavaScript file from a GWT module. The use of
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>generateDeferredFragment, generatePrimaryFragment, generatePropertyProvider, generateScriptInjector, generateSelectionScript, generateStylesheetInjector, getHostedFilename, getModulePrefix, isRelativeURL, link, maybeAddHostedModeFile, processSelectionInformation, replaceAll, supportsDevMode</CODE></TD>
+<TD><CODE>generateDeferredFragment, generatePrimaryFragment, generatePropertyProvider, generateScriptInjector, generateSelectionScript, generateStylesheetInjector, getHostedFilename, getModulePrefix, getSelectionScriptStringBuffer, isRelativeURL, link, maybeAddHostedModeFile, processSelectionInformation, processSelectionScriptCommon, replaceAll, supportsDevMode</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.core.ext.linker.AbstractLinker"><!-- --></A>
@@ -518,7 +518,7 @@ protected java.lang.String <B>getSelectionScriptTemplate</B>(<A HREF="../../../.
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

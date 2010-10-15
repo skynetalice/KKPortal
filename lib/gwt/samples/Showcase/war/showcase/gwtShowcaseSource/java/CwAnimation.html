@@ -43,7 +43,7 @@
 
     /**
      * Update the position of the widget, adding a rotational offset.
-     * 
+     *
      * @param w the widget to move
      * @param radian the progress in radian
      * @param offset the offset in radian
@@ -59,8 +59,7 @@
   /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     @DefaultStringValue("Cancel")
     String cwAnimationCancel();
 
@@ -113,7 +112,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * The {@link Button} used to start the {@link Animation}.
@@ -167,7 +166,7 @@
   /**
    * Create an options panel that allows users to select a widget and reposition
    * it.
-   * 
+   *
    * @return the new options panel
    */
   private Widget createOptionsBar() {

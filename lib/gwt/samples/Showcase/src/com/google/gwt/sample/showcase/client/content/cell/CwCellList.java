@@ -23,6 +23,7 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.Constants;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.ImageResource;
+import com.google.gwt.safehtml.shared.SafeHtmlBuilder;
 import com.google.gwt.sample.showcase.client.ContentWidget;
 import com.google.gwt.sample.showcase.client.ShowcaseAnnotations.ShowcaseData;
 import com.google.gwt.sample.showcase.client.ShowcaseAnnotations.ShowcaseRaw;
@@ -31,6 +32,7 @@ import com.google.gwt.sample.showcase.client.content.cell.ContactDatabase.Contac
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.cellview.client.CellList;
+import com.google.gwt.user.cellview.client.HasKeyboardPagingPolicy.KeyboardPagingPolicy;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.AbstractImagePrototype;
 import com.google.gwt.user.client.ui.Button;
@@ -57,8 +59,7 @@ public class CwCellList extends ContentWidget {
    * The constants used in this Content Widget.
    */
   @ShowcaseSource
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCellListDescription();
 
     String cwCellListName();
@@ -88,31 +89,25 @@ public class CwCellList extends ContentWidget {
     }
 
     @Override
-    public void render(ContactInfo value, Object key, StringBuilder sb) {
-      // Value can be null, so do a null check.
+    public void render(ContactInfo value, Object key, SafeHtmlBuilder sb) {
+      // Value can be null, so do a null check..
       if (value == null) {
         return;
       }
 
-      sb.append("<table>");
+      sb.appendHtmlConstant("<table>");
 
       // Add the contact image.
-      sb.append("<tr><td rowspan='3'>");
-      sb.append(imageHtml);
-      sb.append("</td>");
+      sb.appendHtmlConstant("<tr><td rowspan='3'>");
+      sb.appendHtmlConstant(imageHtml);
+      sb.appendHtmlConstant("</td>");
 
-      // Add the name.
-      sb.append("<td style='font-size:95%;'>");
-      sb.append(value.getFullName());
-      sb.append("</td>");
-      sb.append("</tr>");
-
-      // Add the address.
-      sb.append("<tr><td>");
-      sb.append(value.getAddress());
-      sb.append("</td></tr>");
-
-      sb.append("</table>");
+      // Add the name and address.
+      sb.appendHtmlConstant("<td style='font-size:95%;'>");
+      sb.appendEscaped(value.getFullName());
+      sb.appendHtmlConstant("</td></tr><tr><td>");
+      sb.appendEscaped(value.getAddress());
+      sb.appendHtmlConstant("</td></tr></table>");
     }
   }
 
@@ -151,39 +146,14 @@ public class CwCellList extends ContentWidget {
   private CellList<ContactInfo> cellList;
 
   /**
-   * An instance of the constants.
-   */
-  @ShowcaseData
-  private CwConstants constants;
-
-  /**
    * Constructor.
    *
    * @param constants the constants
    */
   public CwCellList(CwConstants constants) {
-    super(constants);
-    this.constants = constants;
-    registerSource("ContactDatabase.java");
-    registerSource("CwCellList.ui.xml");
-    registerSource("ContactInfoForm.java");
-    registerSource("ShowMorePagerPanel.java");
-    registerSource("RangeLabelPager");
-  }
-
-  @Override
-  public String getDescription() {
-    return constants.cwCellListDescription();
-  }
-
-  @Override
-  public String getName() {
-    return constants.cwCellListName();
-  }
-
-  @Override
-  public boolean hasStyle() {
-    return false;
+    super(constants.cwCellListName(), constants.cwCellListDescription(), false,
+        "ContactDatabase.java", "CwCellList.ui.xml", "ContactInfoForm.java",
+        "ShowMorePagerPanel.java", "RangeLabelPager.java");
   }
 
   /**
@@ -196,31 +166,31 @@ public class CwCellList extends ContentWidget {
 
     // Create a CellList.
     ContactCell contactCell = new ContactCell(images.contact());
-    cellList = new CellList<ContactInfo>(contactCell);
-    cellList.setPageSize(30);
-
-    // Add a selection model so we can select cells.
-    final SingleSelectionModel<ContactInfo> selectionModel = new SingleSelectionModel<ContactInfo>();
-    cellList.setSelectionModel(selectionModel);
-    selectionModel.addSelectionChangeHandler(
-        new SelectionChangeEvent.Handler() {
-          public void onSelectionChange(SelectionChangeEvent event) {
-            contactForm.setContact(selectionModel.getSelectedObject());
-          }
-        });
 
     // Set a key provider that provides a unique key for each contact. If key is
     // used to identify contacts when fields (such as the name and address)
     // change.
-    cellList.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
-    selectionModel.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
+    cellList = new CellList<ContactInfo>(contactCell,
+        ContactDatabase.ContactInfo.KEY_PROVIDER);
+    cellList.setPageSize(30);
+    cellList.setKeyboardPagingPolicy(KeyboardPagingPolicy.INCREASE_RANGE);
 
-    // Add the CellList to the data provider in the database.
-    ContactDatabase.get().addDataDisplay(cellList);
+    // Add a selection model so we can select cells.
+    final SingleSelectionModel<ContactInfo> selectionModel = new SingleSelectionModel<ContactInfo>(
+        ContactDatabase.ContactInfo.KEY_PROVIDER);
+    cellList.setSelectionModel(selectionModel);
+    selectionModel.addSelectionChangeHandler(new SelectionChangeEvent.Handler() {
+      public void onSelectionChange(SelectionChangeEvent event) {
+        contactForm.setContact(selectionModel.getSelectedObject());
+      }
+    });
 
     // Create the UiBinder.
     Binder uiBinder = GWT.create(Binder.class);
     Widget widget = uiBinder.createAndBindUi(this);
+
+    // Add the CellList to the data provider in the database.
+    ContactDatabase.get().addDataDisplay(cellList);
 
     // Set the cellList as the display of the pagers. This example has two
     // pagers. pagerPanel is a scrollable pager that extends the range when the
@@ -251,10 +221,5 @@ public class CwCellList extends ContentWidget {
         callback.onSuccess(onInitialize());
       }
     });
-  }
-
-  @Override
-  protected void setRunAsyncPrefetches() {
-    prefetchCellWidgets();
   }
 }

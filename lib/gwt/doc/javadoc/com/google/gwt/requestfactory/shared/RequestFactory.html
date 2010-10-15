@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestEvent.State.html" title="enum in com.google.gwt.requestfactory.shared"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestObject.html" title="interface in com.google.gwt.requestfactory.shared"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestTransport.html" title="interface in com.google.gwt.requestfactory.shared"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/requestfactory/shared/RequestFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="RequestFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -122,14 +122,6 @@ Interface RequestFactory</H2>
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#URL">URL</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
 </TABLE>
 &nbsp;
 <!-- ========== METHOD SUMMARY =========== -->
@@ -146,47 +138,30 @@ Interface RequestFactory</H2>
 <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
 <TR ALIGN="right" VALIGN="">
 <TD NOWRAP><FONT SIZE="-1">
-<CODE>&lt;R extends com.google.gwt.valuestore.shared.Record&gt; 
+<CODE>&lt;P extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt; 
 <BR>
-R</CODE></FONT></TD>
+<A HREF="../../../../../com/google/gwt/requestfactory/shared/Request.html" title="interface in com.google.gwt.requestfactory.shared">Request</A>&lt;P&gt;</CODE></FONT></TD>
 </TR>
 </TABLE>
 </CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#create(java.lang.Class)">create</A></B>(java.lang.Class&lt;R&gt;&nbsp;token)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#find(com.google.gwt.requestfactory.shared.EntityProxyId)">find</A></B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxyId</A>&lt;P&gt;&nbsp;proxyId)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return a request to find a fresh instance of the referenced proxy.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getClass(com.google.gwt.valuestore.shared.Record)">getClass</A></B>(com.google.gwt.valuestore.shared.Record&nbsp;proxy)</CODE>
+<CODE>&nbsp;<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getEventBus()">getEventBus</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the class object which may be used to create new instances of the
- type of the given proxy, via <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#create(java.lang.Class)"><CODE>create(java.lang.Class<R>)</CODE></A>.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getClass(java.lang.String)">getClass</A></B>(java.lang.String&nbsp;token)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the class object which may be used to create new instances of the
- type of this token, via <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#create(java.lang.Class)"><CODE>create(java.lang.Class<R>)</CODE></A>.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;com.google.gwt.valuestore.shared.Record</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getProxy(java.lang.String)">getProxy</A></B>(java.lang.String&nbsp;token)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the appropriate proxy, which may have only its id attribute set.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the eventbus this factory's events are posted on, which was set via
+ <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#initialize(com.google.gwt.event.shared.EventBus)"><CODE>initialize(com.google.gwt.event.shared.EventBus)</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getToken(java.lang.Class)">getToken</A></B>(java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt;&nbsp;clazz)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getHistoryToken(java.lang.Class)">getHistoryToken</A></B>(java.lang.Class&lt;? extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt;&nbsp;clazz)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a <A HREF="../../../../../com/google/gwt/user/client/History.html" title="class in com.google.gwt.user.client"><CODE>History</CODE></A> compatible token that
@@ -195,27 +170,56 @@ R</CODE></FONT></TD>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getToken(com.google.gwt.valuestore.shared.Record)">getToken</A></B>(com.google.gwt.valuestore.shared.Record&nbsp;proxy)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getHistoryToken(com.google.gwt.requestfactory.shared.EntityProxyId)">getHistoryToken</A></B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxyId</A>&lt;?&gt;&nbsp;proxy)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a <A HREF="../../../../../com/google/gwt/user/client/History.html" title="class in com.google.gwt.user.client"><CODE>History</CODE></A> compatible token that
- represents the given proxy.</TD>
+ represents the given proxy class.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Class&lt;? extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getProxyClass(java.lang.String)">getProxyClass</A></B>(java.lang.String&nbsp;historyToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the class object which may be used to create new instances of the
+ type of this token, via <CODE>#create</CODE>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt; 
+<BR>
+<A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxyId</A>&lt;T&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getProxyId(java.lang.String)">getProxyId</A></B>(java.lang.String&nbsp;historyToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the appropriate <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared"><CODE>EntityProxyId</CODE></A> using a string returned from
+ <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getHistoryToken(com.google.gwt.requestfactory.shared.EntityProxyId)"><CODE>getHistoryToken(EntityProxyId)</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#init(com.google.gwt.event.shared.EventBus)">init</A></B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#initialize(com.google.gwt.event.shared.EventBus)">initialize</A></B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start this request factory.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start this request factory with a
+ <A HREF="../../../../../com/google/gwt/requestfactory/client/DefaultRequestTransport.html" title="class in com.google.gwt.requestfactory.client"><CODE>DefaultRequestTransport</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/LoggingRequest.html" title="interface in com.google.gwt.requestfactory.shared">LoggingRequest</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#loggingRequest()">loggingRequest</A></B>()</CODE>
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#initialize(com.google.gwt.event.shared.EventBus, com.google.gwt.requestfactory.shared.RequestTransport)">initialize</A></B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus,
+           <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestTransport.html" title="interface in com.google.gwt.requestfactory.shared">RequestTransport</A>&nbsp;transport)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start this request factory with a user-provided transport.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -239,16 +243,6 @@ static final java.lang.String <B>JSON_CONTENT_TYPE_UTF8</B></PRE>
 <DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.google.gwt.requestfactory.shared.RequestFactory.JSON_CONTENT_TYPE_UTF8">Constant Field Values</A></DL>
 </DL>
-<HR>
-
-<A NAME="URL"><!-- --></A><H3>
-URL</H3>
-<PRE>
-static final java.lang.String <B>URL</B></PRE>
-<DL>
-<DL>
-<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.google.gwt.requestfactory.shared.RequestFactory.URL">Constant Field Values</A></DL>
-</DL>
 
 <!-- ============ METHOD DETAIL ========== -->
 
@@ -260,26 +254,12 @@ static final java.lang.String <B>URL</B></PRE>
 </TR>
 </TABLE>
 
-<A NAME="create(java.lang.Class)"><!-- --></A><H3>
-create</H3>
+<A NAME="find(com.google.gwt.requestfactory.shared.EntityProxyId)"><!-- --></A><H3>
+find</H3>
 <PRE>
-&lt;R extends com.google.gwt.valuestore.shared.Record&gt; R <B>create</B>(java.lang.Class&lt;R&gt;&nbsp;token)</PRE>
+&lt;P extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt; <A HREF="../../../../../com/google/gwt/requestfactory/shared/Request.html" title="interface in com.google.gwt.requestfactory.shared">Request</A>&lt;P&gt; <B>find</B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxyId</A>&lt;P&gt;&nbsp;proxyId)</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getClass(com.google.gwt.valuestore.shared.Record)"><!-- --></A><H3>
-getClass</H3>
-<PRE>
-java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt; <B>getClass</B>(com.google.gwt.valuestore.shared.Record&nbsp;proxy)</PRE>
-<DL>
-<DD>Return the class object which may be used to create new instances of the
- type of the given proxy, via <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#create(java.lang.Class)"><CODE>create(java.lang.Class<R>)</CODE></A>. Due to limitations of GWT's
- metadata system, calls to the proxy's getClass() method will not serve this
- purpose.
+<DD>Return a request to find a fresh instance of the referenced proxy.
 <P>
 <DD><DL>
 </DL>
@@ -287,14 +267,13 @@ java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt; <B>getC
 </DL>
 <HR>
 
-<A NAME="getClass(java.lang.String)"><!-- --></A><H3>
-getClass</H3>
+<A NAME="getEventBus()"><!-- --></A><H3>
+getEventBus</H3>
 <PRE>
-java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt; <B>getClass</B>(java.lang.String&nbsp;token)</PRE>
+<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A> <B>getEventBus</B>()</PRE>
 <DL>
-<DD>Return the class object which may be used to create new instances of the
- type of this token, via <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#create(java.lang.Class)"><CODE>create(java.lang.Class<R>)</CODE></A>. The token may represent either a
- proxy instance (see {@link #getToken(Record)) or a proxy class (see
+<DD>Returns the eventbus this factory's events are posted on, which was set via
+ <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#initialize(com.google.gwt.event.shared.EventBus)"><CODE>initialize(com.google.gwt.event.shared.EventBus)</CODE></A>.
 <P>
 <DD><DL>
 </DL>
@@ -302,27 +281,14 @@ java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt; <B>getC
 </DL>
 <HR>
 
-<A NAME="getProxy(java.lang.String)"><!-- --></A><H3>
-getProxy</H3>
+<A NAME="getHistoryToken(java.lang.Class)"><!-- --></A><H3>
+getHistoryToken</H3>
 <PRE>
-com.google.gwt.valuestore.shared.Record <B>getProxy</B>(java.lang.String&nbsp;token)</PRE>
-<DL>
-<DD>Return the appropriate proxy, which may have only its id attribute set.
-<P>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getToken(java.lang.Class)"><!-- --></A><H3>
-getToken</H3>
-<PRE>
-java.lang.String <B>getToken</B>(java.lang.Class&lt;? extends com.google.gwt.valuestore.shared.Record&gt;&nbsp;clazz)</PRE>
+java.lang.String <B>getHistoryToken</B>(java.lang.Class&lt;? extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt;&nbsp;clazz)</PRE>
 <DL>
 <DD>Get a <A HREF="../../../../../com/google/gwt/user/client/History.html" title="class in com.google.gwt.user.client"><CODE>History</CODE></A> compatible token that
  represents the given class. It can be processed by
- <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getClass(java.lang.String)"><CODE>getClass(String)</CODE></A>
+ <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getProxyClass(java.lang.String)"><CODE>getProxyClass(String)</CODE></A>
 <P>
 <DD><DL>
 
@@ -331,14 +297,23 @@ java.lang.String <B>getToken</B>(java.lang.Class&lt;? extends com.google.gwt.val
 </DL>
 <HR>
 
-<A NAME="getToken(com.google.gwt.valuestore.shared.Record)"><!-- --></A><H3>
-getToken</H3>
+<A NAME="getHistoryToken(com.google.gwt.requestfactory.shared.EntityProxyId)"><!-- --></A><H3>
+getHistoryToken</H3>
 <PRE>
-java.lang.String <B>getToken</B>(com.google.gwt.valuestore.shared.Record&nbsp;proxy)</PRE>
+java.lang.String <B>getHistoryToken</B>(<A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxyId</A>&lt;?&gt;&nbsp;proxy)</PRE>
 <DL>
 <DD>Get a <A HREF="../../../../../com/google/gwt/user/client/History.html" title="class in com.google.gwt.user.client"><CODE>History</CODE></A> compatible token that
- represents the given proxy. It can be processed by
- <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getClass(java.lang.String)"><CODE>getClass(String)</CODE></A> and <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getClass(com.google.gwt.valuestore.shared.Record)"><CODE>getClass(Record)</CODE></A>.
+ represents the given proxy class. It can be processed by
+ <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getProxyClass(java.lang.String)"><CODE>getProxyClass(String)</CODE></A>.
+ <p>
+ The history token returned for an EntityProxyId associated with a
+ newly-created (future) EntityProxy will differ from the token returned by
+ this method after the EntityProxy has been persisted. Once an EntityProxy
+ has been persisted, the return value for this method will always be stable,
+ regardless of when the EntityProxyId was retrieved relative to the persist
+ operation. In other words, the "future" history token returned for an
+ as-yet-unpersisted EntityProxy is only valid for the duration of the
+ RequestFactory's lifespan.
 <P>
 <DD><DL>
 
@@ -347,12 +322,15 @@ java.lang.String <B>getToken</B>(com.google.gwt.valuestore.shared.Record&nbsp;pr
 </DL>
 <HR>
 
-<A NAME="init(com.google.gwt.event.shared.EventBus)"><!-- --></A><H3>
-init</H3>
+<A NAME="getProxyClass(java.lang.String)"><!-- --></A><H3>
+getProxyClass</H3>
 <PRE>
-void <B>init</B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus)</PRE>
+java.lang.Class&lt;? extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt; <B>getProxyClass</B>(java.lang.String&nbsp;historyToken)</PRE>
 <DL>
-<DD>Start this request factory.
+<DD>Return the class object which may be used to create new instances of the
+ type of this token, via <CODE>#create</CODE>. The token may represent either a
+ proxy instance (see <CODE>#getHistoryToken()</CODE>) or a proxy class (see
+ <CODE>#getToken()</CODE>).
 <P>
 <DD><DL>
 </DL>
@@ -360,11 +338,42 @@ void <B>init</B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.ht
 </DL>
 <HR>
 
-<A NAME="loggingRequest()"><!-- --></A><H3>
-loggingRequest</H3>
+<A NAME="getProxyId(java.lang.String)"><!-- --></A><H3>
+getProxyId</H3>
 <PRE>
-<A HREF="../../../../../com/google/gwt/requestfactory/shared/LoggingRequest.html" title="interface in com.google.gwt.requestfactory.shared">LoggingRequest</A> <B>loggingRequest</B>()</PRE>
+&lt;T extends <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxy.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxy</A>&gt; <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared">EntityProxyId</A>&lt;T&gt; <B>getProxyId</B>(java.lang.String&nbsp;historyToken)</PRE>
 <DL>
+<DD>Return the appropriate <A HREF="../../../../../com/google/gwt/requestfactory/shared/EntityProxyId.html" title="interface in com.google.gwt.requestfactory.shared"><CODE>EntityProxyId</CODE></A> using a string returned from
+ <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestFactory.html#getHistoryToken(com.google.gwt.requestfactory.shared.EntityProxyId)"><CODE>getHistoryToken(EntityProxyId)</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initialize(com.google.gwt.event.shared.EventBus)"><!-- --></A><H3>
+initialize</H3>
+<PRE>
+void <B>initialize</B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus)</PRE>
+<DL>
+<DD>Start this request factory with a
+ <A HREF="../../../../../com/google/gwt/requestfactory/client/DefaultRequestTransport.html" title="class in com.google.gwt.requestfactory.client"><CODE>DefaultRequestTransport</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="initialize(com.google.gwt.event.shared.EventBus, com.google.gwt.requestfactory.shared.RequestTransport)"><!-- --></A><H3>
+initialize</H3>
+<PRE>
+void <B>initialize</B>(<A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared">EventBus</A>&nbsp;eventBus,
+                <A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestTransport.html" title="interface in com.google.gwt.requestfactory.shared">RequestTransport</A>&nbsp;transport)</PRE>
+<DL>
+<DD>Start this request factory with a user-provided transport.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -393,14 +402,14 @@ loggingRequest</H3>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestEvent.State.html" title="enum in com.google.gwt.requestfactory.shared"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestObject.html" title="interface in com.google.gwt.requestfactory.shared"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/requestfactory/shared/RequestTransport.html" title="interface in com.google.gwt.requestfactory.shared"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/requestfactory/shared/RequestFactory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="RequestFactory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

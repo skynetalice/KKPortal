@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -112,10 +112,6 @@ java.lang.Object
  When this cell is rendered, it will render each component <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> inside
  a span. If the component <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> uses block level elements (such as a
  Div), the component cells will stack vertically.
- </p>
-
- <p>
- Note: This class is new and its interface subject to change.
  </p>
 <P>
 
@@ -196,13 +192,13 @@ java.lang.Object
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
        java.lang.Object&nbsp;key,
-       java.lang.StringBuilder&nbsp;sb)</CODE>
+       <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -214,13 +210,24 @@ java.lang.Object
 </TR>
 </TABLE>
 </CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html#render(C, java.lang.Object, java.lang.StringBuilder, com.google.gwt.cell.client.HasCell)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder, com.google.gwt.cell.client.HasCell)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
        java.lang.Object&nbsp;key,
-       java.lang.StringBuilder&nbsp;sb,
+       <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb,
        <A HREF="../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client">HasCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>,X&gt;&nbsp;hasCell)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render the composite cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable
+ for passing to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+           <A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
+           java.lang.Object&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reset focus on the Cell.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -240,7 +247,7 @@ java.lang.Object
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.cell.client.<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -312,8 +319,9 @@ public java.util.Set&lt;java.lang.String&gt; <B>getConsumedEvents</B>()</PRE>
 <DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#getConsumedEvents()">Cell</A></CODE></B></DD>
 <DD><p>
  Get the set of events that this cell consumes. The container that uses this
- cell should only pass these events to <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>Cell.onBrowserEvent(Element,
- Object, Object, NativeEvent, ValueUpdater)</CODE></A>.
+ cell should only pass these events to
+ <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>Cell.onBrowserEvent(Element, Object, Object, NativeEvent, ValueUpdater)</CODE></A>
+ .
  </p>
  <p>
  The returned value should not be modified, and may be an unmodifiable set.
@@ -362,9 +370,10 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 <DD>Handle a browser event that took place within the cell. The default
  implementation returns null.
 
- This method is a no-op in <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A>. If you override this method
- to add support for events, remember to pass the event types that the cell
- expects into the constructor.
+ <p>
+ If you override this method to add support for events, remember to pass the
+ event types that the cell expects into the constructor.
+ </p>
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE></DL>
@@ -375,22 +384,55 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 </DL>
 <HR>
 
-<A NAME="render(java.lang.Object,java.lang.Object,java.lang.StringBuilder)"><!-- --></A><A NAME="render(C, java.lang.Object, java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(java.lang.Object,java.lang.Object,com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><A NAME="render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
 public void <B>render</B>(<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
                    java.lang.Object&nbsp;key,
-                   java.lang.StringBuilder&nbsp;sb)</PRE>
+                   <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">Cell</A></CODE></B></DD>
-<DD>Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">Cell</A></CODE></B></DD>
+<DD>Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+ 
+ <p>
+ Note: If your cell contains natively focusable elements, such as buttons or
+ input elements, be sure to set the tabIndex to -1 so that they do not steal
+ focus away from the containing widget.
+ </p>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the StringBuilder to be written to</DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to be written to</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resetFocus(com.google.gwt.dom.client.Element,java.lang.Object,java.lang.Object)"><!-- --></A><A NAME="resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)"><!-- --></A><H3>
+resetFocus</H3>
+<PRE>
+public boolean <B>resetFocus</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+                          <A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
+                          java.lang.Object&nbsp;key)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">AbstractCell</A></CODE></B></DD>
+<DD>Reset focus on the Cell. This method is called if the cell has focus when
+ it is refreshed.
+
+ <p>
+ This method is a no-op and returns false. If your cell is editable or can
+ be focused by the user, override this method to reset focus when the
+ containing widget is refreshed.
+ </p>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if focus is taken, false if not</DL>
 </DD>
 </DL>
 <HR>
@@ -406,7 +448,7 @@ public void <B>setValue</B>(<A HREF="../../../../../com/google/gwt/dom/client/El
 <DD>This method may be used by cell containers to set the value on a single
  cell directly, rather than using <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(String)</CODE></A>. See
  <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)"><CODE>AbstractCell.setValue(Element, Object, Object)</CODE></A> for a default
- implementation that uses <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)"><CODE>Cell.render(Object, Object, StringBuilder)</CODE></A>.
+ implementation that uses <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><CODE>Cell.render(Object, Object, SafeHtmlBuilder)</CODE></A>.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&gt;</CODE></DL>
@@ -433,16 +475,26 @@ protected <A HREF="../../../../../com/google/gwt/dom/client/Element.html" title=
 </DL>
 <HR>
 
-<A NAME="render(java.lang.Object,java.lang.Object,java.lang.StringBuilder,com.google.gwt.cell.client.HasCell)"><!-- --></A><A NAME="render(C, java.lang.Object, java.lang.StringBuilder, com.google.gwt.cell.client.HasCell)"><!-- --></A><H3>
+<A NAME="render(java.lang.Object,java.lang.Object,com.google.gwt.safehtml.shared.SafeHtmlBuilder,com.google.gwt.cell.client.HasCell)"><!-- --></A><A NAME="render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder, com.google.gwt.cell.client.HasCell)"><!-- --></A><H3>
 render</H3>
 <PRE>
 protected &lt;X&gt; void <B>render</B>(<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>&nbsp;value,
                           java.lang.Object&nbsp;key,
-                          java.lang.StringBuilder&nbsp;sb,
+                          <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb,
                           <A HREF="../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client">HasCell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/CompositeCell.html" title="type parameter in CompositeCell">C</A>,X&gt;&nbsp;hasCell)</PRE>
 <DL>
+<DD>Render the composite cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable
+ for passing to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+ 
+ <p>
+ Note: If your cell contains natively focusable elements, such as buttons or
+ input elements, be sure to set the tabIndex to -1 so that they do not steal
+ focus away from the containing widget.
+ </p>
+<P>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to be written to<DD><CODE>hasCell</CODE> - a <A HREF="../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client"><CODE>HasCell</CODE></A> instance containing the cells to be
+          rendered within this cell</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -469,7 +521,7 @@ protected &lt;X&gt; void <B>render</B>(<A HREF="../../../../../com/google/gwt/ce
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

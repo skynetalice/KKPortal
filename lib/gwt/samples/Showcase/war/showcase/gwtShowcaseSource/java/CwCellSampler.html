@@ -7,8 +7,7 @@
   /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCellSamplerDescription();
 
     String cwCellSamplerName();
@@ -140,11 +139,6 @@
   Button redrawButton;
 
   /**
-   * An instance of the constants.
-   */
-  private CwConstants constants;
-
-  /**
    * The list of cells that are editable.
    */
   private List&lt;AbstractEditableCell&lt;?, ?&gt;&gt; editableCells;
@@ -164,8 +158,7 @@
 
     // Create the table.
     editableCells = new ArrayList&lt;AbstractEditableCell&lt;?, ?&gt;&gt;();
-    cellTable = new CellTable&lt;ContactInfo&gt;(6);
-    cellTable.setKeyProvider(ContactInfo.KEY_PROVIDER);
+    cellTable = new CellTable&lt;ContactInfo&gt;(6, ContactInfo.KEY_PROVIDER);
     ContactDatabase.get().addDataDisplay(cellTable);
 
     // CheckboxCell.

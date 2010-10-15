@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -95,14 +95,14 @@ java.lang.Object
           <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.Hyperlink</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/dom/client/HasClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasClickHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/dom/client/HasDoubleClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasDoubleClickHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesClickEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesClickEvents</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/dom/client/HasClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasClickHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesClickEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesClickEvents</A></DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/InlineHyperlink.html" title="class in com.google.gwt.user.client.ui">InlineHyperlink</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>Hyperlink</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesClickEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesClickEvents</A>, <A HREF="../../../../../../com/google/gwt/event/dom/client/HasClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasClickHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/dom/client/HasDoubleClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasDoubleClickHandlers</A></DL>
+<DT><PRE>public class <B>Hyperlink</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesClickEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesClickEvents</A>, <A HREF="../../../../../../com/google/gwt/event/dom/client/HasClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasClickHandlers</A>, <A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></DL>
 </PRE>
 
 <P>
@@ -245,6 +245,15 @@ A widget that serves as an "internal" hyperlink. That is, it is a link to
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html#Hyperlink(com.google.gwt.safehtml.shared.SafeHtml, java.lang.String)">Hyperlink</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+          java.lang.String&nbsp;targetHistoryToken)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a hyperlink with its html and target history token specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html#Hyperlink(java.lang.String, boolean, java.lang.String)">Hyperlink</A></B>(java.lang.String&nbsp;text,
           boolean&nbsp;asHTML,
           java.lang.String&nbsp;targetHistoryToken)</CODE>
@@ -290,14 +299,6 @@ A widget that serves as an "internal" hyperlink. That is, it is a link to
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;<I>Use <A HREF="../../../../../../com/google/gwt/user/client/ui/FocusWidget.html#addClickHandler(com.google.gwt.event.dom.client.ClickHandler)"><CODE>FocusWidget.addClickHandler(com.google.gwt.event.dom.client.ClickHandler)</CODE></A> instead and call
      History.newItem from the handler if you need to process the
      click before the history token is set.</I></TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html#addDoubleClickHandler(com.google.gwt.event.dom.client.DoubleClickHandler)">addDoubleClickHandler</A></B>(<A HREF="../../../../../../com/google/gwt/event/dom/client/DoubleClickHandler.html" title="interface in com.google.gwt.event.dom.client">DoubleClickHandler</A>&nbsp;handler)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a <A HREF="../../../../../../com/google/gwt/event/dom/client/DoubleClickEvent.html" title="class in com.google.gwt.event.dom.client"><CODE>DoubleClickEvent</CODE></A> handler.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -354,6 +355,14 @@ A widget that serves as an "internal" hyperlink. That is, it is a link to
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets this object's contents via known-safe HTML.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html#setHTML(java.lang.String)">setHTML</A></B>(java.lang.String&nbsp;html)</CODE>
 
 <BR>
@@ -382,7 +391,7 @@ A widget that serves as an "internal" hyperlink. That is, it is a link to
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isAttached()">isAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onAttach()">onAttach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onDetach()">onDetach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isAttached()">isAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onAttach()">onAttach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onDetach()">onDetach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.UIObject"><!-- --></A>
@@ -435,6 +444,19 @@ public <B>Hyperlink</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="Hyperlink(com.google.gwt.safehtml.shared.SafeHtml, java.lang.String)"><!-- --></A><H3>
+Hyperlink</H3>
+<PRE>
+public <B>Hyperlink</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+                 java.lang.String&nbsp;targetHistoryToken)</PRE>
+<DL>
+<DD>Creates a hyperlink with its html and target history token specified.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the hyperlink's safe html<DD><CODE>targetHistoryToken</CODE> - the history token to which it will link<DT><B>See Also:</B><DD><A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html#setTargetHistoryToken(java.lang.String)"><CODE>setTargetHistoryToken(java.lang.String)</CODE></A></DL>
+</DL>
+<HR>
+
 <A NAME="Hyperlink(java.lang.String, boolean, java.lang.String)"><!-- --></A><H3>
 Hyperlink</H3>
 <PRE>
@@ -459,8 +481,8 @@ public <B>Hyperlink</B>(java.lang.String&nbsp;text,
 <P>
 <DL>
 <DT><B>Parameters:</B><DD><CODE>text</CODE> - the hyperlink's text<DD><CODE>targetHistoryToken</CODE> - the history token to which it will link, which
-     may not be null (use <A HREF="../../../../../../com/google/gwt/user/client/ui/Anchor.html" title="class in com.google.gwt.user.client.ui"><CODE>Anchor</CODE></A> instead if you don't need history
-     processing)</DL>
+          may not be null (use <A HREF="../../../../../../com/google/gwt/user/client/ui/Anchor.html" title="class in com.google.gwt.user.client.ui"><CODE>Anchor</CODE></A> instead if you don't need
+          history processing)</DL>
 </DL>
 <HR>
 
@@ -522,24 +544,6 @@ addClickListener</H3>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>listener</CODE> - the listener interface to add</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="addDoubleClickHandler(com.google.gwt.event.dom.client.DoubleClickHandler)"><!-- --></A><H3>
-addDoubleClickHandler</H3>
-<PRE>
-public <A HREF="../../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A> <B>addDoubleClickHandler</B>(<A HREF="../../../../../../com/google/gwt/event/dom/client/DoubleClickHandler.html" title="interface in com.google.gwt.event.dom.client">DoubleClickHandler</A>&nbsp;handler)</PRE>
-<DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/event/dom/client/HasDoubleClickHandlers.html#addDoubleClickHandler(com.google.gwt.event.dom.client.DoubleClickHandler)">HasDoubleClickHandlers</A></CODE></B></DD>
-<DD>Adds a <A HREF="../../../../../../com/google/gwt/event/dom/client/DoubleClickEvent.html" title="class in com.google.gwt.event.dom.client"><CODE>DoubleClickEvent</CODE></A> handler.
-<P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/event/dom/client/HasDoubleClickHandlers.html#addDoubleClickHandler(com.google.gwt.event.dom.client.DoubleClickHandler)">addDoubleClickHandler</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/event/dom/client/HasDoubleClickHandlers.html" title="interface in com.google.gwt.event.dom.client">HasDoubleClickHandlers</A></CODE></DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>handler</CODE> - the double click handler
-<DT><B>Returns:</B><DD><A HREF="../../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared"><CODE>HandlerRegistration</CODE></A> used to remove this handler</DL>
 </DD>
 </DL>
 <HR>
@@ -654,6 +658,32 @@ public void <B>setHTML</B>(java.lang.String&nbsp;html)</PRE>
 </DL>
 <HR>
 
+<A NAME="setHTML(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+setHTML</H3>
+<PRE>
+public void <B>setHTML</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">HasSafeHtml</A></CODE></B></DD>
+<DD>Sets this object's contents via known-safe HTML.
+
+ <p>
+ The object will behave exactly the same as when a widget's
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html#setHTML(java.lang.String)"><CODE>HasHTML.setHTML(String)</CODE></A> method is
+ invoked; however the <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared"><CODE>SafeHtml</CODE></A> passed to this method observes the
+ contract that it can be used in an HTML context without causing unsafe
+ script execution. Thus, unlike
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html#setHTML(java.lang.String)"><CODE>HasHTML.setHTML(String)</CODE></A>, using this
+ method cannot result in Cross-Site Scripting security vulnerabilities.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the object's new HTML, represented as a <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared"><CODE>SafeHtml</CODE></A> object</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="setTargetHistoryToken(java.lang.String)"><!-- --></A><H3>
 setTargetHistoryToken</H3>
 <PRE>
@@ -668,7 +698,7 @@ public void <B>setTargetHistoryToken</B>(java.lang.String&nbsp;targetHistoryToke
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>targetHistoryToken</CODE> - the new history token, which may not be null (use
-        <A HREF="../../../../../../com/google/gwt/user/client/ui/Anchor.html" title="class in com.google.gwt.user.client.ui"><CODE>Anchor</CODE></A> instead if you don't need history processing)</DL>
+          <A HREF="../../../../../../com/google/gwt/user/client/ui/Anchor.html" title="class in com.google.gwt.user.client.ui"><CODE>Anchor</CODE></A> instead if you don't need history processing)</DL>
 </DD>
 </DL>
 <HR>
@@ -731,7 +761,7 @@ protected void <B>onEnsureDebugId</B>(java.lang.String&nbsp;baseID)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

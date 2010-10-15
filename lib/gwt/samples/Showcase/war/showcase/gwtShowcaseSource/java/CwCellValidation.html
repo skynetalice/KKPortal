@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCellValidationColumnAddress();
 
     String cwCellValidationColumnName();
@@ -15,48 +14,35 @@
   }
 
   /**
-   * The ViewData used by {@link ValidatableInputCell}.
-   */
-  private static class ValidationData {
-    private String value;
-    private boolean invalid;
-
-    public String getValue() {
-      return value;
-    }
-
-    public boolean isInvalid() {
-      return invalid;
-    }
-
-    public void setInvalid(boolean invalid) {
-      this.invalid = invalid;
-    }
-
-    public void setValue(String value) {
-      this.value = value;
-    }
-  }
-
-  /**
    * An input cell that changes color based on the validation status.
    */
-  private static class ValidatableInputCell extends AbstractEditableCell&lt;
-      String, ValidationData&gt; {
+  private static class ValidatableInputCell extends
+      AbstractInputCell&lt;String, ValidationData&gt; {
 
-    private String errorMessage;
+    private SafeHtml errorMessage;
 
     public ValidatableInputCell(String errorMessage) {
       super("change");
-      this.errorMessage = errorMessage;
+      if (template == null) {
+        template = GWT.create(Template.class);
+      }
+      this.errorMessage = SimpleHtmlSanitizer.sanitizeHtml(errorMessage);
     }
 
     @Override
     public void onBrowserEvent(Element parent, String value, Object key,
         NativeEvent event, ValueUpdater&lt;String&gt; valueUpdater) {
-      ValidationData viewData = getViewData(key);
+      super.onBrowserEvent(parent, value, key, event, valueUpdater);
 
-      if (event.getType().equals("change")) {
+      // Ignore events that don't target the input.
+      Element target = event.getEventTarget().cast();
+      if (!parent.getFirstChildElement().isOrHasChild(target)) {
+        return;
+      }
+
+      ValidationData viewData = getViewData(key);
+      String eventType = event.getType();
+      if ("change".equals(eventType)) {
         InputElement input = parent.getFirstChild().cast();
 
         // Mark cell as containing a pending change
@@ -69,6 +55,7 @@
         }
         String newValue = input.getValue();
         viewData.setValue(newValue);
+        finishEditing(parent, newValue, key, valueUpdater);
 
         // Update the value updater, which updates the field updater.
         if (valueUpdater != null) {
@@ -78,7 +65,7 @@
     }
 
     @Override
-    public void render(String value, Object key, StringBuilder sb) {
+    public void render(String value, Object key, SafeHtmlBuilder sb) {
       // Get the view data.
       ValidationData viewData = getViewData(key);
       if (viewData != null && viewData.getValue().equals(value)) {
@@ -95,25 +82,49 @@
       String pendingValue = (viewData == null) ? null : viewData.getValue();
       boolean invalid = (viewData == null) ? false : viewData.isInvalid();
 
-      sb.append("&lt;input type=\"text\" value=\"");
-      if (pendingValue != null) {
-        sb.append(pendingValue);
-      } else {
-        sb.append(value);
-      }
-      sb.append("\" style=\"color:");
-      if (pendingValue != null) {
-        sb.append(invalid ? "red" : "blue");
-      } else {
-        sb.append("black");
-      }
-      sb.append("\"&gt;&lt;/input&gt;");
+      sb.append(template.input(pendingValue != null ? pendingValue : value,
+          pendingValue != null ? (invalid ? "red" : "blue") : ("black")));
 
       if (invalid) {
-        sb.append("&lt;span style='color:red;'&gt;");
+        sb.appendHtmlConstant("&nbsp;&lt;span style='color:red;'&gt;");
         sb.append(errorMessage);
-        sb.append("&lt;/span&gt;");
+        sb.appendHtmlConstant("&lt;/span&gt;");
       }
+    }
+
+    @Override
+    protected void onEnterKeyDown(Element parent, String value, Object key,
+        NativeEvent event, ValueUpdater&lt;String&gt; valueUpdater) {
+      Element target = event.getEventTarget().cast();
+      if (getInputElement(parent).isOrHasChild(target)) {
+        finishEditing(parent, value, key, valueUpdater);
+      } else {
+        super.onEnterKeyDown(parent, value, key, event, valueUpdater);
+      }
+    }
+  }
+
+  /**
+   * The ViewData used by {@link ValidatableInputCell}.
+   */
+  private static class ValidationData {
+    private boolean invalid;
+    private String value;
+
+    public String getValue() {
+      return value;
+    }
+
+    public boolean isInvalid() {
+      return invalid;
+    }
+
+    public void setInvalid(boolean invalid) {
+      this.invalid = invalid;
+    }
+
+    public void setValue(String value) {
+      this.value = value;
     }
   }
 
@@ -150,7 +161,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -158,8 +169,8 @@
   @Override
   public Widget onInitialize() {
     // Create a table.
-    final CellTable&lt;ContactInfo&gt; table = new CellTable&lt;ContactInfo&gt;(10);
-    table.setKeyProvider(ContactInfo.KEY_PROVIDER);
+    final CellTable&lt;ContactInfo&gt; table = new CellTable&lt;ContactInfo&gt;(10,
+        ContactInfo.KEY_PROVIDER);
 
     // Add the Name column.
     table.addColumn(new Column&lt;ContactInfo, String&gt;(new TextCell()) {
@@ -181,8 +192,7 @@
     };
     table.addColumn(addressColumn, constants.cwCellValidationColumnAddress());
     addressColumn.setFieldUpdater(new FieldUpdater&lt;ContactInfo, String&gt;() {
-      public void update(
-          int index, final ContactInfo object, final String value) {
+      public void update(int index, final ContactInfo object, final String value) {
         // Perform validation after 2 seconds to simulate network delay.
         new Timer() {
           @Override
@@ -196,8 +206,7 @@
               ContactDatabase.get().refreshDisplays();
             } else {
               // Update the view data to mark the pending value as invalid.
-              ValidationData viewData = addressCell.getViewData(
-                  ContactInfo.KEY_PROVIDER.getKey(object));
+              ValidationData viewData = addressCell.getViewData(ContactInfo.KEY_PROVIDER.getKey(object));
               viewData.setInvalid(true);
 
               // We only modified the cell, so do a local redraw.

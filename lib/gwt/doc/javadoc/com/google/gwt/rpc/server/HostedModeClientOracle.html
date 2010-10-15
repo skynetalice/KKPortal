@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -221,16 +221,16 @@ A ClientOracle that is used for hosted-mode clients. This type only
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/HostedModeClientOracle.html#getSeedName(java.lang.Class)">getSeedName</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/HostedModeClientOracle.html#getQueryId(java.lang.Class)">getQueryId</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unimplemented.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/HostedModeClientOracle.html#getTypeId(java.lang.Class)">getTypeId</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/HostedModeClientOracle.html#getSeedName(java.lang.Class)">getSeedName</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unimplemented.</TD>
@@ -467,6 +467,22 @@ public java.lang.reflect.Field[] <B>getOperableFields</B>(java.lang.Class&lt;?&g
 </DL>
 <HR>
 
+<A NAME="getQueryId(java.lang.Class)"><!-- --></A><H3>
+getQueryId</H3>
+<PRE>
+public int <B>getQueryId</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</PRE>
+<DL>
+<DD>Unimplemented.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html#getQueryId(java.lang.Class)">getQueryId</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html" title="class in com.google.gwt.rpc.server">ClientOracle</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getSeedName(java.lang.Class)"><!-- --></A><H3>
 getSeedName</H3>
 <PRE>
@@ -476,22 +492,6 @@ public java.lang.String <B>getSeedName</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)<
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html#getSeedName(java.lang.Class)">getSeedName</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html" title="class in com.google.gwt.rpc.server">ClientOracle</A></CODE></DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getTypeId(java.lang.Class)"><!-- --></A><H3>
-getTypeId</H3>
-<PRE>
-public int <B>getTypeId</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</PRE>
-<DL>
-<DD>Unimplemented.
-<P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html#getTypeId(java.lang.Class)">getTypeId</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html" title="class in com.google.gwt.rpc.server">ClientOracle</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>
@@ -553,7 +553,7 @@ public boolean <B>isScript</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -213,20 +213,20 @@ Encapsulates information about a remote client. This type is not intended to
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html#getQueryId(java.lang.Class)">getQueryId</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the assigned castability queryId of a given type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>abstract &nbsp;java.lang.String</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html#getSeedName(java.lang.Class)">getSeedName</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the name of the top-level function that is used as the seed
  function for a given type.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>abstract &nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/rpc/server/ClientOracle.html#getTypeId(java.lang.Class)">getTypeId</A></B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the assigned typeId of a given type or 0.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -420,13 +420,12 @@ public abstract java.lang.reflect.Field[] <B>getOperableFields</B>(java.lang.Cla
 </DL>
 <HR>
 
-<A NAME="getSeedName(java.lang.Class)"><!-- --></A><H3>
-getSeedName</H3>
+<A NAME="getQueryId(java.lang.Class)"><!-- --></A><H3>
+getQueryId</H3>
 <PRE>
-public abstract java.lang.String <B>getSeedName</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</PRE>
+public abstract int <B>getQueryId</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</PRE>
 <DL>
-<DD>Returns the name of the top-level function that is used as the seed
- function for a given type.
+<DD>Returns the assigned castability queryId of a given type.
 <P>
 <DD><DL>
 </DL>
@@ -434,12 +433,13 @@ public abstract java.lang.String <B>getSeedName</B>(java.lang.Class&lt;?&gt;&nbs
 </DL>
 <HR>
 
-<A NAME="getTypeId(java.lang.Class)"><!-- --></A><H3>
-getTypeId</H3>
+<A NAME="getSeedName(java.lang.Class)"><!-- --></A><H3>
+getSeedName</H3>
 <PRE>
-public abstract int <B>getTypeId</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</PRE>
+public abstract java.lang.String <B>getSeedName</B>(java.lang.Class&lt;?&gt;&nbsp;clazz)</PRE>
 <DL>
-<DD>Returns the assigned typeId of a given type or 0.
+<DD>Returns the name of the top-level function that is used as the seed
+ function for a given type.
 <P>
 <DD><DL>
 </DL>
@@ -498,7 +498,7 @@ public abstract boolean <B>isScript</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

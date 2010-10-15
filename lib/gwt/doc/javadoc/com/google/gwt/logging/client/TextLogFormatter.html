@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -91,11 +91,12 @@ Class TextLogFormatter</H2>
 <PRE>
 java.lang.Object
   <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">java.util.logging.Formatter
-      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.logging.client.TextLogFormatter</B>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">com.google.gwt.logging.impl.FormatterImpl
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.logging.client.TextLogFormatter</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>TextLogFormatter</B><DT>extends java.util.logging.Formatter</DL>
+<DT><PRE>public class <B>TextLogFormatter</B><DT>extends com.google.gwt.logging.impl.FormatterImpl</DL>
 </PRE>
 
 <P>
@@ -116,7 +117,7 @@ Formats LogRecords into 2 lines of text.
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/TextLogFormatter.html#TextLogFormatter()">TextLogFormatter</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/TextLogFormatter.html#TextLogFormatter(boolean)">TextLogFormatter</A></B>(boolean&nbsp;showStackTraces)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -138,6 +139,15 @@ Formats LogRecords into 2 lines of text.
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.logging.impl.FormatterImpl"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.google.gwt.logging.impl.FormatterImpl</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>getRecordInfo, getStackTraceAsString</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.util.logging.Formatter"><!-- --></A>
@@ -171,10 +181,10 @@ Formats LogRecords into 2 lines of text.
 </TR>
 </TABLE>
 
-<A NAME="TextLogFormatter()"><!-- --></A><H3>
+<A NAME="TextLogFormatter(boolean)"><!-- --></A><H3>
 TextLogFormatter</H3>
 <PRE>
-public <B>TextLogFormatter</B>()</PRE>
+public <B>TextLogFormatter</B>(boolean&nbsp;showStackTraces)</PRE>
 <DL>
 </DL>
 
@@ -224,7 +234,7 @@ public java.lang.String <B>format</B>(java.util.logging.LogRecord&nbsp;event)</P
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwNumberFormatDescription();
 
     String cwNumberFormatFailedToParseInput();
@@ -23,7 +22,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * The {@link Label} where the formatted value is displayed.
@@ -104,7 +103,7 @@
 
   /**
    * Show an error message. Pass in null to clear the error message.
-   * 
+   *
    * @param errorMsg the error message
    */
   private void showErrorMessage(String errorMsg) {

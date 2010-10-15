@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -93,16 +93,20 @@ java.lang.Object
   <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.event.shared.HandlerManager</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A>, <A HREF="../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A></DD>
 </DL>
 <HR>
+<B>Deprecated.</B>&nbsp;<I>use <A HREF="../../../../../com/google/gwt/event/shared/SimpleEventBus.html" title="class in com.google.gwt.event.shared"><CODE>SimpleEventBus</CODE></A>.</I>
+<P>
 <DL>
-<DT><PRE>public class <B>HandlerManager</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A></DL>
+<DT><PRE><FONT SIZE="-1">@Deprecated
+</FONT>public class <B>HandlerManager</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A></DL>
 </PRE>
 
 <P>
 Manager responsible for adding handlers to event sources and firing those
- handlers on passed in events.
+ handlers on passed in events. Primitive ancestor of <A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="class in com.google.gwt.event.shared"><CODE>EventBus</CODE></A>,
+ and used at the core of {com.google.gwt.user.client.ui.Widget}.
 <P>
 
 <P>
@@ -122,14 +126,15 @@ Manager responsible for adding handlers to event sources and firing those
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#HandlerManager(java.lang.Object)">HandlerManager</A></B>(java.lang.Object&nbsp;source)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a handler manager with the given source.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Creates a handler manager with a source to be set on all events fired via
+ <A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#fireEvent(com.google.gwt.event.shared.GwtEvent)"><CODE>fireEvent(GwtEvent)</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#HandlerManager(java.lang.Object, boolean)">HandlerManager</A></B>(java.lang.Object&nbsp;source,
                boolean&nbsp;fireInReverseOrder)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a handler manager with the given source, specifying the order in
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Creates a handler manager with the given source, specifying the order in
  which handlers are fired.</TD>
 </TR>
 </TABLE>
@@ -158,7 +163,7 @@ Manager responsible for adding handlers to event sources and firing those
            H&nbsp;handler)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a handler.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Adds a handler.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -166,7 +171,7 @@ Manager responsible for adding handlers to event sources and firing those
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A></B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.html" title="class in com.google.gwt.event.shared">GwtEvent</A>&lt;?&gt;&nbsp;event)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fires the given event to the handlers listening to the event's type.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Fires the given event to the handlers listening to the event's type.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -184,7 +189,7 @@ H</CODE></FONT></TD>
            int&nbsp;index)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the handler at the given index.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Gets the handler at the given index.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -192,7 +197,7 @@ H</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A></B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;?&gt;&nbsp;type)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the number of handlers listening to the event type.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Gets the number of handlers listening to the event type.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -200,7 +205,7 @@ H</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#isEventHandled(com.google.gwt.event.shared.GwtEvent.Type)">isEventHandled</A></B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;?&gt;&nbsp;e)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Does this handler manager handle the given event type?</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Does this handler manager handle the given event type?</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -218,7 +223,7 @@ void</CODE></FONT></TD>
               H&nbsp;handler)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the given handler from the specified event type.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Removes the given handler from the specified event type.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -248,11 +253,12 @@ HandlerManager</H3>
 <PRE>
 public <B>HandlerManager</B>(java.lang.Object&nbsp;source)</PRE>
 <DL>
-<DD>Creates a handler manager with the given source. Handlers will be fired in
- the order that they are added.
+<DD><B>Deprecated.</B>&nbsp;<DD>Creates a handler manager with a source to be set on all events fired via
+ <A HREF="../../../../../com/google/gwt/event/shared/HandlerManager.html#fireEvent(com.google.gwt.event.shared.GwtEvent)"><CODE>fireEvent(GwtEvent)</CODE></A>. Handlers will be fired in the order that they
+ are added.
 <P>
 <DL>
-<DT><B>Parameters:</B><DD><CODE>source</CODE> - the event source</DL>
+<DT><B>Parameters:</B><DD><CODE>source</CODE> - the default event source</DL>
 </DL>
 <HR>
 
@@ -262,7 +268,7 @@ HandlerManager</H3>
 public <B>HandlerManager</B>(java.lang.Object&nbsp;source,
                       boolean&nbsp;fireInReverseOrder)</PRE>
 <DL>
-<DD>Creates a handler manager with the given source, specifying the order in
+<DD><B>Deprecated.</B>&nbsp;<DD>Creates a handler manager with the given source, specifying the order in
  which handlers are fired.
 <P>
 <DL>
@@ -285,10 +291,10 @@ addHandler</H3>
 public &lt;H extends <A HREF="../../../../../com/google/gwt/event/shared/EventHandler.html" title="interface in com.google.gwt.event.shared">EventHandler</A>&gt; <A HREF="../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A> <B>addHandler</B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;H&gt;&nbsp;type,
                                                                H&nbsp;handler)</PRE>
 <DL>
-<DD>Adds a handler.
+<DD><B>Deprecated.</B>&nbsp;<DD>Adds a handler.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/event/shared/EventBus.html#addHandler(com.google.gwt.event.shared.GwtEvent.Type, H)">addHandler</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/event/shared/EventBus.html" title="interface in com.google.gwt.event.shared">EventBus</A></CODE></DL>
+</DL>
 </DD>
 <DD><DL>
 <DT><B>Type Parameters:</B><DD><CODE>H</CODE> - The type of handler<DT><B>Parameters:</B><DD><CODE>type</CODE> - the event type associated with this handler<DD><CODE>handler</CODE> - the handler
@@ -303,16 +309,16 @@ fireEvent</H3>
 <PRE>
 public void <B>fireEvent</B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.html" title="class in com.google.gwt.event.shared">GwtEvent</A>&lt;?&gt;&nbsp;event)</PRE>
 <DL>
-<DD>Fires the given event to the handlers listening to the event's type.
- 
- Note, any subclass should be very careful about overriding this method, as
- adds/removes of handlers will not be safe except within this
- implementation.
-
+<DD><B>Deprecated.</B>&nbsp;<DD>Fires the given event to the handlers listening to the event's type.
+ <p>
  Any exceptions thrown by handlers will be bundled into a
  <A HREF="../../../../../com/google/gwt/event/shared/UmbrellaException.html" title="class in com.google.gwt.event.shared"><CODE>UmbrellaException</CODE></A> and then re-thrown after all handlers have
  completed. An exception thrown by a handler will not prevent other handlers
  from executing.
+ <p>
+ Note, any subclass should be very careful about overriding this method, as
+ adds/removes of handlers will not be safe except within this
+ implementation.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/event/shared/HasHandlers.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A></CODE></DL>
@@ -329,7 +335,7 @@ getHandler</H3>
 public &lt;H extends <A HREF="../../../../../com/google/gwt/event/shared/EventHandler.html" title="interface in com.google.gwt.event.shared">EventHandler</A>&gt; H <B>getHandler</B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;H&gt;&nbsp;type,
                                              int&nbsp;index)</PRE>
 <DL>
-<DD>Gets the handler at the given index.
+<DD><B>Deprecated.</B>&nbsp;<DD>Gets the handler at the given index.
 <P>
 <DD><DL>
 </DL>
@@ -346,7 +352,7 @@ getHandlerCount</H3>
 <PRE>
 public int <B>getHandlerCount</B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;?&gt;&nbsp;type)</PRE>
 <DL>
-<DD>Gets the number of handlers listening to the event type.
+<DD><B>Deprecated.</B>&nbsp;<DD>Gets the number of handlers listening to the event type.
 <P>
 <DD><DL>
 </DL>
@@ -363,7 +369,7 @@ isEventHandled</H3>
 <PRE>
 public boolean <B>isEventHandled</B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;?&gt;&nbsp;e)</PRE>
 <DL>
-<DD>Does this handler manager handle the given event type?
+<DD><B>Deprecated.</B>&nbsp;<DD>Does this handler manager handle the given event type?
 <P>
 <DD><DL>
 </DL>
@@ -381,9 +387,7 @@ removeHandler</H3>
 public &lt;H extends <A HREF="../../../../../com/google/gwt/event/shared/EventHandler.html" title="interface in com.google.gwt.event.shared">EventHandler</A>&gt; void <B>removeHandler</B>(<A HREF="../../../../../com/google/gwt/event/shared/GwtEvent.Type.html" title="class in com.google.gwt.event.shared">GwtEvent.Type</A>&lt;H&gt;&nbsp;type,
                                                    H&nbsp;handler)</PRE>
 <DL>
-<DD>Removes the given handler from the specified event type. Normally,
- applications should call <A HREF="../../../../../com/google/gwt/event/shared/HandlerRegistration.html#removeHandler()"><CODE>HandlerRegistration.removeHandler()</CODE></A>
- instead.
+<DD><B>Deprecated.</B>&nbsp;<DD>Removes the given handler from the specified event type.
 <P>
 <DD><DL>
 </DL>
@@ -416,7 +420,7 @@ public &lt;H extends <A HREF="../../../../../com/google/gwt/event/shared/EventHa
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

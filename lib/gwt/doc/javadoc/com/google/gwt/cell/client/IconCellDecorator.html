@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -104,10 +104,6 @@ java.lang.Object
 
 <P>
 A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> decorator that adds an icon to another <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.
-
- <p>
- Note: This class is new and its interface subject to change.
- </p>
 <P>
 
 <P>
@@ -168,11 +164,11 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<CODE>protected &nbsp;<A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html#getIconHtml(C)">getIconHtml</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the HTML string that represents the icon.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the safe HTML string that represents the icon.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -216,13 +212,23 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value,
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value,
        java.lang.Object&nbsp;key,
-       java.lang.StringBuilder&nbsp;sb)</CODE>
+       <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+           <A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value,
+           java.lang.Object&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reset focus on the Cell.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -322,8 +328,9 @@ public java.util.Set&lt;java.lang.String&gt; <B>getConsumedEvents</B>()</PRE>
 <DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#getConsumedEvents()">Cell</A></CODE></B></DD>
 <DD><p>
  Get the set of events that this cell consumes. The container that uses this
- cell should only pass these events to <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>Cell.onBrowserEvent(Element,
- Object, Object, NativeEvent, ValueUpdater)</CODE></A>.
+ cell should only pass these events to
+ <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>Cell.onBrowserEvent(Element, Object, Object, NativeEvent, ValueUpdater)</CODE></A>
+ .
  </p>
  <p>
  The returned value should not be modified, and may be an unmodifiable set.
@@ -403,22 +410,49 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 </DL>
 <HR>
 
-<A NAME="render(java.lang.Object,java.lang.Object,java.lang.StringBuilder)"><!-- --></A><A NAME="render(C, java.lang.Object, java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(java.lang.Object,java.lang.Object,com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><A NAME="render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
 public void <B>render</B>(<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value,
                    java.lang.Object&nbsp;key,
-                   java.lang.StringBuilder&nbsp;sb)</PRE>
+                   <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">Cell</A></CODE></B></DD>
-<DD>Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">Cell</A></CODE></B></DD>
+<DD>Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+ 
+ <p>
+ Note: If your cell contains natively focusable elements, such as buttons or
+ input elements, be sure to set the tabIndex to -1 so that they do not steal
+ focus away from the containing widget.
+ </p>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&gt;</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the StringBuilder to be written to</DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to be written to</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="resetFocus(com.google.gwt.dom.client.Element,java.lang.Object,java.lang.Object)"><!-- --></A><A NAME="resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)"><!-- --></A><H3>
+resetFocus</H3>
+<PRE>
+public boolean <B>resetFocus</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+                          <A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value,
+                          java.lang.Object&nbsp;key)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">Cell</A></CODE></B></DD>
+<DD>Reset focus on the Cell. This method is called if the cell has focus when
+ it is refreshed.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&gt;</CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>true if focus is taken, false if not</DL>
 </DD>
 </DL>
 <HR>
@@ -434,7 +468,7 @@ public void <B>setValue</B>(<A HREF="../../../../../com/google/gwt/dom/client/El
 <DD>This method may be used by cell containers to set the value on a single
  cell directly, rather than using <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(String)</CODE></A>. See
  <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)"><CODE>AbstractCell.setValue(Element, Object, Object)</CODE></A> for a default
- implementation that uses <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)"><CODE>Cell.render(Object, Object, StringBuilder)</CODE></A>.
+ implementation that uses <A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><CODE>Cell.render(Object, Object, SafeHtmlBuilder)</CODE></A>.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&gt;</CODE></DL>
@@ -448,9 +482,9 @@ public void <B>setValue</B>(<A HREF="../../../../../com/google/gwt/dom/client/El
 <A NAME="getIconHtml(java.lang.Object)"><!-- --></A><A NAME="getIconHtml(C)"><!-- --></A><H3>
 getIconHtml</H3>
 <PRE>
-protected java.lang.String <B>getIconHtml</B>(<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value)</PRE>
+protected <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A> <B>getIconHtml</B>(<A HREF="../../../../../com/google/gwt/cell/client/IconCellDecorator.html" title="type parameter in IconCellDecorator">C</A>&nbsp;value)</PRE>
 <DL>
-<DD>Get the HTML string that represents the icon. Override this method to
+<DD>Get the safe HTML string that represents the icon. Override this method to
  change the icon based on the value.
 <P>
 <DD><DL>
@@ -504,7 +538,7 @@ protected boolean <B>isIconUsed</B>(<A HREF="../../../../../com/google/gwt/cell/
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -144,7 +144,7 @@ Generates a cross-site compatible bootstrap sequence.
 <TH ALIGN="left"><B>Fields inherited from class com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>FRAGMENT_EXTENSION, FRAGMENT_SUBDIR</CODE></TD>
+<TD><CODE>COMPUTE_SCRIPT_BASE_JS, FRAGMENT_EXTENSION, FRAGMENT_SUBDIR, PERMUTATIONS_JS, PROCESS_METAS_JS</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -208,8 +208,7 @@ Generates a cross-site compatible bootstrap sequence.
                 java.lang.String&nbsp;strongName)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute the beginning of a JavaScript file that will hold the main module
- implementation.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -220,8 +219,7 @@ Generates a cross-site compatible bootstrap sequence.
                 int&nbsp;numFragments)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Compute the beginning of a JavaScript file that will hold the main module
- implementation.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -248,7 +246,7 @@ Generates a cross-site compatible bootstrap sequence.
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>doEmitCompilation, emitSelectionScript, generatePrimaryFragment, generatePropertyProvider, generateScriptInjector, generateSelectionScript, generateStylesheetInjector, getHostedFilename, isRelativeURL, link, link, maybeAddHostedModeFile, processSelectionInformation, replaceAll, supportsDevMode</CODE></TD>
+<TD><CODE>doEmitCompilation, emitSelectionScript, generatePrimaryFragment, generatePropertyProvider, generateScriptInjector, generateSelectionScript, generateStylesheetInjector, getHostedFilename, getSelectionScriptStringBuffer, isRelativeURL, link, link, maybeAddHostedModeFile, processSelectionInformation, processSelectionScriptCommon, replaceAll, supportsDevMode</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.core.ext.linker.AbstractLinker"><!-- --></A>
@@ -337,7 +335,7 @@ protected java.lang.String <B>generateDeferredFragment</B>(<A HREF="../../../../
 <DT><B>Overrides:</B><DD><CODE>generateDeferredFragment</CODE> in class <CODE>com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>logger</CODE> - a TreeLogger<DD><CODE>context</CODE> - a LinkerContext<DD><CODE>fragment</CODE> - the fragment number</DL>
+</DL>
 </DD>
 </DL>
 <HR>
@@ -364,10 +362,6 @@ protected java.lang.String <B>getModulePrefix</B>(<A HREF="../../../../../com/go
                                            <A HREF="../../../../../com/google/gwt/core/ext/LinkerContext.html" title="interface in com.google.gwt.core.ext">LinkerContext</A>&nbsp;context,
                                            java.lang.String&nbsp;strongName)</PRE>
 <DL>
-<DD><B>Description copied from class: <CODE>com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</CODE></B></DD>
-<DD>Compute the beginning of a JavaScript file that will hold the main module
- implementation.
-<P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE>getModulePrefix</CODE> in class <CODE>com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</CODE></DL>
 </DD>
@@ -385,17 +379,11 @@ protected java.lang.String <B>getModulePrefix</B>(<A HREF="../../../../../com/go
                                            java.lang.String&nbsp;strongName,
                                            int&nbsp;numFragments)</PRE>
 <DL>
-<DD><B>Description copied from class: <CODE>com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</CODE></B></DD>
-<DD>Compute the beginning of a JavaScript file that will hold the main module
- implementation. By default, calls
- <CODE>SelectionScriptLinker.getModulePrefix(TreeLogger, LinkerContext, String)</CODE>.
-<P>
 <DD><DL>
 <DT><B>Overrides:</B><DD><CODE>getModulePrefix</CODE> in class <CODE>com.google.gwt.core.ext.linker.impl.SelectionScriptLinker</CODE></DL>
 </DD>
 <DD><DL>
-<DD><CODE>strongName</CODE> - strong name of the module being emitted<DD><CODE>numFragments</CODE> - the number of fragments for this module, including the
-          main fragment (fragment 0)</DL>
+</DL>
 </DD>
 </DL>
 <HR>
@@ -452,7 +440,7 @@ protected java.lang.String <B>getSelectionScriptTemplate</B>(<A HREF="../../../.
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

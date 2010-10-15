@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/logging/client/HasWidgetsLogHandler.html" title="class in com.google.gwt.logging.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/LogConfiguration.html" title="class in com.google.gwt.logging.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/JsonLogRecordClientUtil.html" title="class in com.google.gwt.logging.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/logging/client/HtmlLogFormatter.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="HtmlLogFormatter.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -91,11 +91,12 @@ Class HtmlLogFormatter</H2>
 <PRE>
 java.lang.Object
   <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">java.util.logging.Formatter
-      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.logging.client.HtmlLogFormatter</B>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by ">com.google.gwt.logging.impl.FormatterImpl
+          <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.logging.client.HtmlLogFormatter</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>HtmlLogFormatter</B><DT>extends java.util.logging.Formatter</DL>
+<DT><PRE>public class <B>HtmlLogFormatter</B><DT>extends com.google.gwt.logging.impl.FormatterImpl</DL>
 </PRE>
 
 <P>
@@ -118,7 +119,7 @@ Formats LogRecords into HTML. Subclasses should override the GetHtmlPrefix
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/HtmlLogFormatter.html#HtmlLogFormatter()">HtmlLogFormatter</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/logging/client/HtmlLogFormatter.html#HtmlLogFormatter(boolean)">HtmlLogFormatter</A></B>(boolean&nbsp;showStackTraces)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -158,6 +159,15 @@ Formats LogRecords into HTML. Subclasses should override the GetHtmlPrefix
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.logging.impl.FormatterImpl"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.google.gwt.logging.impl.FormatterImpl</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>getRecordInfo, getStackTraceAsString</CODE></TD>
+</TR>
+</TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.util.logging.Formatter"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
 <TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
@@ -189,10 +199,10 @@ Formats LogRecords into HTML. Subclasses should override the GetHtmlPrefix
 </TR>
 </TABLE>
 
-<A NAME="HtmlLogFormatter()"><!-- --></A><H3>
+<A NAME="HtmlLogFormatter(boolean)"><!-- --></A><H3>
 HtmlLogFormatter</H3>
 <PRE>
-public <B>HtmlLogFormatter</B>()</PRE>
+public <B>HtmlLogFormatter</B>(boolean&nbsp;showStackTraces)</PRE>
 <DL>
 </DL>
 
@@ -264,14 +274,14 @@ protected java.lang.String <B>getHtmlSuffix</B>(java.util.logging.LogRecord&nbsp
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/logging/client/HasWidgetsLogHandler.html" title="class in com.google.gwt.logging.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/LogConfiguration.html" title="class in com.google.gwt.logging.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/logging/client/JsonLogRecordClientUtil.html" title="class in com.google.gwt.logging.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/logging/client/HtmlLogFormatter.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="HtmlLogFormatter.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

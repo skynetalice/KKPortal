@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.html" title="interface in com.google.gwt.view.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/view/client/SingleSelectionModel.html" title="class in com.google.gwt.view.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/view/client/SimpleKeyProvider.html" title="class in com.google.gwt.view.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="SelectionModel.AbstractSelectionModel.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -109,8 +109,8 @@ java.lang.Object
 </PRE>
 
 <P>
-A default implementation of SelectionModel that provides listener addition
- and removal.
+A default implementation of <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.html" title="interface in com.google.gwt.view.client"><CODE>SelectionModel</CODE></A> that provides listener
+ addition and removal.
 <P>
 
 <P>
@@ -146,10 +146,12 @@ A default implementation of SelectionModel that provides listener addition
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#SelectionModel.AbstractSelectionModel()">SelectionModel.AbstractSelectionModel</A></B>()</CODE>
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#SelectionModel.AbstractSelectionModel(com.google.gwt.view.client.ProvidesKey)">SelectionModel.AbstractSelectionModel</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="type parameter in SelectionModel.AbstractSelectionModel">T</A>&gt;&nbsp;keyProvider)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct an AbstractSelectionModel with a given key provider.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -183,7 +185,7 @@ A default implementation of SelectionModel that provides listener addition
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#fireSelectionChangeEvent()">fireSelectionChangeEvent</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fire a <A HREF="../../../../../com/google/gwt/view/client/SelectionChangeEvent.html" title="class in com.google.gwt.view.client"><CODE>SelectionChangeEvent</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -207,7 +209,7 @@ A default implementation of SelectionModel that provides listener addition
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventCancelled()">isEventCancelled</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return true if the next scheduled event should be canceled.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -215,7 +217,7 @@ A default implementation of SelectionModel that provides listener addition
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#isEventScheduled()">isEventScheduled</A></B>()</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return true if an event is scheduled to be fired.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -232,7 +234,7 @@ A default implementation of SelectionModel that provides listener addition
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventCancelled(boolean)">setEventCancelled</A></B>(boolean&nbsp;isEventCancelled)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the next scheduled event should be canceled.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -240,15 +242,7 @@ A default implementation of SelectionModel that provides listener addition
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setEventScheduled(boolean)">setEventScheduled</A></B>(boolean&nbsp;isEventScheduled)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html#setKeyProvider(com.google.gwt.view.client.ProvidesKey)">setKeyProvider</A></B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="type parameter in SelectionModel.AbstractSelectionModel">T</A>&gt;&nbsp;keyProvider)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the key provider for items in this model.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether an event is scheduled to be fired.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -282,11 +276,16 @@ A default implementation of SelectionModel that provides listener addition
 </TR>
 </TABLE>
 
-<A NAME="SelectionModel.AbstractSelectionModel()"><!-- --></A><H3>
+<A NAME="SelectionModel.AbstractSelectionModel(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
 SelectionModel.AbstractSelectionModel</H3>
 <PRE>
-public <B>SelectionModel.AbstractSelectionModel</B>()</PRE>
+protected <B>SelectionModel.AbstractSelectionModel</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="type parameter in SelectionModel.AbstractSelectionModel">T</A>&gt;&nbsp;keyProvider)</PRE>
 <DL>
+<DD>Construct an AbstractSelectionModel with a given key provider.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>keyProvider</CODE> - an instance of ProvidesKey<T>, or null if the record
+        object should act as its own key</DL>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -324,7 +323,7 @@ public void <B>fireEvent</B>(<A HREF="../../../../../com/google/gwt/event/shared
 <DL>
 <DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/event/shared/HasHandlers.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">HasHandlers</A></CODE></B></DD>
 <DD>Fires the given event to the handlers listening to the event's type.
- 
+ <p>
  Any exceptions thrown by handlers will be bundled into a
  <A HREF="../../../../../com/google/gwt/event/shared/UmbrellaException.html" title="class in com.google.gwt.event.shared"><CODE>UmbrellaException</CODE></A> and then re-thrown after all handlers have
  completed. An exception thrown by a handler will not prevent other handlers
@@ -373,27 +372,13 @@ public <A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" titl
 </DL>
 <HR>
 
-<A NAME="setKeyProvider(com.google.gwt.view.client.ProvidesKey)"><!-- --></A><H3>
-setKeyProvider</H3>
-<PRE>
-public void <B>setKeyProvider</B>(<A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client">ProvidesKey</A>&lt;<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="type parameter in SelectionModel.AbstractSelectionModel">T</A>&gt;&nbsp;keyProvider)</PRE>
-<DL>
-<DD>Set the key provider for items in this model.
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>keyProvider</CODE> - the <A HREF="../../../../../com/google/gwt/view/client/ProvidesKey.html" title="interface in com.google.gwt.view.client"><CODE>ProvidesKey</CODE></A></DL>
-</DD>
-</DL>
-<HR>
-
 <A NAME="fireSelectionChangeEvent()"><!-- --></A><H3>
 fireSelectionChangeEvent</H3>
 <PRE>
 protected void <B>fireSelectionChangeEvent</B>()</PRE>
 <DL>
+<DD>Fire a <A HREF="../../../../../com/google/gwt/view/client/SelectionChangeEvent.html" title="class in com.google.gwt.view.client"><CODE>SelectionChangeEvent</CODE></A>.  Multiple firings may be coalesced.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -408,6 +393,8 @@ isEventCancelled</H3>
 <PRE>
 protected boolean <B>isEventCancelled</B>()</PRE>
 <DL>
+<DD>Return true if the next scheduled event should be canceled.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -422,6 +409,8 @@ isEventScheduled</H3>
 <PRE>
 protected boolean <B>isEventScheduled</B>()</PRE>
 <DL>
+<DD>Return true if an event is scheduled to be fired.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -453,6 +442,8 @@ setEventCancelled</H3>
 <PRE>
 protected void <B>setEventCancelled</B>(boolean&nbsp;isEventCancelled)</PRE>
 <DL>
+<DD>Set whether the next scheduled event should be canceled.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -467,6 +458,8 @@ setEventScheduled</H3>
 <PRE>
 protected void <B>setEventScheduled</B>(boolean&nbsp;isEventScheduled)</PRE>
 <DL>
+<DD>Set whether an event is scheduled to be fired.
+<P>
 <DD><DL>
 </DL>
 </DD>
@@ -498,14 +491,14 @@ protected void <B>setEventScheduled</B>(boolean&nbsp;isEventScheduled)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/google/gwt/view/client/SelectionModel.html" title="interface in com.google.gwt.view.client"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/google/gwt/view/client/SingleSelectionModel.html" title="class in com.google.gwt.view.client"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/google/gwt/view/client/SimpleKeyProvider.html" title="class in com.google.gwt.view.client"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="SelectionModel.AbstractSelectionModel.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

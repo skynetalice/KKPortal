@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwDialogBoxCaption();
 
     String cwDialogBoxClose();
@@ -25,7 +24,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -38,8 +37,8 @@
     dialogBox.setAnimationEnabled(true);
 
     // Create a button to show the dialog Box
-    Button openButton = new Button(constants.cwDialogBoxShowButton(),
-        new ClickHandler() {
+    Button openButton = new Button(
+        constants.cwDialogBoxShowButton(), new ClickHandler() {
           public void onClick(ClickEvent sender) {
             dialogBox.center();
             dialogBox.show();
@@ -47,8 +46,8 @@
         });
 
     // Create a ListBox
-    HTML listDesc = new HTML("&lt;br&gt;&lt;br&gt;&lt;br&gt;"
-        + constants.cwDialogBoxListBoxInfo());
+    HTML listDesc = new HTML(
+        "&lt;br&gt;&lt;br&gt;&lt;br&gt;" + constants.cwDialogBoxListBoxInfo());
 
     ListBox list = new ListBox();
     list.setVisibleItemCount(1);
@@ -69,7 +68,7 @@
 
   /**
    * Create the dialog box for this example.
-   * 
+   *
    * @return the new dialog box
    */
   private DialogBox createDialogBox() {
@@ -86,30 +85,30 @@
     // Add some text to the top of the dialog
     HTML details = new HTML(constants.cwDialogBoxDetails());
     dialogContents.add(details);
-    dialogContents.setCellHorizontalAlignment(details,
-        HasHorizontalAlignment.ALIGN_CENTER);
+    dialogContents.setCellHorizontalAlignment(
+        details, HasHorizontalAlignment.ALIGN_CENTER);
 
     // Add an image to the dialog
     Image image = new Image(Showcase.images.jimmy());
     dialogContents.add(image);
-    dialogContents.setCellHorizontalAlignment(image,
-        HasHorizontalAlignment.ALIGN_CENTER);
+    dialogContents.setCellHorizontalAlignment(
+        image, HasHorizontalAlignment.ALIGN_CENTER);
 
     // Add a close button at the bottom of the dialog
-    Button closeButton = new Button(constants.cwDialogBoxClose(),
-        new ClickHandler() {
+    Button closeButton = new Button(
+        constants.cwDialogBoxClose(), new ClickHandler() {
           public void onClick(ClickEvent event) {
             dialogBox.hide();
           }
         });
     dialogContents.add(closeButton);
     if (LocaleInfo.getCurrentLocale().isRTL()) {
-      dialogContents.setCellHorizontalAlignment(closeButton,
-          HasHorizontalAlignment.ALIGN_LEFT);
+      dialogContents.setCellHorizontalAlignment(
+          closeButton, HasHorizontalAlignment.ALIGN_LEFT);
 
     } else {
-      dialogContents.setCellHorizontalAlignment(closeButton,
-          HasHorizontalAlignment.ALIGN_RIGHT);
+      dialogContents.setCellHorizontalAlignment(
+          closeButton, HasHorizontalAlignment.ALIGN_RIGHT);
     }
 
     // Return the dialog box

@@ -1,8 +1,7 @@
 <pre>  /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants extends Constants,
-      ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwBidiFormattingArg0Label();
 
     String cwBidiFormattingArg1Label();
@@ -47,7 +46,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * The blog messages used in this example.
@@ -78,10 +77,11 @@
     layout.setCellSpacing(5);
 
     // Add a link to the source code of the Interface
-    Anchor link = new Anchor("BlogMessages");
+    final String rawFile = getSimpleName(BlogMessages.class);
+    Anchor link = new Anchor(rawFile);
     link.addClickHandler(new ClickHandler() {
       public void onClick(ClickEvent event) {
-        selectTab(2);
+        fireRawSourceRequest(rawFile + ".java");
       }
     });
     HorizontalPanel linkPanel = new HorizontalPanel();
@@ -100,8 +100,8 @@
     arg0Box = new TextBox();
     // Using an initial value whose direction is opposite the locale's direction
     // demonstrates the need for and effect of bidi formatting.
-    arg0Box.setText(LocaleInfo.getCurrentLocale().isRTL() ? "Tom Bombadil" :
-      "תומר גרין");
+    arg0Box.setText(
+        LocaleInfo.getCurrentLocale().isRTL() ? "Tom Bombadil" : "תומר גרין");
     layout.setHTML(2, 0, constants.cwBidiFormattingArg0Label());
     layout.setWidget(2, 1, arg0Box);
 
@@ -115,8 +115,8 @@
     arg2Box = new TextBox();
     // Using an initial value whose direction is opposite the locale's direction
     // demonstrates the need for and effect of bidi formatting.
-    arg2Box.setText(LocaleInfo.getCurrentLocale().isRTL() ?
-        "How deep is your love?" : "כמה חול יש בחוף?");
+    arg2Box.setText(LocaleInfo.getCurrentLocale().isRTL()
+        ? "How deep is your love?" : "כמה חול יש בחוף?");
     layout.setHTML(4, 0, constants.cwBidiFormattingArg2Label());
     layout.setWidget(4, 1, arg2Box);
 
@@ -149,14 +149,6 @@
   }
 
   /**
-   * Html-escape the input String.
-   * TODO(tomerigo): Use SafeHtml when it becomes available.
-   */
-  private String htmlEscape(String str) {
-      return str.replace("&", "&amp;").replace("&lt;", "&lt;");
-  }
-
-  /**
    * Update the formatted message.
    */
   private void updateMessages() {
@@ -165,12 +157,11 @@
     String arg2 = arg2Box.getText().trim();
     message.setText(blogMessages.userComment(arg0, arg1, arg2));
 
-    bidiFormattedMessage.setHTML(blogMessages.userComment(
-        bidiFormatter.spanWrap(arg0),
+    bidiFormattedMessage.setHTML(
+        blogMessages.userComment(bidiFormatter.spanWrap(arg0),
         // arg1 is intended to be an unsigned number, so bidi formatting is not
         // needed. However, HTML escaping is a must to avoid an XSS attack hole!
-        htmlEscape(arg1),
-        bidiFormatter.spanWrap(arg2)));
+            SafeHtmlUtils.htmlEscape(arg1), bidiFormatter.spanWrap(arg2)));
   }
 
 </pre>

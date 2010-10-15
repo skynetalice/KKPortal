@@ -46,14 +46,14 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/TabListenerCollection.html" title="class in com.google.gwt.user.client.ui"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/TakesValue.html" title="interface in com.google.gwt.user.client.ui"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/TextArea.html" title="class in com.google.gwt.user.client.ui"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../../index.html?com/google/gwt/user/client/ui/TabPanel.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="TabPanel.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -96,7 +96,7 @@ java.lang.Object
               <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.TabPanel</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasBeforeSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasBeforeSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasAnimation.html" title="interface in com.google.gwt.user.client.ui">HasAnimation</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesTabEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesTabEvents</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/TabListener.html" title="interface in com.google.gwt.user.client.ui">TabListener</A>, java.lang.Iterable&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&gt;</DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasBeforeSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasBeforeSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasAnimation.html" title="interface in com.google.gwt.user.client.ui">HasAnimation</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel.ForIsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesTabEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesTabEvents</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/TabListener.html" title="interface in com.google.gwt.user.client.ui">TabListener</A>, java.lang.Iterable&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&gt;</DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/DecoratedTabPanel.html" title="class in com.google.gwt.user.client.ui">DecoratedTabPanel</A></DD>
@@ -109,23 +109,23 @@ java.lang.Object
 <P>
 <DL>
 <DT><PRE><FONT SIZE="-1">@Deprecated
-</FONT>public class <B>TabPanel</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/Composite.html" title="class in com.google.gwt.user.client.ui">Composite</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/TabListener.html" title="interface in com.google.gwt.user.client.ui">TabListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesTabEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesTabEvents</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasAnimation.html" title="interface in com.google.gwt.user.client.ui">HasAnimation</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasBeforeSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasBeforeSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasSelectionHandlers</A>&lt;java.lang.Integer&gt;</DL>
+</FONT>public class <B>TabPanel</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/Composite.html" title="class in com.google.gwt.user.client.ui">Composite</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/TabListener.html" title="interface in com.google.gwt.user.client.ui">TabListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesTabEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesTabEvents</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasAnimation.html" title="interface in com.google.gwt.user.client.ui">HasAnimation</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel.ForIsWidget</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasBeforeSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasBeforeSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasSelectionHandlers</A>&lt;java.lang.Integer&gt;</DL>
 </PRE>
 
 <P>
 A panel that represents a tabbed set of pages, each of which contains another
  widget. Its child widgets are shown as the user selects the various tabs
  associated with them. The tabs can contain arbitrary HTML.
- 
+
  <p>
  This widget will <em>only</em> work in quirks mode. If your application is in
  Standards Mode, use <A HREF="../../../../../../com/google/gwt/user/client/ui/TabLayoutPanel.html" title="class in com.google.gwt.user.client.ui"><CODE>TabLayoutPanel</CODE></A> instead.
  </p>
- 
+
  <p>
  <img class='gallery' src='doc-files/TabPanel.png'/>
  </p>
- 
+
  <p>
  Note that this widget is not a panel per se, but rather a
  <A HREF="../../../../../../com/google/gwt/user/client/ui/Composite.html" title="class in com.google.gwt.user.client.ui"><CODE>Composite</CODE></A> that aggregates a
@@ -133,14 +133,14 @@ A panel that represents a tabbed set of pages, each of which contains another
  <A HREF="../../../../../../com/google/gwt/user/client/ui/DeckPanel.html" title="class in com.google.gwt.user.client.ui"><CODE>DeckPanel</CODE></A>. It does, however, implement
  <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui"><CODE>HasWidgets</CODE></A>.
  </p>
- 
- <h3>CSS Style Rules</h3> 
- <ul class='css'> 
- <li>.gwt-TabPanel { the tab panel itself }</li> 
+
+ <h3>CSS Style Rules</h3>
+ <ul class='css'>
+ <li>.gwt-TabPanel { the tab panel itself }</li>
  <li>.gwt-TabPanelBottom { the bottom section of the tab panel
- (the deck containing the widget) }</li> 
+ (the deck containing the widget) }</li>
  </ul>
- 
+
  <p>
  <h3>Example</h3>
  <blockquote><pre>public class TabPanelExample implements EntryPoint {
@@ -189,6 +189,16 @@ A panel that represents a tabbed set of pages, each of which contains another
 </TR>
 </TABLE>
 &nbsp;
+<A NAME="nested_classes_inherited_from_class_com.google.gwt.user.client.ui.HasWidgets"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">HasWidgets.ForIsWidget</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
 <!-- =========== FIELD SUMMARY =========== -->
 
 <A NAME="field_summary"><!-- --></A>
@@ -231,6 +241,34 @@ A panel that represents a tabbed set of pages, each of which contains another
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#add(com.google.gwt.user.client.ui.IsWidget, com.google.gwt.user.client.ui.IsWidget)">add</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w,
+    <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;tabWidget)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#add(com.google.gwt.user.client.ui.IsWidget, java.lang.String)">add</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w,
+    java.lang.String&nbsp;tabText)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#add(com.google.gwt.user.client.ui.IsWidget, java.lang.String, boolean)">add</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w,
+    java.lang.String&nbsp;tabText,
+    boolean&nbsp;asHTML)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -343,10 +381,49 @@ A panel that represents a tabbed set of pages, each of which contains another
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#getWidgetIndex(com.google.gwt.user.client.ui.IsWidget)">getWidgetIndex</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;child)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#getWidgetIndex(com.google.gwt.user.client.ui.Widget)">getWidgetIndex</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Gets the index of the specified child widget.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#insert(com.google.gwt.user.client.ui.IsWidget, com.google.gwt.user.client.ui.IsWidget, int)">insert</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;widget,
+       <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;tabWidget,
+       int&nbsp;beforeIndex)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#insert(com.google.gwt.user.client.ui.IsWidget, java.lang.String, boolean, int)">insert</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;widget,
+       java.lang.String&nbsp;tabText,
+       boolean&nbsp;asHTML,
+       int&nbsp;beforeIndex)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabPanel.html#insert(com.google.gwt.user.client.ui.IsWidget, java.lang.String, int)">insert</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;widget,
+       java.lang.String&nbsp;tabText,
+       int&nbsp;beforeIndex)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -493,7 +570,7 @@ A panel that represents a tabbed set of pages, each of which contains another
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.UIObject"><!-- --></A>
@@ -554,6 +631,58 @@ public <B>TabPanel</B>()</PRE>
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="add(com.google.gwt.user.client.ui.IsWidget, com.google.gwt.user.client.ui.IsWidget)"><!-- --></A><H3>
+add</H3>
+<PRE>
+public void <B>add</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w,
+                <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;tabWidget)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="add(com.google.gwt.user.client.ui.IsWidget, java.lang.String)"><!-- --></A><H3>
+add</H3>
+<PRE>
+public void <B>add</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w,
+                java.lang.String&nbsp;tabText)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="add(com.google.gwt.user.client.ui.IsWidget, java.lang.String, boolean)"><!-- --></A><H3>
+add</H3>
+<PRE>
+public void <B>add</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w,
+                java.lang.String&nbsp;tabText,
+                boolean&nbsp;asHTML)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="add(com.google.gwt.user.client.ui.Widget)"><!-- --></A><H3>
 add</H3>
@@ -773,6 +902,22 @@ public int <B>getWidgetCount</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="getWidgetIndex(com.google.gwt.user.client.ui.IsWidget)"><!-- --></A><H3>
+getWidgetIndex</H3>
+<PRE>
+public int <B>getWidgetIndex</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;child)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.ForIsWidget.html#getWidgetIndex(com.google.gwt.user.client.ui.IsWidget)">getWidgetIndex</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel.ForIsWidget</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getWidgetIndex(com.google.gwt.user.client.ui.Widget)"><!-- --></A><H3>
 getWidgetIndex</H3>
 <PRE>
@@ -786,8 +931,63 @@ public int <B>getWidgetIndex</B>(<A HREF="../../../../../../com/google/gwt/user/
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be found
-<DT><B>Returns:</B><DD>the widget's index, or <code>-1</code> if it is not a child of
-         this panel</DL>
+<DT><B>Returns:</B><DD>the widget's index, or <code>-1</code> if it is not a child of this
+         panel</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insert(com.google.gwt.user.client.ui.IsWidget, com.google.gwt.user.client.ui.IsWidget, int)"><!-- --></A><H3>
+insert</H3>
+<PRE>
+public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;widget,
+                   <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;tabWidget,
+                   int&nbsp;beforeIndex)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insert(com.google.gwt.user.client.ui.IsWidget, java.lang.String, boolean, int)"><!-- --></A><H3>
+insert</H3>
+<PRE>
+public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;widget,
+                   java.lang.String&nbsp;tabText,
+                   boolean&nbsp;asHTML,
+                   int&nbsp;beforeIndex)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insert(com.google.gwt.user.client.ui.IsWidget, java.lang.String, int)"><!-- --></A><H3>
+insert</H3>
+<PRE>
+public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;widget,
+                   java.lang.String&nbsp;tabText,
+                   int&nbsp;beforeIndex)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Convenience overload to allow <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui"><CODE>IsWidget</CODE></A> to be used directly.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
 </DD>
 </DL>
 <HR>
@@ -812,25 +1012,6 @@ public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/
 </DL>
 <HR>
 
-<A NAME="insert(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.ui.Widget, int)"><!-- --></A><H3>
-insert</H3>
-<PRE>
-public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
-                   <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;tabWidget,
-                   int&nbsp;beforeIndex)</PRE>
-<DL>
-<DD><B>Deprecated.</B>&nbsp;<DD>Inserts a widget into the tab panel. If the Widget is already attached to
- the TabPanel, it will be moved to the requested index.
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be inserted.<DD><CODE>tabWidget</CODE> - the widget to be shown on its tab.<DD><CODE>beforeIndex</CODE> - the index before which it will be inserted.</DL>
-</DD>
-</DL>
-<HR>
-
 <A NAME="insert(com.google.gwt.user.client.ui.Widget, java.lang.String, int)"><!-- --></A><H3>
 insert</H3>
 <PRE>
@@ -846,6 +1027,25 @@ public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be inserted<DD><CODE>tabText</CODE> - the text to be shown on its tab<DD><CODE>beforeIndex</CODE> - the index before which it will be inserted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insert(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.ui.Widget, int)"><!-- --></A><H3>
+insert</H3>
+<PRE>
+public void <B>insert</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+                   <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;tabWidget,
+                   int&nbsp;beforeIndex)</PRE>
+<DL>
+<DD><B>Deprecated.</B>&nbsp;<DD>Inserts a widget into the tab panel. If the Widget is already attached to
+ the TabPanel, it will be moved to the requested index.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be inserted.<DD><CODE>tabWidget</CODE> - the widget to be shown on its tab.<DD><CODE>beforeIndex</CODE> - the index before which it will be inserted.</DL>
 </DD>
 </DL>
 <HR>
@@ -1097,14 +1297,14 @@ protected void <B>onEnsureDebugId</B>(java.lang.String&nbsp;baseID)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/TabListenerCollection.html" title="class in com.google.gwt.user.client.ui"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/TakesValue.html" title="interface in com.google.gwt.user.client.ui"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/TextArea.html" title="class in com.google.gwt.user.client.ui"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../../index.html?com/google/gwt/user/client/ui/TabPanel.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="TabPanel.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;

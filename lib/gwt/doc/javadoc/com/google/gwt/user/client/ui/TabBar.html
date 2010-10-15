@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -96,7 +96,7 @@ java.lang.Object
               <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.TabBar</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasBeforeSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasBeforeSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ClickListener.html" title="interface in com.google.gwt.user.client.ui">ClickListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/KeyboardListener.html" title="interface in com.google.gwt.user.client.ui">KeyboardListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesTabEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesTabEvents</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasBeforeSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasBeforeSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasSelectionHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasSelectionHandlers</A>&lt;java.lang.Integer&gt;, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ClickListener.html" title="interface in com.google.gwt.user.client.ui">ClickListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/KeyboardListener.html" title="interface in com.google.gwt.user.client.ui">KeyboardListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesTabEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesTabEvents</A></DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/DecoratedTabBar.html" title="class in com.google.gwt.user.client.ui">DecoratedTabBar</A></DD>
@@ -262,6 +262,14 @@ A horizontal bar of folder-style tabs, most commonly used as part of a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#addTab(com.google.gwt.safehtml.shared.SafeHtml)">addTab</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a new tab with the specified text.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#addTab(java.lang.String)">addTab</A></B>(java.lang.String&nbsp;text)</CODE>
 
 <BR>
@@ -332,6 +340,15 @@ A horizontal bar of folder-style tabs, most commonly used as part of a
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the specified tab's HTML.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#insertTab(com.google.gwt.safehtml.shared.SafeHtml, int)">insertTab</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+          int&nbsp;beforeIndex)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inserts a new tab at the specified index.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -481,6 +498,15 @@ A horizontal bar of folder-style tabs, most commonly used as part of a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#setTabHTML(int, com.google.gwt.safehtml.shared.SafeHtml)">setTabHTML</A></B>(int&nbsp;index,
+           <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a tab's contents via safe html.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#setTabHTML(int, java.lang.String)">setTabHTML</A></B>(int&nbsp;index,
            java.lang.String&nbsp;html)</CODE>
 
@@ -512,7 +538,7 @@ A horizontal bar of folder-style tabs, most commonly used as part of a
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()">onUnload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.UIObject"><!-- --></A>
@@ -606,6 +632,22 @@ public <A HREF="../../../../../../com/google/gwt/event/shared/HandlerRegistratio
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>handler</CODE> - the handler
 <DT><B>Returns:</B><DD>the registration for the event</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addTab(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+addTab</H3>
+<PRE>
+public void <B>addTab</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD>Adds a new tab with the specified text.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the new tab's html</DL>
 </DD>
 </DL>
 <HR>
@@ -748,6 +790,23 @@ public java.lang.String <B>getTabHTML</B>(int&nbsp;index)</PRE>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>index</CODE> - the index of the tab whose HTML is to be retrieved
 <DT><B>Returns:</B><DD>the tab's HTML</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertTab(com.google.gwt.safehtml.shared.SafeHtml, int)"><!-- --></A><H3>
+insertTab</H3>
+<PRE>
+public void <B>insertTab</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html,
+                      int&nbsp;beforeIndex)</PRE>
+<DL>
+<DD>Inserts a new tab at the specified index.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the new tab's html<DD><CODE>beforeIndex</CODE> - the index before which this tab will be inserted</DL>
 </DD>
 </DL>
 <HR>
@@ -1042,7 +1101,25 @@ public void <B>setTabHTML</B>(int&nbsp;index,
  
  Use care when setting an object's HTML; it is an easy way to expose
  script-based security problems. Consider using
- <A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#setTabText(int, java.lang.String)"><CODE>setTabText(int, String)</CODE></A> whenever possible.
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#setTabText(int, java.lang.String)"><CODE>setTabText(int, String)</CODE></A> or <A HREF="../../../../../../com/google/gwt/user/client/ui/TabBar.html#setTabHTML(int, com.google.gwt.safehtml.shared.SafeHtml)"><CODE>setTabHTML(int, SafeHtml)</CODE></A>
+ whenever possible.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>index</CODE> - the index of the tab whose HTML is to be set<DD><CODE>html</CODE> - the tab new HTML</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setTabHTML(int, com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+setTabHTML</H3>
+<PRE>
+public void <B>setTabHTML</B>(int&nbsp;index,
+                       <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD>Sets a tab's contents via safe html.
 <P>
 <DD><DL>
 </DL>
@@ -1148,7 +1225,7 @@ protected void <B>onEnsureDebugId</B>(java.lang.String&nbsp;baseID)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

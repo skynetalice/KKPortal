@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -288,6 +288,32 @@ T</CODE></FONT></TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getInheritableMethods()">getInheritableMethods</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterates over the most-derived declaration of each unique inheritable
+ method available in the type hierarchy of the specified type, including
+ those found in superclasses and superinterfaces.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getInheritableMethodsOnSuperclassesAndThisClass(java.util.Map)">getInheritableMethodsOnSuperclassesAndThisClass</A></B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface(java.util.Map)">getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface</A></B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the methods declared in interfaces that this type extends.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getJNISignature()">getJNISignature</A></B>()</CODE>
 
@@ -368,22 +394,6 @@ T</CODE></FONT></TD>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Iterates over the most-derived declaration of each unique overridable
  method available in the type hierarchy of the specified type, including
  those found in superclasses and superinterfaces.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getOverridableMethodsOnSuperclassesAndThisClass(java.util.Map)">getOverridableMethodsOnSuperclassesAndThisClass</A></B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface(java.util.Map)">getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface</A></B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the methods declared in interfaces that this type extends.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -833,6 +843,32 @@ public <A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.ht
 </DD>
 <DD><DL>
 </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInheritableMethods()"><!-- --></A><H3>
+getInheritableMethods</H3>
+<PRE>
+public <A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>[] <B>getInheritableMethods</B>()</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html#getInheritableMethods()">JClassType</A></CODE></B></DD>
+<DD>Iterates over the most-derived declaration of each unique inheritable
+ method available in the type hierarchy of the specified type, including
+ those found in superclasses and superinterfaces. A method is inheritable if
+ its accessibility is <code>public</code>, <code>protected</code>, or
+ package protected.
+ 
+ This method offers a convenient way for Generators to find candidate
+ methods to call from a subclass.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html#getInheritableMethods()">getInheritableMethods</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html" title="class in com.google.gwt.core.ext.typeinfo">JClassType</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>an array of <A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo"><CODE>JMethod</CODE></A> objects representing inheritable
+         methods</DL>
 </DD>
 </DL>
 <HR>
@@ -1450,6 +1486,39 @@ protected <A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType
 </DL>
 <HR>
 
+<A NAME="getInheritableMethodsOnSuperclassesAndThisClass(java.util.Map)"><!-- --></A><H3>
+getInheritableMethodsOnSuperclassesAndThisClass</H3>
+<PRE>
+protected void <B>getInheritableMethodsOnSuperclassesAndThisClass</B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html#getInheritableMethodsOnSuperclassesAndThisClass(java.util.Map)">getInheritableMethodsOnSuperclassesAndThisClass</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html" title="class in com.google.gwt.core.ext.typeinfo">JClassType</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface(java.util.Map)"><!-- --></A><H3>
+getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface</H3>
+<PRE>
+protected void <B>getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface</B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</PRE>
+<DL>
+<DD>Gets the methods declared in interfaces that this type extends. If this
+ type is a class, its own methods are not added. If this type is an
+ interface, its own methods are added. Used internally by
+ <A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getOverridableMethods()"><CODE>getOverridableMethods()</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html#getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface(java.util.Map)">getInheritableMethodsOnSuperinterfacesAndMaybeThisInterface</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html" title="class in com.google.gwt.core.ext.typeinfo">JClassType</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>methodsBySignature</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getModifierBits()"><!-- --></A><H3>
 getModifierBits</H3>
 <PRE>
@@ -1460,39 +1529,6 @@ protected int <B>getModifierBits</B>()</PRE>
 </DD>
 <DD><DL>
 </DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getOverridableMethodsOnSuperclassesAndThisClass(java.util.Map)"><!-- --></A><H3>
-getOverridableMethodsOnSuperclassesAndThisClass</H3>
-<PRE>
-protected void <B>getOverridableMethodsOnSuperclassesAndThisClass</B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</PRE>
-<DL>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html#getOverridableMethodsOnSuperclassesAndThisClass(java.util.Map)">getOverridableMethodsOnSuperclassesAndThisClass</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html" title="class in com.google.gwt.core.ext.typeinfo">JClassType</A></CODE></DL>
-</DD>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface(java.util.Map)"><!-- --></A><H3>
-getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface</H3>
-<PRE>
-protected void <B>getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface</B>(java.util.Map&lt;java.lang.String,<A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JMethod.html" title="class in com.google.gwt.core.ext.typeinfo">JMethod</A>&gt;&nbsp;methodsBySignature)</PRE>
-<DL>
-<DD>Gets the methods declared in interfaces that this type extends. If this
- type is a class, its own methods are not added. If this type is an
- interface, its own methods are added. Used internally by
- <A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JRealClassType.html#getOverridableMethods()"><CODE>getOverridableMethods()</CODE></A>.
-<P>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html#getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface(java.util.Map)">getOverridableMethodsOnSuperinterfacesAndMaybeThisInterface</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/core/ext/typeinfo/JClassType.html" title="class in com.google.gwt.core.ext.typeinfo">JClassType</A></CODE></DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>methodsBySignature</CODE> - </DL>
 </DD>
 </DL>
 <HR>
@@ -1549,7 +1585,7 @@ protected void <B>removeSubtype</B>(<A HREF="../../../../../../com/google/gwt/co
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

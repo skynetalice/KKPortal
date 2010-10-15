@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -94,7 +94,7 @@ Interface ProvidesKey&lt;T&gt;</H2>
 <DT><B>All Known Subinterfaces:</B> <DD><A HREF="../../../../../com/google/gwt/view/client/SelectionModel.html" title="interface in com.google.gwt.view.client">SelectionModel</A>&lt;T&gt;</DD>
 </DL>
 <DL>
-<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="class in com.google.gwt.view.client">AbstractDataProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/AsyncDataProvider.html" title="class in com.google.gwt.view.client">AsyncDataProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/DefaultSelectionModel.html" title="class in com.google.gwt.view.client">DefaultSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/ListDataProvider.html" title="class in com.google.gwt.view.client">ListDataProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html" title="class in com.google.gwt.view.client">MultiSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/NoSelectionModel.html" title="class in com.google.gwt.view.client">NoSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="class in com.google.gwt.view.client">SelectionModel.AbstractSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/SingleSelectionModel.html" title="class in com.google.gwt.view.client">SingleSelectionModel</A></DD>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../../com/google/gwt/view/client/AbstractDataProvider.html" title="class in com.google.gwt.view.client">AbstractDataProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/AsyncDataProvider.html" title="class in com.google.gwt.view.client">AsyncDataProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/DefaultSelectionModel.html" title="class in com.google.gwt.view.client">DefaultSelectionModel</A>, <A HREF="../../../../../com/google/gwt/requestfactory/ui/client/EntityProxyKeyProvider.html" title="class in com.google.gwt.requestfactory.ui.client">EntityProxyKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/ListDataProvider.html" title="class in com.google.gwt.view.client">ListDataProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/MultiSelectionModel.html" title="class in com.google.gwt.view.client">MultiSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/NoSelectionModel.html" title="class in com.google.gwt.view.client">NoSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/SelectionModel.AbstractSelectionModel.html" title="class in com.google.gwt.view.client">SelectionModel.AbstractSelectionModel</A>, <A HREF="../../../../../com/google/gwt/view/client/SimpleKeyProvider.html" title="class in com.google.gwt.view.client">SimpleKeyProvider</A>, <A HREF="../../../../../com/google/gwt/view/client/SingleSelectionModel.html" title="class in com.google.gwt.view.client">SingleSelectionModel</A></DD>
 </DL>
 <HR>
 <DL>
@@ -109,14 +109,8 @@ Interface ProvidesKey&lt;T&gt;</H2>
  </p>
  <p>
  The key must implement a coherent set of <CODE>Object.equals(Object)</CODE> and
- <CODE>Object.hashCode()</CODE> methods such that if objects A and B are to be
- treated as identical, then A.equals(B), B.equals(A), and A.hashCode() ==
- B.hashCode().  If A and B are to be treated as unequal, then it must
- be the case that A.equals(B) == false and B.equals(A) == false.
- </p>
-
- <p>
- Note: This class is new and its interface subject to change.
+ <CODE>Object.hashCode()</CODE> methods such that if objects <code>A</code> and <code>B</code> are to be treated as identical, then <code>A.equals(B)</code>, <code>B.equals(A)</code>, and <code>A.hashCode() == B.hashCode()</code>. If <code>A</code> and
+ <code>B</code> are to be treated as unequal, then it must be the case that <code>A.equals(B) == false</code> and <code>B.equals(A) == false</code>.
  </p>
 <P>
 
@@ -191,7 +185,7 @@ java.lang.Object <B>getKey</B>(<A HREF="../../../../../com/google/gwt/view/clien
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

@@ -7,8 +7,7 @@
   /**
    * The constants used in this Content Widget.
    */
-  public static interface CwConstants
-      extends Constants, ContentWidget.CwConstants {
+  public static interface CwConstants extends Constants {
     String cwCellTableColumnAddress();
 
     String cwCellTableColumnCategory();
@@ -37,7 +36,7 @@
   /**
    * An instance of the constants.
    */
-  private CwConstants constants;
+  private final CwConstants constants;
 
   /**
    * Initialize this example.
@@ -45,7 +44,11 @@
   @Override
   public Widget onInitialize() {
     // Create a CellTable.
-    cellTable = new CellTable&lt;ContactInfo&gt;();
+
+    // Set a key provider that provides a unique key for each contact. If key is
+    // used to identify contacts when fields (such as the name and address)
+    // change.
+    cellTable = new CellTable&lt;ContactInfo&gt;(ContactDatabase.ContactInfo.KEY_PROVIDER);
 
     // Create a Pager to control the table.
     SimplePager.Resources pagerResources = GWT.create(
@@ -55,17 +58,11 @@
     pager.setDisplay(cellTable);
 
     // Add a selection model so we can select cells.
-    final MultiSelectionModel&lt;ContactInfo&gt; selectionModel = new MultiSelectionModel&lt;ContactInfo&gt;();
+    final MultiSelectionModel&lt;ContactInfo&gt; selectionModel = new MultiSelectionModel&lt;ContactInfo&gt;(ContactDatabase.ContactInfo.KEY_PROVIDER);
     cellTable.setSelectionModel(selectionModel);
 
     // Initialize the columns.
     initTableColumns(selectionModel);
-
-    // Set a key provider that provides a unique key for each contact. If key is
-    // used to identify contacts when fields (such as the name and address)
-    // change.
-    cellTable.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
-    selectionModel.setKeyProvider(ContactDatabase.ContactInfo.KEY_PROVIDER);
 
     // Add the CellList to the adapter in the database.
     ContactDatabase.get().addDataDisplay(cellTable);
@@ -99,7 +96,7 @@
         selectionModel.setSelected(object, value);
       }
     });
-    cellTable.addColumn(checkColumn, "&lt;br&gt;");
+    cellTable.addColumn(checkColumn, SafeHtmlUtils.fromSafeConstant("&lt;br&gt;"));
 
     // First name.
     Column&lt;ContactInfo, String&gt; firstNameColumn = new Column&lt;

@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -105,21 +105,16 @@ java.lang.Object
 <P>
 A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A> used to render and edit <CODE>Date</CODE>s. When a cell is selected
  by clicking on it, a <A HREF="../../../../../com/google/gwt/user/datepicker/client/DatePicker.html" title="class in com.google.gwt.user.datepicker.client"><CODE>DatePicker</CODE></A> is popped up. When a date is selected
- using the DatePicker, the new date is passed to the
+ using the <code>DatePicker</code>, the new date is passed to the
  <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html#update(C)"><CODE>update</CODE></A> method of the <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A> that
  was passed to <A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><CODE>onBrowserEvent(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater<java.util.Date>)</CODE></A> for the click event. Note that this
- means that the call to ValueUpdater.update will occur after onBrowserEvent
- has returned. Pressing the 'escape' key dismisses the DatePicker popup
- without calling ValueUpdater.update.
-
+ means that the call to <code>ValueUpdater.update</code> will occur after <code>onBrowserEvent</code> has returned. Pressing the 'escape' key dismisses the <code>DatePicker</code> popup without calling <code>ValueUpdater.update</code>.
+ 
  <p>
- Each DatePickerCell has a unique DatePicker popup associated with it; thus,
- if a single DatePickerCell is used as the cell for a column in a table, only
- one entry in that column will be editable at a given time.
- </p>
-
- <p>
- Note: This class is new and its interface subject to change.
+ Each <code>DatePickerCell</code> has a unique <code>DatePicker</code> popup associated
+ with it; thus, if a single <code>DatePickerCell</code> is used as the cell for a
+ column in a table, only one entry in that column will be editable at a given
+ time.
  </p>
 <P>
 
@@ -147,7 +142,24 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#DatePickerCell(com.google.gwt.i18n.client.DateTimeFormat)">DatePickerCell</A></B>(<A HREF="../../../../../com/google/gwt/i18n/client/DateTimeFormat.html" title="class in com.google.gwt.i18n.client">DateTimeFormat</A>&nbsp;format)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new DatePickerCell that uses the given date/time format.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new DatePickerCell that uses the given date/time format and a
+ <A HREF="../../../../../com/google/gwt/text/shared/SimpleSafeHtmlRenderer.html" title="class in com.google.gwt.text.shared"><CODE>SimpleSafeHtmlRenderer</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#DatePickerCell(com.google.gwt.i18n.client.DateTimeFormat, com.google.gwt.text.shared.SafeHtmlRenderer)">DatePickerCell</A></B>(<A HREF="../../../../../com/google/gwt/i18n/client/DateTimeFormat.html" title="class in com.google.gwt.i18n.client">DateTimeFormat</A>&nbsp;format,
+               <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new DatePickerCell that uses the given date/time format and
+ <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#DatePickerCell(com.google.gwt.text.shared.SafeHtmlRenderer)">DatePickerCell</A></B>(<A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a new DatePickerCell that uses the date/time format given by
+ <A HREF="../../../../../com/google/gwt/i18n/client/DateTimeFormat.html#getFullDateFormat()"><CODE>DateTimeFormat.getFullDateFormat()</CODE></A> and the given
+ <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -158,6 +170,17 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#isEditing(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object)">isEditing</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+          java.util.Date&nbsp;value,
+          java.lang.Object&nbsp;key)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if the cell is currently editing the data identified by the
+ given element and key.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -173,14 +196,27 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#render(java.util.Date, java.lang.Object, java.lang.StringBuilder)">render</A></B>(java.util.Date&nbsp;value,
-       java.lang.Object&nbsp;key,
-       java.lang.StringBuilder&nbsp;sb)</CODE>
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A></B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+               java.util.Date&nbsp;value,
+               java.lang.Object&nbsp;key,
+               <A HREF="../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
+               <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;java.util.Date&gt;&nbsp;valueUpdater)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Called when the user triggers a <code>keydown</code> event with the ENTER
+ key while focused on the cell.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/google/gwt/cell/client/DatePickerCell.html#render(java.util.Date, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></B>(java.util.Date&nbsp;value,
+       java.lang.Object&nbsp;key,
+       <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.cell.client.AbstractEditableCell"><!-- --></A>
@@ -198,7 +234,7 @@ A <A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.cell.client.<A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#dependsOnSelection()">dependsOnSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#getConsumedEvents()">getConsumedEvents</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#handlesSelection()">handlesSelection</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#resetFocus(com.google.gwt.dom.client.Element, C, java.lang.Object)">resetFocus</A>, <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#setValue(com.google.gwt.dom.client.Element, C, java.lang.Object)">setValue</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -239,7 +275,32 @@ DatePickerCell</H3>
 <PRE>
 public <B>DatePickerCell</B>(<A HREF="../../../../../com/google/gwt/i18n/client/DateTimeFormat.html" title="class in com.google.gwt.i18n.client">DateTimeFormat</A>&nbsp;format)</PRE>
 <DL>
-<DD>Constructs a new DatePickerCell that uses the given date/time format.
+<DD>Constructs a new DatePickerCell that uses the given date/time format and a
+ <A HREF="../../../../../com/google/gwt/text/shared/SimpleSafeHtmlRenderer.html" title="class in com.google.gwt.text.shared"><CODE>SimpleSafeHtmlRenderer</CODE></A>.
+<P>
+</DL>
+<HR>
+
+<A NAME="DatePickerCell(com.google.gwt.text.shared.SafeHtmlRenderer)"><!-- --></A><H3>
+DatePickerCell</H3>
+<PRE>
+public <B>DatePickerCell</B>(<A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</PRE>
+<DL>
+<DD>Constructs a new DatePickerCell that uses the date/time format given by
+ <A HREF="../../../../../com/google/gwt/i18n/client/DateTimeFormat.html#getFullDateFormat()"><CODE>DateTimeFormat.getFullDateFormat()</CODE></A> and the given
+ <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.
+<P>
+</DL>
+<HR>
+
+<A NAME="DatePickerCell(com.google.gwt.i18n.client.DateTimeFormat, com.google.gwt.text.shared.SafeHtmlRenderer)"><!-- --></A><H3>
+DatePickerCell</H3>
+<PRE>
+public <B>DatePickerCell</B>(<A HREF="../../../../../com/google/gwt/i18n/client/DateTimeFormat.html" title="class in com.google.gwt.i18n.client">DateTimeFormat</A>&nbsp;format,
+                      <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared">SafeHtmlRenderer</A>&lt;java.lang.String&gt;&nbsp;renderer)</PRE>
+<DL>
+<DD>Constructs a new DatePickerCell that uses the given date/time format and
+ <A HREF="../../../../../com/google/gwt/text/shared/SafeHtmlRenderer.html" title="interface in com.google.gwt.text.shared"><CODE>SafeHtmlRenderer</CODE></A>.
 <P>
 </DL>
 
@@ -252,6 +313,28 @@ public <B>DatePickerCell</B>(<A HREF="../../../../../com/google/gwt/i18n/client/
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="isEditing(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object)"><!-- --></A><H3>
+isEditing</H3>
+<PRE>
+public boolean <B>isEditing</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+                         java.util.Date&nbsp;value,
+                         java.lang.Object&nbsp;key)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">AbstractEditableCell</A></CODE></B></DD>
+<DD>Returns true if the cell is currently editing the data identified by the
+ given element and key. While a cell is editing, widgets containing the cell
+ may choose to pass keystrokes directly to the cell rather than using them
+ for navigation purposes.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.util.Date&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html#isEditing(com.google.gwt.dom.client.Element, C, java.lang.Object)">isEditing</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="class in com.google.gwt.cell.client">AbstractEditableCell</A>&lt;java.util.Date,java.util.Date&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - the parent Element<DD><CODE>value</CODE> - the value associated with the cell<DD><CODE>key</CODE> - the unique key associated with the row object</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="onBrowserEvent(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><!-- --></A><H3>
 onBrowserEvent</H3>
@@ -266,12 +349,13 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 <DD>Handle a browser event that took place within the cell. The default
  implementation returns null.
 
- This method is a no-op in <A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client"><CODE>AbstractCell</CODE></A>. If you override this method
- to add support for events, remember to pass the event types that the cell
- expects into the constructor.
+ <p>
+ If you override this method to add support for events, remember to pass the
+ event types that the cell expects into the constructor.
+ </p>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.util.Date&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractEditableCell.html" title="class in com.google.gwt.cell.client">AbstractEditableCell</A>&lt;java.util.Date,java.util.Date&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.util.Date&gt;</CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onBrowserEvent(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onBrowserEvent</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;java.util.Date&gt;</CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>parent</CODE> - the parent Element<DD><CODE>value</CODE> - the value associated with the cell<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>event</CODE> - the native browser event<DD><CODE>valueUpdater</CODE> - a <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A>, or null if not specified</DL>
@@ -279,22 +363,53 @@ public void <B>onBrowserEvent</B>(<A HREF="../../../../../com/google/gwt/dom/cli
 </DL>
 <HR>
 
-<A NAME="render(java.util.Date, java.lang.Object, java.lang.StringBuilder)"><!-- --></A><H3>
+<A NAME="render(java.util.Date, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)"><!-- --></A><H3>
 render</H3>
 <PRE>
 public void <B>render</B>(java.util.Date&nbsp;value,
                    java.lang.Object&nbsp;key,
-                   java.lang.StringBuilder&nbsp;sb)</PRE>
+                   <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared">SafeHtmlBuilder</A>&nbsp;sb)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">Cell</A></CODE></B></DD>
-<DD>Render a cell as HTML into a StringBuilder, suitable for passing to
- <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">Cell</A></CODE></B></DD>
+<DD>Render a cell as HTML into a <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A>, suitable for passing
+ to <A HREF="../../../../../com/google/gwt/dom/client/Element.html#setInnerHTML(java.lang.String)"><CODE>Element.setInnerHTML(java.lang.String)</CODE></A> on a container element.
+ 
+ <p>
+ Note: If your cell contains natively focusable elements, such as buttons or
+ input elements, be sure to set the tabIndex to -1 so that they do not steal
+ focus away from the containing widget.
+ </p>
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.util.Date&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, java.lang.StringBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;java.util.Date&gt;</CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in interface <CODE><A HREF="../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;java.util.Date&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#render(C, java.lang.Object, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;java.util.Date&gt;</CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the StringBuilder to be written to</DL>
+<DT><B>Parameters:</B><DD><CODE>value</CODE> - the cell value to be rendered<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>sb</CODE> - the <A HREF="../../../../../com/google/gwt/safehtml/shared/SafeHtmlBuilder.html" title="class in com.google.gwt.safehtml.shared"><CODE>SafeHtmlBuilder</CODE></A> to be written to</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="onEnterKeyDown(com.google.gwt.dom.client.Element, java.util.Date, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)"><!-- --></A><H3>
+onEnterKeyDown</H3>
+<PRE>
+protected void <B>onEnterKeyDown</B>(<A HREF="../../../../../com/google/gwt/dom/client/Element.html" title="class in com.google.gwt.dom.client">Element</A>&nbsp;parent,
+                              java.util.Date&nbsp;value,
+                              java.lang.Object&nbsp;key,
+                              <A HREF="../../../../../com/google/gwt/dom/client/NativeEvent.html" title="class in com.google.gwt.dom.client">NativeEvent</A>&nbsp;event,
+                              <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client">ValueUpdater</A>&lt;java.util.Date&gt;&nbsp;valueUpdater)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">AbstractCell</A></CODE></B></DD>
+<DD>Called when the user triggers a <code>keydown</code> event with the ENTER
+ key while focused on the cell. If your cell interacts with the user, you
+ should override this method to provide a consistent user experience. Your
+ widget must consume <code>keydown</code> events for this method to be
+ called.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html#onEnterKeyDown(com.google.gwt.dom.client.Element, C, java.lang.Object, com.google.gwt.dom.client.NativeEvent, com.google.gwt.cell.client.ValueUpdater)">onEnterKeyDown</A></CODE> in class <CODE><A HREF="../../../../../com/google/gwt/cell/client/AbstractCell.html" title="class in com.google.gwt.cell.client">AbstractCell</A>&lt;java.util.Date&gt;</CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parent</CODE> - the parent Element<DD><CODE>value</CODE> - the value associated with the cell<DD><CODE>key</CODE> - the unique key associated with the row object<DD><CODE>event</CODE> - the native browser event<DD><CODE>valueUpdater</CODE> - a <A HREF="../../../../../com/google/gwt/cell/client/ValueUpdater.html" title="interface in com.google.gwt.cell.client"><CODE>ValueUpdater</CODE></A>, or null if not specified</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -321,7 +436,7 @@ public void <B>render</B>(java.util.Date&nbsp;value,
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

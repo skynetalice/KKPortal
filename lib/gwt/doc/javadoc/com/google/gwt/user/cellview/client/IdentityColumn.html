@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -143,7 +143,7 @@ A passthrough column, useful for giving cells access to the entire row
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html#IdentityColumn(com.google.gwt.cell.client.Cell)">IdentityColumn</A></B>(<A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>&gt;&nbsp;cell)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Construct a new IdentityColumn with a given <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -161,7 +161,7 @@ A passthrough column, useful for giving cells access to the entire row
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html#getValue(T)">getValue</A></B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>&nbsp;object)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the value of type C extracted from the record of type T.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the passed-in object.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.cellview.client.Column"><!-- --></A>
@@ -170,7 +170,7 @@ A passthrough column, useful for giving cells access to the entire row
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.cellview.client.<A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="class in com.google.gwt.user.cellview.client">Column</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getCell()">getCell</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getFieldUpdater()">getFieldUpdater</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#onBrowserEvent(com.google.gwt.dom.client.Element, int, T, com.google.gwt.dom.client.NativeEvent, com.google.gwt.view.client.ProvidesKey)">onBrowserEvent</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#render(T, com.google.gwt.view.client.ProvidesKey, java.lang.StringBuilder)">render</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#setFieldUpdater(com.google.gwt.cell.client.FieldUpdater)">setFieldUpdater</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getCell()">getCell</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getFieldUpdater()">getFieldUpdater</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#onBrowserEvent(com.google.gwt.dom.client.Element, int, T, com.google.gwt.dom.client.NativeEvent, com.google.gwt.view.client.ProvidesKey)">onBrowserEvent</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#render(T, com.google.gwt.view.client.ProvidesKey, com.google.gwt.safehtml.shared.SafeHtmlBuilder)">render</A>, <A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#setFieldUpdater(com.google.gwt.cell.client.FieldUpdater)">setFieldUpdater</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -200,8 +200,8 @@ IdentityColumn</H3>
 <PRE>
 public <B>IdentityColumn</B>(<A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client">Cell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>&gt;&nbsp;cell)</PRE>
 <DL>
-<DL>
-<DT><B>Parameters:</B><DD><CODE>cell</CODE> - </DL>
+<DD>Construct a new IdentityColumn with a given <A HREF="../../../../../../com/google/gwt/cell/client/Cell.html" title="interface in com.google.gwt.cell.client"><CODE>Cell</CODE></A>.
+<P>
 </DL>
 
 <!-- ============ METHOD DETAIL ========== -->
@@ -219,8 +219,7 @@ getValue</H3>
 <PRE>
 public <A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A> <B>getValue</B>(<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>&nbsp;object)</PRE>
 <DL>
-<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getValue(T)">HasCell</A></CODE></B></DD>
-<DD>Returns the value of type C extracted from the record of type T.
+<DD>Return the passed-in object.
 <P>
 <DD><DL>
 <DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html#getValue(T)">getValue</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/cell/client/HasCell.html" title="interface in com.google.gwt.cell.client">HasCell</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>&gt;</CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html#getValue(T)">getValue</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/user/cellview/client/Column.html" title="class in com.google.gwt.user.cellview.client">Column</A>&lt;<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>,<A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityColumn.html" title="type parameter in IdentityColumn">T</A>&gt;</CODE></DL>
@@ -254,7 +253,7 @@ public <A HREF="../../../../../../com/google/gwt/user/cellview/client/IdentityCo
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

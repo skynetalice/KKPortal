@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -94,14 +94,14 @@ java.lang.Object
       <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.Widget</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A></DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/cellview/client/AbstractHasData.html" title="class in com.google.gwt.user.cellview.client">AbstractHasData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Composite.html" title="class in com.google.gwt.user.client.ui">Composite</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/FileUpload.html" title="class in com.google.gwt.user.client.ui">FileUpload</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/FocusWidget.html" title="class in com.google.gwt.user.client.ui">FocusWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Frame.html" title="class in com.google.gwt.user.client.ui">Frame</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Hidden.html" title="class in com.google.gwt.user.client.ui">Hidden</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Hyperlink.html" title="class in com.google.gwt.user.client.ui">Hyperlink</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Image.html" title="class in com.google.gwt.user.client.ui">Image</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Label.html" title="class in com.google.gwt.user.client.ui">Label</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/MenuBar.html" title="class in com.google.gwt.user.client.ui">MenuBar</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html" title="class in com.google.gwt.user.client.ui">Panel</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Tree.html" title="class in com.google.gwt.user.client.ui">Tree</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>Widget</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.html" title="class in com.google.gwt.user.client.ui">UIObject</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A></DL>
+<DT><PRE>public class <B>Widget</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.html" title="class in com.google.gwt.user.client.ui">UIObject</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A></DL>
 </PRE>
 
 <P>
@@ -178,6 +178,14 @@ The base class for the majority of user-interface objects. Widget adds
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A></B>(<A HREF="../../../../../../com/google/gwt/event/logical/shared/AttachEvent.Handler.html" title="interface in com.google.gwt.event.logical.shared">AttachEvent.Handler</A>&nbsp;handler)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a <A HREF="../../../../../../com/google/gwt/event/logical/shared/AttachEvent.html" title="class in com.google.gwt.event.logical.shared"><CODE>AttachEvent</CODE></A> handler.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>
 <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
 <TR ALIGN="right" VALIGN="">
@@ -212,6 +220,23 @@ The base class for the majority of user-interface objects. Widget adds
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds this handler to the widget.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This convenience method makes a null-safe call to
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html#asWidget()"><CODE>IsWidget.asWidget()</CODE></A>.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -421,6 +446,42 @@ public <B>Widget</B>()</PRE>
 </TR>
 </TABLE>
 
+<A NAME="asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)"><!-- --></A><H3>
+asWidgetOrNull</H3>
+<PRE>
+public static <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A> <B>asWidgetOrNull</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>&nbsp;w)</PRE>
+<DL>
+<DD>This convenience method makes a null-safe call to
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html#asWidget()"><CODE>IsWidget.asWidget()</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the widget aspect, or <code>null</code> if w is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)"><!-- --></A><H3>
+addAttachHandler</H3>
+<PRE>
+public <A HREF="../../../../../../com/google/gwt/event/shared/HandlerRegistration.html" title="interface in com.google.gwt.event.shared">HandlerRegistration</A> <B>addAttachHandler</B>(<A HREF="../../../../../../com/google/gwt/event/logical/shared/AttachEvent.Handler.html" title="interface in com.google.gwt.event.logical.shared">AttachEvent.Handler</A>&nbsp;handler)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">HasAttachHandlers</A></CODE></B></DD>
+<DD>Adds a <A HREF="../../../../../../com/google/gwt/event/logical/shared/AttachEvent.html" title="class in com.google.gwt.event.logical.shared"><CODE>AttachEvent</CODE></A> handler.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>handler</CODE> - the handler
+<DT><B>Returns:</B><DD>the handler registration</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="addDomHandler(com.google.gwt.event.shared.EventHandler,com.google.gwt.event.dom.client.DomEvent.Type)"><!-- --></A><A NAME="addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)"><!-- --></A><H3>
 addDomHandler</H3>
 <PRE>
@@ -459,6 +520,21 @@ public final &lt;H extends <A HREF="../../../../../../com/google/gwt/event/share
 </DL>
 <HR>
 
+<A NAME="asWidget()"><!-- --></A><H3>
+asWidget</H3>
+<PRE>
+public <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A> <B>asWidget</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html#asWidget()">asWidget</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui"><CODE>Widget</CODE></A> aspect of the receiver</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="fireEvent(com.google.gwt.event.shared.GwtEvent)"><!-- --></A><H3>
 fireEvent</H3>
 <PRE>
@@ -466,7 +542,7 @@ public void <B>fireEvent</B>(<A HREF="../../../../../../com/google/gwt/event/sha
 <DL>
 <DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">HasHandlers</A></CODE></B></DD>
 <DD>Fires the given event to the handlers listening to the event's type.
- 
+ <p>
  Any exceptions thrown by handlers will be bundled into a
  <A HREF="../../../../../../com/google/gwt/event/shared/UmbrellaException.html" title="class in com.google.gwt.event.shared"><CODE>UmbrellaException</CODE></A> and then re-thrown after all handlers have
  completed. An exception thrown by a handler will not prevent other handlers
@@ -557,7 +633,7 @@ removeFromParent</H3>
 public void <B>removeFromParent</B>()</PRE>
 <DL>
 <DD>Removes this widget from its parent widget, if one exists.
- 
+
  <p>
  If it has no parent, this method does nothing. If it is a "root" widget
  (meaning it's been added to the detach list via
@@ -607,7 +683,7 @@ public void <B>sinkEvents</B>(int&nbsp;eventBitsToAdd)</PRE>
  wishing to customize sinkEvents can preserve this deferred sink behavior by
  putting their implementation behind a check of
  <code>isOrWasAttached()</code>:
- 
+
  <pre>
  @Override
  public void sinkEvents(int eventBitsToAdd) {
@@ -633,7 +709,7 @@ createHandlerManager</H3>
 <PRE>
 protected <A HREF="../../../../../../com/google/gwt/event/shared/HandlerManager.html" title="class in com.google.gwt.event.shared">HandlerManager</A> <B>createHandlerManager</B>()</PRE>
 <DL>
-<DD>Creates the <A HREF="../../../../../../com/google/gwt/event/shared/HandlerManager.html" title="class in com.google.gwt.event.shared"><CODE>HandlerManager</CODE></A> used by this Widget. You can overwrite
+<DD>Creates the <A HREF="../../../../../../com/google/gwt/event/shared/HandlerManager.html" title="class in com.google.gwt.event.shared"><CODE>HandlerManager</CODE></A> used by this Widget. You can override
  this method to create a custom <A HREF="../../../../../../com/google/gwt/event/shared/HandlerManager.html" title="class in com.google.gwt.event.shared"><CODE>HandlerManager</CODE></A>.
 <P>
 <DD><DL>
@@ -748,8 +824,8 @@ protected void <B>onAttach</B>()</PRE>
  </p>
  <p>
  It is strongly recommended that you override <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onLoad()"><CODE>onLoad()</CODE></A> or
- <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()"><CODE>doAttachChildren()</CODE></A> instead of this method to avoid
- inconsistencies between logical and physical attachment states. 
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doAttachChildren()"><CODE>doAttachChildren()</CODE></A> instead of this method to avoid inconsistencies
+ between logical and physical attachment states.
  </p>
  <p>
  Subclasses that override this method must call
@@ -781,8 +857,8 @@ protected void <B>onDetach</B>()</PRE>
  </p>
  <p>
  It is strongly recommended that you override <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onUnload()"><CODE>onUnload()</CODE></A> or
- <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()"><CODE>doDetachChildren()</CODE></A> instead of this method to avoid
- inconsistencies between logical and physical attachment states. 
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#doDetachChildren()"><CODE>doDetachChildren()</CODE></A> instead of this method to avoid inconsistencies
+ between logical and physical attachment states.
  </p>
  <p>
  Subclasses that override this method must call
@@ -810,7 +886,8 @@ onLoad</H3>
 protected void <B>onLoad</B>()</PRE>
 <DL>
 <DD>This method is called immediately after a widget becomes attached to the
- browser's document.
+ browser's document. This default implementation notifies the widgets
+ <CODE>AttachEvent.Handler</CODE>s.
 <P>
 <DD><DL>
 </DL>
@@ -827,7 +904,8 @@ onUnload</H3>
 protected void <B>onUnload</B>()</PRE>
 <DL>
 <DD>This method is called immediately before a widget will be detached from the
- browser's document.
+ browser's document. This default implementation notifies the widgets
+ <CODE>AttachEvent.Handler</CODE>s.
 <P>
 <DD><DL>
 </DL>
@@ -860,7 +938,7 @@ protected void <B>onUnload</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

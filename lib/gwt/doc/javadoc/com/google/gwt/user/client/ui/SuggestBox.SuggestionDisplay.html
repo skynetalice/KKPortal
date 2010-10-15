@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -180,6 +180,16 @@ Used to display suggestions to the user.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestBox.SuggestionDisplay.html#setMoreSuggestions(boolean, int)">setMoreSuggestions</A></B>(boolean&nbsp;hasMoreSuggestions,
+                   int&nbsp;numMoreSuggestions)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accepts information about whether there were more suggestions matching
+ than were provided to <A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestBox.SuggestionDisplay.html#showSuggestions(com.google.gwt.user.client.ui.SuggestBox, java.util.Collection, boolean, boolean, com.google.gwt.user.client.ui.SuggestBox.SuggestionCallback)"><CODE>showSuggestions(com.google.gwt.user.client.ui.SuggestBox, java.util.Collection<? extends com.google.gwt.user.client.ui.SuggestOracle.Suggestion>, boolean, boolean, com.google.gwt.user.client.ui.SuggestBox.SuggestionCallback)</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected abstract &nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestBox.SuggestionDisplay.html#showSuggestions(com.google.gwt.user.client.ui.SuggestBox, java.util.Collection, boolean, boolean, com.google.gwt.user.client.ui.SuggestBox.SuggestionCallback)">showSuggestions</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestBox.html" title="class in com.google.gwt.user.client.ui">SuggestBox</A>&nbsp;suggestBox,
                 java.util.Collection&lt;? extends <A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestOracle.Suggestion.html" title="interface in com.google.gwt.user.client.ui">SuggestOracle.Suggestion</A>&gt;&nbsp;suggestions,
@@ -298,6 +308,22 @@ protected void <B>onEnsureDebugId</B>(java.lang.String&nbsp;suggestBoxBaseID)</P
 </DL>
 <HR>
 
+<A NAME="setMoreSuggestions(boolean, int)"><!-- --></A><H3>
+setMoreSuggestions</H3>
+<PRE>
+protected void <B>setMoreSuggestions</B>(boolean&nbsp;hasMoreSuggestions,
+                                  int&nbsp;numMoreSuggestions)</PRE>
+<DL>
+<DD>Accepts information about whether there were more suggestions matching
+ than were provided to <A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestBox.SuggestionDisplay.html#showSuggestions(com.google.gwt.user.client.ui.SuggestBox, java.util.Collection, boolean, boolean, com.google.gwt.user.client.ui.SuggestBox.SuggestionCallback)"><CODE>showSuggestions(com.google.gwt.user.client.ui.SuggestBox, java.util.Collection<? extends com.google.gwt.user.client.ui.SuggestOracle.Suggestion>, boolean, boolean, com.google.gwt.user.client.ui.SuggestBox.SuggestionCallback)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>hasMoreSuggestions</CODE> - true if more matches were available<DD><CODE>numMoreSuggestions</CODE> - number of more matches available. If the
+     specific number is unknown, 0 will be passed.</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="showSuggestions(com.google.gwt.user.client.ui.SuggestBox, java.util.Collection, boolean, boolean, com.google.gwt.user.client.ui.SuggestBox.SuggestionCallback)"><!-- --></A><H3>
 showSuggestions</H3>
 <PRE>
@@ -308,6 +334,9 @@ protected abstract void <B>showSuggestions</B>(<A HREF="../../../../../../com/go
                                         <A HREF="../../../../../../com/google/gwt/user/client/ui/SuggestBox.SuggestionCallback.html" title="interface in com.google.gwt.user.client.ui">SuggestBox.SuggestionCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD>Update the list of visible suggestions.
+ 
+ Use care when using isDisplayStringHtml; it is an easy way to expose 
+ script-based security problems.
 <P>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>suggestBox</CODE> - the suggest box where the suggestions originated<DD><CODE>suggestions</CODE> - the suggestions to show<DD><CODE>isDisplayStringHTML</CODE> - should the suggestions be displayed as HTML<DD><CODE>isAutoSelectEnabled</CODE> - if true, the first item should be selected
@@ -338,7 +367,7 @@ protected abstract void <B>showSuggestions</B>(<A HREF="../../../../../../com/go
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

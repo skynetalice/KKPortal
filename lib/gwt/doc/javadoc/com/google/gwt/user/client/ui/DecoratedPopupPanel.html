@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -98,7 +98,7 @@ java.lang.Object
                       <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.DecoratedPopupPanel</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasCloseHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasCloseHandlers</A>&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/PopupPanel.html" title="class in com.google.gwt.user.client.ui">PopupPanel</A>&gt;, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventPreview.html" title="interface in com.google.gwt.user.client">EventPreview</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasAnimation.html" title="interface in com.google.gwt.user.client.ui">HasAnimation</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesPopupEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesPopupEvents</A>, java.lang.Iterable&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&gt;</DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/logical/shared/HasCloseHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasCloseHandlers</A>&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/PopupPanel.html" title="class in com.google.gwt.user.client.ui">PopupPanel</A>&gt;, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventPreview.html" title="interface in com.google.gwt.user.client">EventPreview</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/AcceptsOneWidget.html" title="interface in com.google.gwt.user.client.ui">AcceptsOneWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasAnimation.html" title="interface in com.google.gwt.user.client.ui">HasAnimation</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasOneWidget.html" title="interface in com.google.gwt.user.client.ui">HasOneWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">HasWidgets.ForIsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SourcesPopupEvents.html" title="interface in com.google.gwt.user.client.ui">SourcesPopupEvents</A>, java.lang.Iterable&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&gt;</DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/DialogBox.html" title="class in com.google.gwt.user.client.ui">DialogBox</A></DD>
@@ -194,6 +194,16 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.DebugIdImpl.html" title="class in com.google.gwt.user.client.ui">UIObject.DebugIdImpl</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.DebugIdImplEnabled.html" title="class in com.google.gwt.user.client.ui">UIObject.DebugIdImplEnabled</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="nested_classes_inherited_from_class_com.google.gwt.user.client.ui.HasWidgets"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">HasWidgets.ForIsWidget</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -342,7 +352,7 @@ java.lang.Object
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html" title="class in com.google.gwt.user.client.ui">SimplePanel</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html#add(com.google.gwt.user.client.ui.Widget)">add</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html#add(com.google.gwt.user.client.ui.Widget)">add</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html#setWidget(com.google.gwt.user.client.ui.IsWidget)">setWidget</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.Panel"><!-- --></A>
@@ -351,7 +361,7 @@ java.lang.Object
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html" title="class in com.google.gwt.user.client.ui">Panel</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#disown(com.google.gwt.user.client.ui.Widget)">disown</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#orphan(com.google.gwt.user.client.ui.Widget)">orphan</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#add(com.google.gwt.user.client.ui.IsWidget)">add</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#disown(com.google.gwt.user.client.ui.Widget)">disown</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#onLoad()">onLoad</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#orphan(com.google.gwt.user.client.ui.Widget)">orphan</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#remove(com.google.gwt.user.client.ui.IsWidget)">remove</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.Widget"><!-- --></A>
@@ -360,7 +370,7 @@ java.lang.Object
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isAttached()">isAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onAttach()">onAttach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onBrowserEvent(com.google.gwt.user.client.Event)">onBrowserEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onDetach()">onDetach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isAttached()">isAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onAttach()">onAttach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onBrowserEvent(com.google.gwt.user.client.Event)">onBrowserEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onDetach()">onDetach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.UIObject"><!-- --></A>
@@ -479,7 +489,7 @@ public <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" tit
 <DD>Gets the panel's child widget.
 <P>
 <DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html#getWidget()">getWidget</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html" title="class in com.google.gwt.user.client.ui">SimplePanel</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasOneWidget.html#getWidget()">getWidget</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasOneWidget.html" title="interface in com.google.gwt.user.client.ui">HasOneWidget</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html#getWidget()">getWidget</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/SimplePanel.html" title="class in com.google.gwt.user.client.ui">SimplePanel</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -554,7 +564,7 @@ public void <B>setWidget</B>(<A HREF="../../../../../../com/google/gwt/user/clie
 <DD>Sets this panel's widget. Any existing child widget will be removed.
 <P>
 <DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/PopupPanel.html#setWidget(com.google.gwt.user.client.ui.Widget)">setWidget</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/PopupPanel.html" title="class in com.google.gwt.user.client.ui">PopupPanel</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasOneWidget.html#setWidget(com.google.gwt.user.client.ui.Widget)">setWidget</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasOneWidget.html" title="interface in com.google.gwt.user.client.ui">HasOneWidget</A></CODE><DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/PopupPanel.html#setWidget(com.google.gwt.user.client.ui.Widget)">setWidget</A></CODE> in class <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/PopupPanel.html" title="class in com.google.gwt.user.client.ui">PopupPanel</A></CODE></DL>
 </DD>
 <DD><DL>
 <DT><B>Parameters:</B><DD><CODE>w</CODE> - the panel's new widget, or <code>null</code> to clear the panel</DL>
@@ -639,7 +649,7 @@ protected <A HREF="../../../../../../com/google/gwt/user/client/Element.html" ti
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

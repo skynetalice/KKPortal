@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -94,11 +94,11 @@ java.lang.Object
       <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.TreeItem</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasText.html" title="interface in com.google.gwt.user.client.ui">HasText</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>TreeItem</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.html" title="class in com.google.gwt.user.client.ui">UIObject</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A></DL>
+<DT><PRE>public class <B>TreeItem</B><DT>extends <A HREF="../../../../../../com/google/gwt/user/client/ui/UIObject.html" title="class in com.google.gwt.user.client.ui">UIObject</A><DT>implements <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html" title="interface in com.google.gwt.user.client.ui">HasHTML</A>, <A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></DL>
 </PRE>
 
 <P>
@@ -205,6 +205,12 @@ An item that can be contained within a
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates an empty tree item.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TreeItem.html#TreeItem(com.google.gwt.safehtml.shared.SafeHtml)">TreeItem</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Constructs a tree item with the given HTML.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TreeItem.html#TreeItem(java.lang.String)">TreeItem</A></B>(java.lang.String&nbsp;html)</CODE>
@@ -425,6 +431,14 @@ An item that can be contained within a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TreeItem.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets this object's contents via known-safe HTML.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/TreeItem.html#setHTML(java.lang.String)">setHTML</A></B>(java.lang.String&nbsp;html)</CODE>
 
 <BR>
@@ -525,6 +539,18 @@ public <B>TreeItem</B>()</PRE>
 TreeItem</H3>
 <PRE>
 public <B>TreeItem</B>(java.lang.String&nbsp;html)</PRE>
+<DL>
+<DD>Constructs a tree item with the given HTML.
+<P>
+<DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the item's HTML</DL>
+</DL>
+<HR>
+
+<A NAME="TreeItem(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+TreeItem</H3>
+<PRE>
+public <B>TreeItem</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
 <DL>
 <DD>Constructs a tree item with the given HTML.
 <P>
@@ -924,6 +950,32 @@ public void <B>setHTML</B>(java.lang.String&nbsp;html)</PRE>
 </DL>
 <HR>
 
+<A NAME="setHTML(com.google.gwt.safehtml.shared.SafeHtml)"><!-- --></A><H3>
+setHTML</H3>
+<PRE>
+public void <B>setHTML</B>(<A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared">SafeHtml</A>&nbsp;html)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">HasSafeHtml</A></CODE></B></DD>
+<DD>Sets this object's contents via known-safe HTML.
+
+ <p>
+ The object will behave exactly the same as when a widget's
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html#setHTML(java.lang.String)"><CODE>HasHTML.setHTML(String)</CODE></A> method is
+ invoked; however the <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared"><CODE>SafeHtml</CODE></A> passed to this method observes the
+ contract that it can be used in an HTML context without causing unsafe
+ script execution. Thus, unlike
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/HasHTML.html#setHTML(java.lang.String)"><CODE>HasHTML.setHTML(String)</CODE></A>, using this
+ method cannot result in Cross-Site Scripting security vulnerabilities.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html#setHTML(com.google.gwt.safehtml.shared.SafeHtml)">setHTML</A></CODE> in interface <CODE><A HREF="../../../../../../com/google/gwt/safehtml/client/HasSafeHtml.html" title="interface in com.google.gwt.safehtml.client">HasSafeHtml</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>html</CODE> - the object's new HTML, represented as a <A HREF="../../../../../../com/google/gwt/safehtml/shared/SafeHtml.html" title="interface in com.google.gwt.safehtml.shared"><CODE>SafeHtml</CODE></A> object</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="setSelected(boolean)"><!-- --></A><H3>
 setSelected</H3>
 <PRE>
@@ -1109,7 +1161,7 @@ protected void <B>onEnsureDebugId</B>(java.lang.String&nbsp;baseID)</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 

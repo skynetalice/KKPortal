@@ -46,7 +46,7 @@ function windowTitle()
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
@@ -97,7 +97,7 @@ java.lang.Object
                   <IMG SRC="../../../../../../resources/inherit.gif" ALT="extended by "><B>com.google.gwt.user.client.ui.DockLayoutPanel</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/AnimatedLayout.html" title="interface in com.google.gwt.user.client.ui">AnimatedLayout</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ProvidesResize.html" title="interface in com.google.gwt.user.client.ui">ProvidesResize</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/RequiresResize.html" title="interface in com.google.gwt.user.client.ui">RequiresResize</A>, java.lang.Iterable&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&gt;</DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../../../com/google/gwt/event/logical/shared/HasAttachHandlers.html" title="interface in com.google.gwt.event.logical.shared">HasAttachHandlers</A>, <A HREF="../../../../../../com/google/gwt/event/shared/HasHandlers.html" title="interface in com.google.gwt.event.shared">HasHandlers</A>, <A HREF="../../../../../../com/google/gwt/user/client/EventListener.html" title="interface in com.google.gwt.user.client">EventListener</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/AnimatedLayout.html" title="interface in com.google.gwt.user.client.ui">AnimatedLayout</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">HasWidgets.ForIsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel.ForIsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/IsWidget.html" title="interface in com.google.gwt.user.client.ui">IsWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ProvidesResize.html" title="interface in com.google.gwt.user.client.ui">ProvidesResize</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/RequiresResize.html" title="interface in com.google.gwt.user.client.ui">RequiresResize</A>, java.lang.Iterable&lt;<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&gt;</DD>
 </DL>
 <DL>
 <DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../../com/google/gwt/user/client/ui/SplitLayoutPanel.html" title="class in com.google.gwt.user.client.ui">SplitLayoutPanel</A></DD>
@@ -226,6 +226,26 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 </TR>
 </TABLE>
 &nbsp;
+<A NAME="nested_classes_inherited_from_class_com.google.gwt.user.client.ui.IndexedPanel"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/IndexedPanel.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">IndexedPanel.ForIsWidget</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<A NAME="nested_classes_inherited_from_class_com.google.gwt.user.client.ui.HasWidgets"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Nested classes/interfaces inherited from interface com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.html" title="interface in com.google.gwt.user.client.ui">HasWidgets</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/HasWidgets.ForIsWidget.html" title="interface in com.google.gwt.user.client.ui">HasWidgets.ForIsWidget</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
 <!-- =========== FIELD SUMMARY =========== -->
 
 <A NAME="field_summary"><!-- --></A>
@@ -289,6 +309,24 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#addLineEnd(com.google.gwt.user.client.ui.Widget, double)">addLineEnd</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+           double&nbsp;size)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a widget to the end of the line.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#addLineStart(com.google.gwt.user.client.ui.Widget, double)">addLineStart</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+             double&nbsp;size)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a widget to the start of the line.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#addNorth(com.google.gwt.user.client.ui.Widget, double)">addNorth</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
          double&nbsp;size)</CODE>
 
@@ -325,7 +363,7 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#animate(int, com.google.gwt.layout.client.Layout.AnimationCallback)">animate</A></B>(int&nbsp;duration,
-        com.google.gwt.layout.client.Layout.AnimationCallback&nbsp;callback)</CODE>
+        <A HREF="../../../../../../com/google/gwt/layout/client/Layout.AnimationCallback.html" title="interface in com.google.gwt.layout.client">Layout.AnimationCallback</A>&nbsp;callback)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layout children, animating over the specified period of time.</TD>
@@ -345,6 +383,14 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html" title="enum in com.google.gwt.user.client.ui">DockLayoutPanel.Direction</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#getResolvedDirection(com.google.gwt.user.client.ui.DockLayoutPanel.Direction)">getResolvedDirection</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html" title="enum in com.google.gwt.user.client.ui">DockLayoutPanel.Direction</A>&nbsp;direction)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolve the specified direction based on the current locale.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -390,6 +436,28 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a widget to the east edge of the dock, inserting it before an existing
+ widget.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#insertLineEnd(com.google.gwt.user.client.ui.Widget, double, com.google.gwt.user.client.ui.Widget)">insertLineEnd</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+              double&nbsp;size,
+              <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;before)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a widget to the start of the line, inserting it before an existing
+ widget.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.html#insertLineStart(com.google.gwt.user.client.ui.Widget, double, com.google.gwt.user.client.ui.Widget)">insertLineStart</A></B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+                double&nbsp;size,
+                <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;before)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a widget to the end of the line, inserting it before an existing
  widget.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
@@ -477,7 +545,7 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html" title="class in com.google.gwt.user.client.ui">ComplexPanel</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#add(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element)">add</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#adjustIndex(com.google.gwt.user.client.ui.Widget, int)">adjustIndex</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#checkIndexBoundsForAccess(int)">checkIndexBoundsForAccess</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#checkIndexBoundsForInsertion(int)">checkIndexBoundsForInsertion</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getChildren()">getChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidget(int)">getWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidgetCount()">getWidgetCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidgetIndex(com.google.gwt.user.client.ui.Widget)">getWidgetIndex</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#insert(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element, int)">insert</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#insert(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element, int, boolean)">insert</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#iterator()">iterator</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#remove(int)">remove</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#add(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element)">add</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#adjustIndex(com.google.gwt.user.client.ui.Widget, int)">adjustIndex</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#checkIndexBoundsForAccess(int)">checkIndexBoundsForAccess</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#checkIndexBoundsForInsertion(int)">checkIndexBoundsForInsertion</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getChildren()">getChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidget(int)">getWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidgetCount()">getWidgetCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidgetIndex(com.google.gwt.user.client.ui.IsWidget)">getWidgetIndex</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#getWidgetIndex(com.google.gwt.user.client.ui.Widget)">getWidgetIndex</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#insert(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element, int)">insert</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#insert(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element, int, boolean)">insert</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#iterator()">iterator</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/ComplexPanel.html#remove(int)">remove</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.Panel"><!-- --></A>
@@ -486,7 +554,7 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html" title="class in com.google.gwt.user.client.ui">Panel</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#clear()">clear</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#disown(com.google.gwt.user.client.ui.Widget)">disown</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#orphan(com.google.gwt.user.client.ui.Widget)">orphan</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#add(com.google.gwt.user.client.ui.IsWidget)">add</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#adopt(com.google.gwt.user.client.ui.Widget, com.google.gwt.user.client.Element)">adopt</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#clear()">clear</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#disown(com.google.gwt.user.client.ui.Widget)">disown</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#doAttachChildren()">doAttachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#doDetachChildren()">doDetachChildren</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#orphan(com.google.gwt.user.client.ui.Widget)">orphan</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Panel.html#remove(com.google.gwt.user.client.ui.IsWidget)">remove</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.Widget"><!-- --></A>
@@ -495,7 +563,7 @@ A panel that lays its child widgets out "docked" at its outer edges, and
 <TH ALIGN="left"><B>Methods inherited from class com.google.gwt.user.client.ui.<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isAttached()">isAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onAttach()">onAttach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onBrowserEvent(com.google.gwt.user.client.Event)">onBrowserEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onDetach()">onDetach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addAttachHandler(com.google.gwt.event.logical.shared.AttachEvent.Handler)">addAttachHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addDomHandler(H, com.google.gwt.event.dom.client.DomEvent.Type)">addDomHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#addHandler(H, com.google.gwt.event.shared.GwtEvent.Type)">addHandler</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidget()">asWidget</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#asWidgetOrNull(com.google.gwt.user.client.ui.IsWidget)">asWidgetOrNull</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#createHandlerManager()">createHandlerManager</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#delegateEvent(com.google.gwt.user.client.ui.Widget, com.google.gwt.event.shared.GwtEvent)">delegateEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#fireEvent(com.google.gwt.event.shared.GwtEvent)">fireEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getHandlerCount(com.google.gwt.event.shared.GwtEvent.Type)">getHandlerCount</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getLayoutData()">getLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#getParent()">getParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isAttached()">isAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#isOrWasAttached()">isOrWasAttached</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onAttach()">onAttach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onBrowserEvent(com.google.gwt.user.client.Event)">onBrowserEvent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#onDetach()">onDetach</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#removeFromParent()">removeFromParent</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#setLayoutData(java.lang.Object)">setLayoutData</A>, <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html#sinkEvents(int)">sinkEvents</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.google.gwt.user.client.ui.UIObject"><!-- --></A>
@@ -584,6 +652,42 @@ public void <B>addEast</B>(<A HREF="../../../../../../com/google/gwt/user/client
 </DL>
 <HR>
 
+<A NAME="addLineEnd(com.google.gwt.user.client.ui.Widget, double)"><!-- --></A><H3>
+addLineEnd</H3>
+<PRE>
+public void <B>addLineEnd</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+                       double&nbsp;size)</PRE>
+<DL>
+<DD>Adds a widget to the end of the line. In LTR mode, the widget is added to
+ the east. In RTL mode, the widget is added to the west.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be added<DD><CODE>size</CODE> - the child widget's size</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addLineStart(com.google.gwt.user.client.ui.Widget, double)"><!-- --></A><H3>
+addLineStart</H3>
+<PRE>
+public void <B>addLineStart</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+                         double&nbsp;size)</PRE>
+<DL>
+<DD>Adds a widget to the start of the line. In LTR mode, the widget is added to
+ the west. In RTL mode, the widget is added to the east.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be added<DD><CODE>size</CODE> - the child widget's size</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="addNorth(com.google.gwt.user.client.ui.Widget, double)"><!-- --></A><H3>
 addNorth</H3>
 <PRE>
@@ -656,7 +760,7 @@ public void <B>animate</B>(int&nbsp;duration)</PRE>
 animate</H3>
 <PRE>
 public void <B>animate</B>(int&nbsp;duration,
-                    com.google.gwt.layout.client.Layout.AnimationCallback&nbsp;callback)</PRE>
+                    <A HREF="../../../../../../com/google/gwt/layout/client/Layout.AnimationCallback.html" title="interface in com.google.gwt.layout.client">Layout.AnimationCallback</A>&nbsp;callback)</PRE>
 <DL>
 <DD><B>Description copied from interface: <CODE><A HREF="../../../../../../com/google/gwt/user/client/ui/AnimatedLayout.html#animate(int, com.google.gwt.layout.client.Layout.AnimationCallback)">AnimatedLayout</A></CODE></B></DD>
 <DD>Layout children, animating over the specified period of time.
@@ -743,6 +847,48 @@ public void <B>insertEast</B>(<A HREF="../../../../../../com/google/gwt/user/cli
 <DL>
 <DD>Adds a widget to the east edge of the dock, inserting it before an existing
  widget.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be added<DD><CODE>size</CODE> - the child widget's size<DD><CODE>before</CODE> - the widget before which to insert the new child, or
+          <code>null</code> to append</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertLineEnd(com.google.gwt.user.client.ui.Widget, double, com.google.gwt.user.client.ui.Widget)"><!-- --></A><H3>
+insertLineEnd</H3>
+<PRE>
+public void <B>insertLineEnd</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+                          double&nbsp;size,
+                          <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;before)</PRE>
+<DL>
+<DD>Adds a widget to the start of the line, inserting it before an existing
+ widget. In LTR mode, the widget is added to the east. In RTL mode, the
+ widget is added to the west.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>widget</CODE> - the widget to be added<DD><CODE>size</CODE> - the child widget's size<DD><CODE>before</CODE> - the widget before which to insert the new child, or
+          <code>null</code> to append</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="insertLineStart(com.google.gwt.user.client.ui.Widget, double, com.google.gwt.user.client.ui.Widget)"><!-- --></A><H3>
+insertLineStart</H3>
+<PRE>
+public void <B>insertLineStart</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;widget,
+                            double&nbsp;size,
+                            <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" title="class in com.google.gwt.user.client.ui">Widget</A>&nbsp;before)</PRE>
+<DL>
+<DD>Adds a widget to the end of the line, inserting it before an existing
+ widget. In LTR mode, the widget is added to the west. In RTL mode, the
+ widget is added to the east.
 <P>
 <DD><DL>
 </DL>
@@ -903,6 +1049,27 @@ protected <A HREF="../../../../../../com/google/gwt/user/client/ui/Widget.html" 
 </DL>
 <HR>
 
+<A NAME="getResolvedDirection(com.google.gwt.user.client.ui.DockLayoutPanel.Direction)"><!-- --></A><H3>
+getResolvedDirection</H3>
+<PRE>
+protected <A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html" title="enum in com.google.gwt.user.client.ui">DockLayoutPanel.Direction</A> <B>getResolvedDirection</B>(<A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html" title="enum in com.google.gwt.user.client.ui">DockLayoutPanel.Direction</A>&nbsp;direction)</PRE>
+<DL>
+<DD>Resolve the specified direction based on the current locale. If the
+ direction is <A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html#LINE_START"><CODE>DockLayoutPanel.Direction.LINE_START</CODE></A> or <A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html#LINE_END"><CODE>DockLayoutPanel.Direction.LINE_END</CODE></A>,
+ the return value will be one of <A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html#EAST"><CODE>DockLayoutPanel.Direction.EAST</CODE></A> or
+ <A HREF="../../../../../../com/google/gwt/user/client/ui/DockLayoutPanel.Direction.html#WEST"><CODE>DockLayoutPanel.Direction.WEST</CODE></A> depending on the RTL mode of the locale. For all
+ other directions, the specified value is returned.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>direction</CODE> - the specified direction
+<DT><B>Returns:</B><DD>the locale</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getUnit()"><!-- --></A><H3>
 getUnit</H3>
 <PRE>
@@ -997,7 +1164,7 @@ protected void <B>onUnload</B>()</PRE>
 </TABLE>
 </TD>
 <TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
-GWT 2.1.0.M3</EM>
+GWT 2.1.0.RC1</EM>
 </TD>
 </TR>
 
